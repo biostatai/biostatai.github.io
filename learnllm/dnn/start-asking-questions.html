@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 1 Start asking questions | Understanding Deep Learning</title>
+  <meta name="description" content="Chapter 1 Start asking questions | Understanding Deep Learning" />
+  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 1 Start asking questions | Understanding Deep Learning" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Chapter 1 Start asking questions | Understanding Deep Learning" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 1 Start asking questions | Understanding Deep Learning" />
+  
+  <meta name="twitter:description" content="Chapter 1 Start asking questions | Understanding Deep Learning" />
+  
+
+<meta name="author" content="Rajesh Talluri, PhD" />
+
+
+<meta name="date" content="2019-09-12" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html">
+<link rel="next" href="the-artificial-neuron.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Understanding Deep Learning</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="start-asking-questions.html"><a href="start-asking-questions.html"><i class="fa fa-check"></i><b>1</b> Start asking questions</a><ul>
+<li class="chapter" data-level="1.1" data-path="start-asking-questions.html"><a href="start-asking-questions.html#what-is-deep-learning"><i class="fa fa-check"></i><b>1.1</b> What is deep learning?</a></li>
+<li class="chapter" data-level="1.2" data-path="start-asking-questions.html"><a href="start-asking-questions.html#what-are-artificial-neural-networks"><i class="fa fa-check"></i><b>1.2</b> What are artificial neural networks?</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="the-artificial-neuron.html"><a href="the-artificial-neuron.html"><i class="fa fa-check"></i><b>2</b> The artificial neuron</a><ul>
+<li class="chapter" data-level="2.1" data-path="the-artificial-neuron.html"><a href="the-artificial-neuron.html#what-can-a-single-neuron-accomplish"><i class="fa fa-check"></i><b>2.1</b> What can a single neuron accomplish?</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="the-artificial-neuron.html"><a href="the-artificial-neuron.html#linear-regression"><i class="fa fa-check"></i><b>2.1.1</b> Linear Regression</a></li>
+<li class="chapter" data-level="2.1.2" data-path="the-artificial-neuron.html"><a href="the-artificial-neuron.html#logistic-regression"><i class="fa fa-check"></i><b>2.1.2</b> Logistic regression</a></li>
+<li class="chapter" data-level="2.1.3" data-path="the-artificial-neuron.html"><a href="the-artificial-neuron.html#linear-classification"><i class="fa fa-check"></i><b>2.1.3</b> Linear Classification</a></li>
+<li class="chapter" data-level="2.1.4" data-path="the-artificial-neuron.html"><a href="the-artificial-neuron.html#other-activation-functions"><i class="fa fa-check"></i><b>2.1.4</b> Other activation functions</a></li>
+<li class="chapter" data-level="2.1.5" data-path="the-artificial-neuron.html"><a href="the-artificial-neuron.html#biological-activation-functions"><i class="fa fa-check"></i><b>2.1.5</b> Biological Activation functions</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="the-artificial-neuron.html"><a href="the-artificial-neuron.html#how-does-a-neuron-learn"><i class="fa fa-check"></i><b>2.2</b> How does a neuron learn?</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="the-artificial-neuron.html"><a href="the-artificial-neuron.html#estimation-of-weights-for-a-single-neuron-with-identity-activation"><i class="fa fa-check"></i><b>2.2.1</b> Estimation of weights for a single neuron with identity activation</a></li>
+<li class="chapter" data-level="2.2.2" data-path="the-artificial-neuron.html"><a href="the-artificial-neuron.html#implement-gradient-descent-for-this-linear-neuron-example"><i class="fa fa-check"></i><b>2.2.2</b> Implement gradient descent for this linear neuron example</a></li>
+<li class="chapter" data-level="2.2.3" data-path="the-artificial-neuron.html"><a href="the-artificial-neuron.html#next-exercises-implement-classification-and-logistic-regression-when-time-permits"><i class="fa fa-check"></i><b>2.2.3</b> Next Exercises, Implement classification and logistic regression when time permits</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="learning-non-linear-functions.html"><a href="learning-non-linear-functions.html"><i class="fa fa-check"></i><b>3</b> Learning non-linear functions</a><ul>
+<li class="chapter" data-level="3.1" data-path="learning-non-linear-functions.html"><a href="learning-non-linear-functions.html#learning-the-xor-function"><i class="fa fa-check"></i><b>3.1</b> Learning the XOR function</a></li>
+<li class="chapter" data-level="3.2" data-path="learning-non-linear-functions.html"><a href="learning-non-linear-functions.html#the-universal-approximation-theorem"><i class="fa fa-check"></i><b>3.2</b> The Universal Approximation Theorem</a></li>
+<li class="chapter" data-level="3.3" data-path="learning-non-linear-functions.html"><a href="learning-non-linear-functions.html#solving-xor-problem-a-neural-network-instead-of-a-single-neuron"><i class="fa fa-check"></i><b>3.3</b> Solving XOR problem a neural network instead of a single neuron</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="gradient-descent-algorithms.html"><a href="gradient-descent-algorithms.html"><i class="fa fa-check"></i><b>4</b> Gradient Descent Algorithms</a><ul>
+<li class="chapter" data-level="4.1" data-path="gradient-descent-algorithms.html"><a href="gradient-descent-algorithms.html#improving-gradient-descent"><i class="fa fa-check"></i><b>4.1</b> Improving Gradient Descent</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="gradient-descent-algorithms.html"><a href="gradient-descent-algorithms.html#representative-sampling-for-stochastic-gradient-descent-sgd"><i class="fa fa-check"></i><b>4.1.1</b> Representative sampling for stochastic gradient descent (SGD)</a></li>
+<li class="chapter" data-level="4.1.2" data-path="gradient-descent-algorithms.html"><a href="gradient-descent-algorithms.html#adaptive-batch-sizes"><i class="fa fa-check"></i><b>4.1.2</b> Adaptive batch sizes</a></li>
+<li class="chapter" data-level="4.1.3" data-path="gradient-descent-algorithms.html"><a href="gradient-descent-algorithms.html#adaptive-learning-rates"><i class="fa fa-check"></i><b>4.1.3</b> Adaptive learning rates</a></li>
+<li class="chapter" data-level="4.1.4" data-path="gradient-descent-algorithms.html"><a href="gradient-descent-algorithms.html#adaptive-loss-functions"><i class="fa fa-check"></i><b>4.1.4</b> Adaptive loss functions</a></li>
+<li class="chapter" data-level="4.1.5" data-path="gradient-descent-algorithms.html"><a href="gradient-descent-algorithms.html#higher-order-derivatives"><i class="fa fa-check"></i><b>4.1.5</b> Higher order derivatives</a></li>
+<li class="chapter" data-level="4.1.6" data-path="gradient-descent-algorithms.html"><a href="gradient-descent-algorithms.html#parallel-chains"><i class="fa fa-check"></i><b>4.1.6</b> Parallel chains</a></li>
+<li class="chapter" data-level="4.1.7" data-path="gradient-descent-algorithms.html"><a href="gradient-descent-algorithms.html#branching-chains-at-each-step"><i class="fa fa-check"></i><b>4.1.7</b> Branching chains at each step</a></li>
+<li class="chapter" data-level="4.1.8" data-path="gradient-descent-algorithms.html"><a href="gradient-descent-algorithms.html#identifying-pathological-topologies-to-stop-and-restart"><i class="fa fa-check"></i><b>4.1.8</b> Identifying pathological topologies to stop and restart</a></li>
+<li class="chapter" data-level="4.1.9" data-path="gradient-descent-algorithms.html"><a href="gradient-descent-algorithms.html#hamiltonian-monte-carlo-based-method"><i class="fa fa-check"></i><b>4.1.9</b> Hamiltonian Monte Carlo based method</a></li>
+<li class="chapter" data-level="4.1.10" data-path="gradient-descent-algorithms.html"><a href="gradient-descent-algorithms.html#section"><i class="fa fa-check"></i><b>4.1.10</b> …</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="automatic-differentiation.html"><a href="automatic-differentiation.html"><i class="fa fa-check"></i><b>5</b> Automatic Differentiation</a><ul>
+<li class="chapter" data-level="5.1" data-path="automatic-differentiation.html"><a href="automatic-differentiation.html#performing-autodiff-in-julia"><i class="fa fa-check"></i><b>5.1</b> Performing Autodiff in Julia</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="automatic-differentiation.html"><a href="automatic-differentiation.html#using-flux"><i class="fa fa-check"></i><b>5.1.1</b> using Flux</a></li>
+<li class="chapter" data-level="5.1.2" data-path="automatic-differentiation.html"><a href="automatic-differentiation.html#using-zygote"><i class="fa fa-check"></i><b>5.1.2</b> using Zygote</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li> &nbsp;&nbsp; &nbsp;&nbsp; &#169; Rajesh Talluri</li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Understanding Deep Learning</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="start-asking-questions" class="section level1">
+<h1><span class="header-section-number">Chapter 1</span> Start asking questions</h1>
+<blockquote>
+<p>The first question to ask is What is deep learning?</p>
+</blockquote>
+<div id="what-is-deep-learning" class="section level2">
+<h2><span class="header-section-number">1.1</span> What is deep learning?</h2>
+<p><img src="dl.png"/></p>
+<p>For a computer to learn, it has to understand the world in terms of concepts. Concepts are modeled in a hierarchical way by creating complex concepts from simpler concepts.</p>
+<p>If models are built using hierarchy of concepts that is deep with many layers, such models are called deep learning models.</p>
+<p>Deep learning generally refers to learning using models with deep hierarchical structures.</p>
+<p>Deep learning is generally implemented using a class of machine learning models based on artificial neural networks.</p>
+<p><img src="nn1.png"/></p>
+<blockquote>
+<p>The next question is …</p>
+</blockquote>
+</div>
+<div id="what-are-artificial-neural-networks" class="section level2">
+<h2><span class="header-section-number">1.2</span> What are artificial neural networks?</h2>
+<p><img src="neuron.png" align = "right"/>
+Artificial neural networks are data models inspired by biological neural networks in the human brain. The basic unit of the biological neural network is neuron or nerve cell.These neurons transmit information by electrochemical signalling. The average human brain consists of about 86 billion neurons. Each neuron is connected to up to 10,000 other neurons. There are possibly 100-1000 trillion synaptic connections through which the neurons signal.</p>
+<p>Artificial neural networks are models which try to mimic the architecture of the brain as this architecture apparently leads to some sort of intelligence and learning capability.</p>
+<p>The basic building block for an artificial neural network is the artificial neuron which is inspired by the biological neuron.</p>
+<p><img src="an.png"/></p>
+<p>It has a bunch of inputs comming into the neuron, which are then mixed together(they can be summed or multiplied or whatever possibly could be done to them, however summation is most commonly used as electrical signals would add up when combined together). The mixed input is then transformed through an activation function.</p>
+<blockquote>
+<p>What is an activation function?? To understand this we need to understand how neurons in the brain work. Different neurons in the brain are activated(transfer signals through them) for certain tasks. So based on the input the neuron has to decide whether to fire/signal or not and how much to fire/signal. This is the basis of the activation function. All the neurons in our brain are not working for all tasks. So depending on the input the neuron decides to whether to send a signal to the neurons it is connected to.</p>
+</blockquote>
+<p>The activation function can take any function form <span class="math inline">\(\phi\)</span>. The output of the activation function is then transmitted as the output of the neuron. This output is then transmitted as input to the other neurons that are connected to this neuron if any.</p>
+<blockquote>
+<p>Ok I think I understand what a neural network is: a collection of artificial neurons. But, how does a neuron work and how does it learn from data?</p>
+</blockquote>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="the-artificial-neuron.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "none"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

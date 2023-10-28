@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 The artificial neuron | Understanding Deep Learning</title>
+  <meta name="description" content="Chapter 2 The artificial neuron | Understanding Deep Learning" />
+  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 The artificial neuron | Understanding Deep Learning" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Chapter 2 The artificial neuron | Understanding Deep Learning" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 The artificial neuron | Understanding Deep Learning" />
+  
+  <meta name="twitter:description" content="Chapter 2 The artificial neuron | Understanding Deep Learning" />
+  
+
+<meta name="author" content="Rajesh Talluri, PhD" />
+
+
+<meta name="date" content="2019-09-12" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="start-asking-questions.html">
+<link rel="next" href="learning-non-linear-functions.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Understanding Deep Learning</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="start-asking-questions.html"><a href="start-asking-questions.html"><i class="fa fa-check"></i><b>1</b> Start asking questions</a><ul>
+<li class="chapter" data-level="1.1" data-path="start-asking-questions.html"><a href="start-asking-questions.html#what-is-deep-learning"><i class="fa fa-check"></i><b>1.1</b> What is deep learning?</a></li>
+<li class="chapter" data-level="1.2" data-path="start-asking-questions.html"><a href="start-asking-questions.html#what-are-artificial-neural-networks"><i class="fa fa-check"></i><b>1.2</b> What are artificial neural networks?</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="the-artificial-neuron.html"><a href="the-artificial-neuron.html"><i class="fa fa-check"></i><b>2</b> The artificial neuron</a><ul>
+<li class="chapter" data-level="2.1" data-path="the-artificial-neuron.html"><a href="the-artificial-neuron.html#what-can-a-single-neuron-accomplish"><i class="fa fa-check"></i><b>2.1</b> What can a single neuron accomplish?</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="the-artificial-neuron.html"><a href="the-artificial-neuron.html#linear-regression"><i class="fa fa-check"></i><b>2.1.1</b> Linear Regression</a></li>
+<li class="chapter" data-level="2.1.2" data-path="the-artificial-neuron.html"><a href="the-artificial-neuron.html#logistic-regression"><i class="fa fa-check"></i><b>2.1.2</b> Logistic regression</a></li>
+<li class="chapter" data-level="2.1.3" data-path="the-artificial-neuron.html"><a href="the-artificial-neuron.html#linear-classification"><i class="fa fa-check"></i><b>2.1.3</b> Linear Classification</a></li>
+<li class="chapter" data-level="2.1.4" data-path="the-artificial-neuron.html"><a href="the-artificial-neuron.html#other-activation-functions"><i class="fa fa-check"></i><b>2.1.4</b> Other activation functions</a></li>
+<li class="chapter" data-level="2.1.5" data-path="the-artificial-neuron.html"><a href="the-artificial-neuron.html#biological-activation-functions"><i class="fa fa-check"></i><b>2.1.5</b> Biological Activation functions</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="the-artificial-neuron.html"><a href="the-artificial-neuron.html#how-does-a-neuron-learn"><i class="fa fa-check"></i><b>2.2</b> How does a neuron learn?</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="the-artificial-neuron.html"><a href="the-artificial-neuron.html#estimation-of-weights-for-a-single-neuron-with-identity-activation"><i class="fa fa-check"></i><b>2.2.1</b> Estimation of weights for a single neuron with identity activation</a></li>
+<li class="chapter" data-level="2.2.2" data-path="the-artificial-neuron.html"><a href="the-artificial-neuron.html#implement-gradient-descent-for-this-linear-neuron-example"><i class="fa fa-check"></i><b>2.2.2</b> Implement gradient descent for this linear neuron example</a></li>
+<li class="chapter" data-level="2.2.3" data-path="the-artificial-neuron.html"><a href="the-artificial-neuron.html#next-exercises-implement-classification-and-logistic-regression-when-time-permits"><i class="fa fa-check"></i><b>2.2.3</b> Next Exercises, Implement classification and logistic regression when time permits</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="learning-non-linear-functions.html"><a href="learning-non-linear-functions.html"><i class="fa fa-check"></i><b>3</b> Learning non-linear functions</a><ul>
+<li class="chapter" data-level="3.1" data-path="learning-non-linear-functions.html"><a href="learning-non-linear-functions.html#learning-the-xor-function"><i class="fa fa-check"></i><b>3.1</b> Learning the XOR function</a></li>
+<li class="chapter" data-level="3.2" data-path="learning-non-linear-functions.html"><a href="learning-non-linear-functions.html#the-universal-approximation-theorem"><i class="fa fa-check"></i><b>3.2</b> The Universal Approximation Theorem</a></li>
+<li class="chapter" data-level="3.3" data-path="learning-non-linear-functions.html"><a href="learning-non-linear-functions.html#solving-xor-problem-a-neural-network-instead-of-a-single-neuron"><i class="fa fa-check"></i><b>3.3</b> Solving XOR problem a neural network instead of a single neuron</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="gradient-descent-algorithms.html"><a href="gradient-descent-algorithms.html"><i class="fa fa-check"></i><b>4</b> Gradient Descent Algorithms</a><ul>
+<li class="chapter" data-level="4.1" data-path="gradient-descent-algorithms.html"><a href="gradient-descent-algorithms.html#improving-gradient-descent"><i class="fa fa-check"></i><b>4.1</b> Improving Gradient Descent</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="gradient-descent-algorithms.html"><a href="gradient-descent-algorithms.html#representative-sampling-for-stochastic-gradient-descent-sgd"><i class="fa fa-check"></i><b>4.1.1</b> Representative sampling for stochastic gradient descent (SGD)</a></li>
+<li class="chapter" data-level="4.1.2" data-path="gradient-descent-algorithms.html"><a href="gradient-descent-algorithms.html#adaptive-batch-sizes"><i class="fa fa-check"></i><b>4.1.2</b> Adaptive batch sizes</a></li>
+<li class="chapter" data-level="4.1.3" data-path="gradient-descent-algorithms.html"><a href="gradient-descent-algorithms.html#adaptive-learning-rates"><i class="fa fa-check"></i><b>4.1.3</b> Adaptive learning rates</a></li>
+<li class="chapter" data-level="4.1.4" data-path="gradient-descent-algorithms.html"><a href="gradient-descent-algorithms.html#adaptive-loss-functions"><i class="fa fa-check"></i><b>4.1.4</b> Adaptive loss functions</a></li>
+<li class="chapter" data-level="4.1.5" data-path="gradient-descent-algorithms.html"><a href="gradient-descent-algorithms.html#higher-order-derivatives"><i class="fa fa-check"></i><b>4.1.5</b> Higher order derivatives</a></li>
+<li class="chapter" data-level="4.1.6" data-path="gradient-descent-algorithms.html"><a href="gradient-descent-algorithms.html#parallel-chains"><i class="fa fa-check"></i><b>4.1.6</b> Parallel chains</a></li>
+<li class="chapter" data-level="4.1.7" data-path="gradient-descent-algorithms.html"><a href="gradient-descent-algorithms.html#branching-chains-at-each-step"><i class="fa fa-check"></i><b>4.1.7</b> Branching chains at each step</a></li>
+<li class="chapter" data-level="4.1.8" data-path="gradient-descent-algorithms.html"><a href="gradient-descent-algorithms.html#identifying-pathological-topologies-to-stop-and-restart"><i class="fa fa-check"></i><b>4.1.8</b> Identifying pathological topologies to stop and restart</a></li>
+<li class="chapter" data-level="4.1.9" data-path="gradient-descent-algorithms.html"><a href="gradient-descent-algorithms.html#hamiltonian-monte-carlo-based-method"><i class="fa fa-check"></i><b>4.1.9</b> Hamiltonian Monte Carlo based method</a></li>
+<li class="chapter" data-level="4.1.10" data-path="gradient-descent-algorithms.html"><a href="gradient-descent-algorithms.html#section"><i class="fa fa-check"></i><b>4.1.10</b> …</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="automatic-differentiation.html"><a href="automatic-differentiation.html"><i class="fa fa-check"></i><b>5</b> Automatic Differentiation</a><ul>
+<li class="chapter" data-level="5.1" data-path="automatic-differentiation.html"><a href="automatic-differentiation.html#performing-autodiff-in-julia"><i class="fa fa-check"></i><b>5.1</b> Performing Autodiff in Julia</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="automatic-differentiation.html"><a href="automatic-differentiation.html#using-flux"><i class="fa fa-check"></i><b>5.1.1</b> using Flux</a></li>
+<li class="chapter" data-level="5.1.2" data-path="automatic-differentiation.html"><a href="automatic-differentiation.html#using-zygote"><i class="fa fa-check"></i><b>5.1.2</b> using Zygote</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li> &nbsp;&nbsp; &nbsp;&nbsp; &#169; Rajesh Talluri</li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Understanding Deep Learning</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="the-artificial-neuron" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> The artificial neuron</h1>
+<p>We will make one small change to the artificial neuron we discussed previously by adding a bias <span class="math inline">\(w_0\)</span> to mixture of the inputs. This is analogous to assuming that, when all the inputs are added to the neuron, there may already be a neuron specific base line signal for each neuron.</p>
+<p><img src="an1.png"/></p>
+<div id="what-can-a-single-neuron-accomplish" class="section level2">
+<h2><span class="header-section-number">2.1</span> What can a single neuron accomplish?</h2>
+<p>Based on the structure of the artificial neuron, the generalized format of y can be written as:</p>
+<p><span class="math display">\[
+y = \phi(w_0+w_1x_1+w_2x_2+\ldots+w_kx_k)
+\]</span></p>
+<p>Depending on function <span class="math inline">\(\phi\)</span> a single neuron can be used to model a variety of tasks. We will provide some common models below.</p>
+<div id="linear-regression" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> Linear Regression</h3>
+<p>When <span class="math inline">\(\phi(x) = x\)</span> which transforms the above equation to
+<span class="math display">\[ y = w_0+w_1x_1+w_2x_2+\ldots+w_kx_k\]</span>
+<img src="Deeplearning_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+</div>
+<div id="logistic-regression" class="section level3">
+<h3><span class="header-section-number">2.1.2</span> Logistic regression</h3>
+<p>When <span class="math inline">\(\phi(x) = logit^{-1}(x) = \frac{e^x}{1+e^x}\)</span> which transforms the above equation to
+<span class="math display">\[
+  log\frac{y}{1-y} = w_0+w_1x_1+w_2x_2+\ldots+w_kx_k
+\]</span></p>
+<p>This is equivalent to binary logistic regression where the neuron outputs y (The probability of the input belonging to one class)</p>
+<p><img src="Deeplearning_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+</div>
+<div id="linear-classification" class="section level3">
+<h3><span class="header-section-number">2.1.3</span> Linear Classification</h3>
+<p>When <span class="math inline">\(\phi(x) = \Bigg\{ \begin{aligned} &amp;0&amp; \text{ if }x &lt; 0\\&amp;1&amp; \text{ if }x \geq 0\\ \end{aligned}\)</span></p>
+<p>The above equation transforms to
+<span class="math display">\[ y = \Bigg\{ \begin{aligned} 
+&amp;0&amp; \text{ if }w_0+w_1x_1+w_2x_2+\ldots+w_kx_k &lt; 0\\
+&amp;1&amp; \text{ if }w_0+w_1x_1+w_2x_2+\ldots+w_kx_k \geq 0
+\end{aligned}
+\]</span></p>
+<p><img src="Deeplearning_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+</div>
+<div id="other-activation-functions" class="section level3">
+<h3><span class="header-section-number">2.1.4</span> Other activation functions</h3>
+<p>There are infinitely many activation functions that can be used to perform a variety of tasks. You can check out a non comprehensive list of activation functions that have been used for neural networks in <a href="https://en.wikipedia.org/wiki/Activation_function#Comparison_of_activation_functions" target="_blank">Wikipedia</a>. There is no consensus on how to pick an activation function (still an active area of research). Some activation functions work better for some tasks.</p>
+<p>All generalized linear models (lognormal, gamma, probit, poisson etc.) can be modeled using a single neuron by changing the activation functions accordingly.</p>
+</div>
+<div id="biological-activation-functions" class="section level3">
+<h3><span class="header-section-number">2.1.5</span> Biological Activation functions</h3>
+<p>Before we move on we will touch upon one activation function inspired by biology, the rectified linear unit (ReLU) activation function.</p>
+<p><img src="Deeplearning_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>In the human brain the neurons do not fire for every input, but when they fire the firing signal strength is proportional to the input. This is probably to be energy efficient. The ReLU function mimics this strategy by outputting zero below a threshold and something proportional to the input above a certain threshold.</p>
+<blockquote>
+<p>Now that we have seen the range of things that a single neuron can accomplish, the next question is how does the neuron learn from the data…</p>
+</blockquote>
+</div>
+</div>
+<div id="how-does-a-neuron-learn" class="section level2">
+<h2><span class="header-section-number">2.2</span> How does a neuron learn?</h2>
+<p>To understand how a neuron learns, let us take the example of a neuron with an identity activation function <span class="math inline">\(\phi(x) = x\)</span> which has the model
+<span class="math display">\[ y = w_0+w_1x_1+w_2x_2+\ldots+w_kx_k\]</span>.</p>
+<p><img src="linearneuron.png"/></p>
+<blockquote>
+<p>How do humans learn?</p>
+</blockquote>
+<blockquote>
+<ol style="list-style-type: decimal">
+<li>By making mistakes and correcting them</li>
+<li>someone teaches them</li>
+<li>By reasoning based on previous experience and understanding</li>
+</ol>
+</blockquote>
+<p>The neuron does not have the opportunity to do 2 and 3 yet, so the only option left for it is the first approach by making mistakes and correcting itself.</p>
+<p>Obviously it needs data, as it is going to learn from data. The data consists of output <span class="math inline">\(y\)</span> for a variety of inputs <span class="math inline">\(X = x_1,x_2,\ldots,x_k\)</span>.</p>
+<p>The job of the neuron is to learn the values of <span class="math inline">\(W =w_0,w_1,\ldots,w_k\)</span>, so that, it can output the same <span class="math inline">\(y\)</span> as the data, for a given <span class="math inline">\(X\)</span>. Let us assume that the neuron started with random values of <span class="math inline">\(W\)</span>. Now it can calculate the output for any input <span class="math inline">\(X\)</span> using the equation</p>
+<p><span class="math display">\[ y = w_0+w_1x_1+w_2x_2+\ldots+w_kx_k\]</span>.</p>
+<blockquote>
+<p>So, how would the neuron know it made a mistake?</p>
+</blockquote>
+<p>Obviously if the <span class="math inline">\(y_{predicted}\)</span> the neuron outputs for a given <span class="math inline">\(X\)</span> is not equal to the <span class="math inline">\(y_{data}\)</span> in the dataset, it knows it made a mistake.</p>
+<blockquote>
+<p>How would it correct itself?</p>
+</blockquote>
+<p>If all the neuron knows is if it made a mistake <span class="math inline">\(y_{predicted} \neq y_{data}\)</span> what are its next options?</p>
+<ol style="list-style-type: decimal">
+<li>Pick another random set of values for <span class="math inline">\(W\)</span>.</li>
+<li>…</li>
+</ol>
+<blockquote>
+<p>Let us do an experiment by thinking from the perspective of the neuron:<span>🤠</span></p>
+</blockquote>
+<blockquote>
+<ol style="list-style-type: decimal">
+<li>Yay!<span>😃</span>
+I have data<span class="math inline">\([X,y]\)</span>. I will pick values for <span class="math inline">\(W\)</span> and output <span class="math inline">\(y_{predicted}\)</span>. I hope this goes well!<span>😇</span></li>
+<li>Damn!<span>😒</span> my output does not match with the data <span class="math inline">\(y_{predicted} \neq y_{data}\)</span>. I do not have correct values of <span class="math inline">\(W\)</span>, so I need to get new values for <span class="math inline">\(W\)</span>. (Randomly generates new values for <span class="math inline">\(W\)</span>) Yess! this should work.<span>😎</span></li>
+<li>Whattt?<span>🤬</span> my output does not match with the data again… <span class="math inline">\(y_{predicted} \neq y_{data}\)</span>. Let me try another <span class="math inline">\(W\)</span>.<span>🙄</span></li>
+</ol>
+</blockquote>
+<p>… This goes on for some time</p>
+<blockquote>
+<ol start="9990" style="list-style-type: decimal">
+<li>Oh my God….<span>😖</span> This is boooriinggg!!!<span>😴</span> I need to be smart…<span>🤔</span> Let me look at what I did and if I gained anything from what I did till now</li>
+<li>Looking back at my results I see that some combinations of the weights make my output go above the expected data output and some make it go below. I should pick weigths in between those weigths so my output does not go above or below. Aha! <span>😈</span></li>
+</ol>
+</blockquote>
+<p>… Some time later.</p>
+<blockquote>
+<p><span>🤨</span>I think I got close enough, and I know, I would never get zero error so these values of <span class="math inline">\(W\)</span> are good enough. I think I have successfully done my job!<span>😅</span></p>
+</blockquote>
+<p>What we learned from this experiment is that:</p>
+<p><span class="math inline">\((y_{predicted} - y_{data})\)</span>(also called error) is a function of the parameters <span class="math inline">\(W\)</span> that the neuron wants to learn.</p>
+<p>The neuron wants to minimize this error … does it?</p>
+<p>Actually , it wants to minimize the absolute error for obvious reasons. So our next question is:</p>
+<p>Given a function <span class="math inline">\(J(W)\)</span> find the value of <span class="math inline">\(W\)</span> that minimizes it.</p>
+<blockquote>
+<p>This is where we need some math <span><img src="math.png" height = "50"/></span>. Take a detour to understand <a href="gradient-descent-algorithms.html#gradient-descent-algorithms">Gradient Descent Algorithms</a> and come back here after understanding them.</p>
+</blockquote>
+<p>We can use gradient descent algorithms to come up with the best values for <span class="math inline">\(W\)</span>, given the data.</p>
+<div id="estimation-of-weights-for-a-single-neuron-with-identity-activation" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> Estimation of weights for a single neuron with identity activation</h3>
+<p><span class="math display">\[
+\begin{align}
+J(W) &amp;= |y - \hat{y}|\\
+&amp;= |y - w_0+w_1x_1+\ldots+w_kx_k|
+\end{align}
+\]</span>
+However, as the absolute value(<span class="math inline">\(||\)</span>) function is not differentiable at zero, differentiable functions such as the squared error function, make computations easy using the gradient descent methods compared to non-differentiable error functions. Although, in some instances, they may make training the neuron harder.</p>
+<p><span class="math display">\[
+\begin{align}
+J(W) &amp;= (y - \hat{y})^2\\
+&amp;= (y - w_0-w_1x_1-\ldots-w_kx_k)^2
+\end{align}
+\]</span></p>
+<p>To use gradient descent we need to compute the derivatives of <span class="math inline">\(J\)</span> with respect to <span class="math inline">\(W = w_0,w_1,\ldots,w_k\)</span>.</p>
+<p><span class="math display">\[ \frac{dJ}{dW} =  \begin{bmatrix} \frac{\partial J}{\partial w_0}\\ \frac{\partial J}{\partial w_1}\\ \vdots\\ \frac{\partial J}{\partial w_k} \end{bmatrix}  = \begin{bmatrix} -2(y - w_0-w_1x_1-\ldots-w_kx_k)\\ -2x_1(y - w_0-w_1x_1-\ldots-w_kx_k)\\ \vdots\\ -2x_k(y - w_0-w_1x_1-\ldots-w_kx_k) \end{bmatrix}\]</span></p>
+<p>The update equation for <span class="math inline">\(W\)</span> using the gradient descent algorithm is then-</p>
+<p><span class="math display">\[ W:= W-\alpha\frac{dJ}{dW} \]</span></p>
+<p><span class="math display">\[ \begin{bmatrix} w_0\\ w_1\\ \vdots\\ w_k \end{bmatrix}:= \begin{bmatrix} w_0\\ w_1\\ \vdots\\ w_k \end{bmatrix}-\alpha\begin{bmatrix} -2(y - w_0-w_1x_1-\ldots-w_kx_k)\\ -2x_1(y - w_0-w_1x_1-\ldots-w_kx_k)\\ \vdots\\ -2x_k(y - w_0-w_1x_1-\ldots-w_kx_k) \end{bmatrix}\]</span></p>
+<p>The above equations are correct when we have one data point <span class="math inline">\([y,X]\)</span>. However we have <span class="math inline">\(n\)</span> data points <span class="math inline">\([y_i,X_i]_{i=1}^n\)</span>.</p>
+<p><span class="math display">\[
+J(W) = \sum_{i=1}^n (y_i - \hat{y}_i)^2
+\]</span></p>
+<p><span class="math display">\[ W:= W-\alpha \sum_{i=1}^n -2[y_i - X_iW].* X_i^T\]</span></p>
+<blockquote>
+<p>.* is element wise multiplication</p>
+</blockquote>
+<blockquote>
+<p><em>(redefining <span class="math inline">\(X_i\)</span> for mathematical simplicity)</em>
+with <span class="math inline">\(X_i = [1, x_1^{(i)}, x_2^{(i)}, x_3^{(i)}, \ldots, x_k^{(i)}]\)</span></p>
+</blockquote>
+</div>
+<div id="implement-gradient-descent-for-this-linear-neuron-example" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> Implement gradient descent for this linear neuron example</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode julia"><code class="sourceCode julia"><a class="sourceLine" id="cb1-1" title="1">using Random, Distributions;</a>
+<a class="sourceLine" id="cb1-2" title="2"></a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="kw">function</span> simulate_data(;n::<span class="dt">Int64</span> = <span class="fl">100</span>, p::<span class="dt">Int64</span> = <span class="fl">4</span>)</a>
+<a class="sourceLine" id="cb1-4" title="4">    β = rand(Normal(<span class="fl">1</span>, <span class="fl">2</span>), p+<span class="fl">1</span> );   <span class="co"># generate β coefficients</span></a>
+<a class="sourceLine" id="cb1-5" title="5">    X = [ones(n,<span class="fl">1</span>) rand(MvNormal(p, <span class="fl">2</span>),n) |&gt; transpose]; <span class="co"># generate the covariates/predictors X</span></a>
+<a class="sourceLine" id="cb1-6" title="6">    Y = X*β + rand(Normal(<span class="fl">0</span>,<span class="fl">0.1</span>), n);          <span class="co"># generate output Y = Xβ+ϵ</span></a>
+<a class="sourceLine" id="cb1-7" title="7">    <span class="kw">return</span> (Y,X,β);</a>
+<a class="sourceLine" id="cb1-8" title="8"><span class="kw">end</span>;</a>
+<a class="sourceLine" id="cb1-9" title="9"></a>
+<a class="sourceLine" id="cb1-10" title="10">Y,X,β = simulate_data(n = <span class="fl">1000</span>, p = <span class="fl">10</span>);</a>
+<a class="sourceLine" id="cb1-11" title="11"></a>
+<a class="sourceLine" id="cb1-12" title="12"><span class="kw">function</span> gradient_descent(;Y::<span class="dt">Array</span>{<span class="dt">Float64</span>,<span class="fl">1</span>},X::<span class="dt">Array</span>{<span class="dt">Float64</span>,<span class="fl">2</span>}, α::<span class="dt">Float64</span> = <span class="fl">0.01</span>, epochs::<span class="dt">Int64</span> = <span class="fl">100</span>)</a>
+<a class="sourceLine" id="cb1-13" title="13">    n,p = (size(X,<span class="fl">1</span>), size(X,<span class="fl">2</span>)-<span class="fl">1</span>);    <span class="co"># get n and p from X</span></a>
+<a class="sourceLine" id="cb1-14" title="14">    W = <span class="dt">Array</span>{<span class="dt">Float64</span>}(undef, p+<span class="fl">1</span>);    <span class="co"># initialize W: the weights vector</span></a>
+<a class="sourceLine" id="cb1-15" title="15"></a>
+<a class="sourceLine" id="cb1-16" title="16">    <span class="kw">for</span> i <span class="kw">in</span> <span class="fl">1</span>:epochs                   <span class="co"># iterate set number of epochs for the weights to converge</span></a>
+<a class="sourceLine" id="cb1-17" title="17">        dW = -<span class="fl">2</span>*transpose(X)*(Y-X*W);   <span class="co"># calculate gradient</span></a>
+<a class="sourceLine" id="cb1-18" title="18">        W = W -α*dW;                    <span class="co"># update weigths</span></a>
+<a class="sourceLine" id="cb1-19" title="19">    <span class="kw">end</span></a>
+<a class="sourceLine" id="cb1-20" title="20">    <span class="kw">return</span> W;</a>
+<a class="sourceLine" id="cb1-21" title="21"><span class="kw">end</span>;</a>
+<a class="sourceLine" id="cb1-22" title="22"></a>
+<a class="sourceLine" id="cb1-23" title="23">W = gradient_descent(Y = Y, X = X, α = <span class="fl">.0001</span>, epochs = <span class="fl">100</span>);</a>
+<a class="sourceLine" id="cb1-24" title="24"></a>
+<a class="sourceLine" id="cb1-25" title="25">using PrettyTables</a>
+<a class="sourceLine" id="cb1-26" title="26">pretty_table(hcat(<span class="st">&quot;w&quot;</span>.*string.(<span class="fl">0</span>:<span class="fl">10</span>), W, β), [<span class="st">&quot;name&quot;</span>, <span class="st">&quot;β&quot;, &quot;</span>wᵢ&quot;])</a></code></pre></div>
+<pre><code>## ┌──────┬───────────────────────┬───────────────────────┐
+## │ name │                     β │                    wᵢ │
+## ├──────┼───────────────────────┼───────────────────────┤
+## │   w0 │   -1.2018248784854897 │   -1.2009784222530304 │
+## │   w1 │    1.0893968528558549 │    1.0883896379664721 │
+## │   w2 │     6.254195223654139 │     6.253891228322042 │
+## │   w3 │      3.56663547532782 │    3.5674692383667446 │
+## │   w4 │     1.002389840731874 │    1.0027461184453705 │
+## │   w5 │    0.9668088646353741 │    0.9671774035656489 │
+## │   w6 │   -2.6723370496389043 │   -2.6717159534926873 │
+## │   w7 │    2.0048167191530433 │    2.0065704597536773 │
+## │   w8 │    1.9045818648761308 │      1.90293706640294 │
+## │   w9 │ -0.035554484869647004 │ -0.038067374181011804 │
+## │  w10 │     2.584741324118255 │    2.5844571409736368 │
+## └──────┴───────────────────────┴───────────────────────┘</code></pre>
+<p>From the above result we can see that we have recovered estimates closer to the true model that was simulated.</p>
+<p>The gradient descent algorithm works as shown in the figure below.
+<img src="c3.gif" /></p>
+</div>
+<div id="next-exercises-implement-classification-and-logistic-regression-when-time-permits" class="section level3">
+<h3><span class="header-section-number">2.2.3</span> Next Exercises, Implement classification and logistic regression when time permits</h3>
+<p>So we have understood how a neuron learns the model parameters and can predict when a new observation comes.</p>
+<blockquote>
+<p>Ok then what is my next question…. I know what a single neuron can do, It would be good to know what a single neuron cannot do.</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="start-asking-questions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="learning-non-linear-functions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "none"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

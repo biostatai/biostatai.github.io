@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 5 Representative sampling for stochastic gradient descent (SGD) | Understanding Deep Learning</title>
+  <meta name="description" content="Chapter 5 Representative sampling for stochastic gradient descent (SGD) | Understanding Deep Learning" />
+  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 5 Representative sampling for stochastic gradient descent (SGD) | Understanding Deep Learning" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Chapter 5 Representative sampling for stochastic gradient descent (SGD) | Understanding Deep Learning" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 5 Representative sampling for stochastic gradient descent (SGD) | Understanding Deep Learning" />
+  
+  <meta name="twitter:description" content="Chapter 5 Representative sampling for stochastic gradient descent (SGD) | Understanding Deep Learning" />
+  
+
+<meta name="author" content="Rajesh Talluri, PhD" />
+
+
+<meta name="date" content="2019-08-26" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="gradient-descent-algorithms.html">
+<link rel="next" href="adaptive-batch-sizes.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Understanding Deep Learning</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="start-asking-questions.html"><a href="start-asking-questions.html"><i class="fa fa-check"></i><b>1</b> Start asking questions</a><ul>
+<li class="chapter" data-level="1.1" data-path="start-asking-questions.html"><a href="start-asking-questions.html#what-is-deep-learning"><i class="fa fa-check"></i><b>1.1</b> What is deep learning?</a></li>
+<li class="chapter" data-level="1.2" data-path="start-asking-questions.html"><a href="start-asking-questions.html#what-are-artificial-neural-networks"><i class="fa fa-check"></i><b>1.2</b> What are artificial neural networks?</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="the-artificial-neuron.html"><a href="the-artificial-neuron.html"><i class="fa fa-check"></i><b>2</b> The artificial neuron</a><ul>
+<li class="chapter" data-level="2.1" data-path="the-artificial-neuron.html"><a href="the-artificial-neuron.html#what-can-a-single-neuron-accomplish"><i class="fa fa-check"></i><b>2.1</b> What can a single neuron accomplish?</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="the-artificial-neuron.html"><a href="the-artificial-neuron.html#linear-regression"><i class="fa fa-check"></i><b>2.1.1</b> Linear Regression</a></li>
+<li class="chapter" data-level="2.1.2" data-path="the-artificial-neuron.html"><a href="the-artificial-neuron.html#logistic-regression"><i class="fa fa-check"></i><b>2.1.2</b> Logistic regression</a></li>
+<li class="chapter" data-level="2.1.3" data-path="the-artificial-neuron.html"><a href="the-artificial-neuron.html#linear-classification"><i class="fa fa-check"></i><b>2.1.3</b> Linear Classification</a></li>
+<li class="chapter" data-level="2.1.4" data-path="the-artificial-neuron.html"><a href="the-artificial-neuron.html#other-activation-functions"><i class="fa fa-check"></i><b>2.1.4</b> Other activation functions</a></li>
+<li class="chapter" data-level="2.1.5" data-path="the-artificial-neuron.html"><a href="the-artificial-neuron.html#biological-activation-functions"><i class="fa fa-check"></i><b>2.1.5</b> Biological Activation functions</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="the-artificial-neuron.html"><a href="the-artificial-neuron.html#how-does-a-neuron-learn"><i class="fa fa-check"></i><b>2.2</b> How does a neuron learn?</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="the-artificial-neuron.html"><a href="the-artificial-neuron.html#estimation-of-weights-for-a-single-neuron-with-identity-activation"><i class="fa fa-check"></i><b>2.2.1</b> Estimation of weights for a single neuron with identity activation</a></li>
+<li class="chapter" data-level="2.2.2" data-path="the-artificial-neuron.html"><a href="the-artificial-neuron.html#implement-gradient-descent-for-this-linear-neuron-example"><i class="fa fa-check"></i><b>2.2.2</b> Implement gradient descent for this linear neuron example</a></li>
+<li class="chapter" data-level="2.2.3" data-path="the-artificial-neuron.html"><a href="the-artificial-neuron.html#next-exercises-implement-classification-and-logistic-regression-when-time-permits"><i class="fa fa-check"></i><b>2.2.3</b> Next Exercises, Implement classification and logistic regression when time permits</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="learning-non-linear-functions.html"><a href="learning-non-linear-functions.html"><i class="fa fa-check"></i><b>3</b> Learning non-linear functions</a><ul>
+<li class="chapter" data-level="3.1" data-path="learning-non-linear-functions.html"><a href="learning-non-linear-functions.html#learning-the-xor-function"><i class="fa fa-check"></i><b>3.1</b> Learning the XOR function</a></li>
+<li class="chapter" data-level="3.2" data-path="learning-non-linear-functions.html"><a href="learning-non-linear-functions.html#the-universal-approximation-theorem"><i class="fa fa-check"></i><b>3.2</b> The Universal Approximation Theorem</a></li>
+<li class="chapter" data-level="3.3" data-path="learning-non-linear-functions.html"><a href="learning-non-linear-functions.html#solving-xor-problem-a-neural-network-instead-of-a-single-neuron"><i class="fa fa-check"></i><b>3.3</b> Solving XOR problem a neural network instead of a single neuron</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="gradient-descent-algorithms.html"><a href="gradient-descent-algorithms.html"><i class="fa fa-check"></i><b>4</b> Gradient Descent Algorithms</a></li>
+<li class="chapter" data-level="5" data-path="representative-sampling-for-stochastic-gradient-descent-sgd.html"><a href="representative-sampling-for-stochastic-gradient-descent-sgd.html"><i class="fa fa-check"></i><b>5</b> Representative sampling for stochastic gradient descent (SGD)</a></li>
+<li class="chapter" data-level="6" data-path="adaptive-batch-sizes.html"><a href="adaptive-batch-sizes.html"><i class="fa fa-check"></i><b>6</b> Adaptive batch sizes</a></li>
+<li class="chapter" data-level="7" data-path="adaptive-learning-rates.html"><a href="adaptive-learning-rates.html"><i class="fa fa-check"></i><b>7</b> Adaptive learning rates</a></li>
+<li class="chapter" data-level="8" data-path="adaptive-loss-functions.html"><a href="adaptive-loss-functions.html"><i class="fa fa-check"></i><b>8</b> Adaptive loss functions</a></li>
+<li class="chapter" data-level="9" data-path="higher-order-derivatives.html"><a href="higher-order-derivatives.html"><i class="fa fa-check"></i><b>9</b> Higher order derivatives</a></li>
+<li class="chapter" data-level="10" data-path="parallel-chains.html"><a href="parallel-chains.html"><i class="fa fa-check"></i><b>10</b> Parallel chains</a></li>
+<li class="chapter" data-level="11" data-path="branching-chains-at-each-step.html"><a href="branching-chains-at-each-step.html"><i class="fa fa-check"></i><b>11</b> Branching chains at each step</a></li>
+<li class="chapter" data-level="12" data-path="identifying-pathological-topologies-to-stop-and-restart.html"><a href="identifying-pathological-topologies-to-stop-and-restart.html"><i class="fa fa-check"></i><b>12</b> Identifying pathological topologies to stop and restart</a></li>
+<li class="chapter" data-level="13" data-path="hamiltonian-monte-carlo-based-method.html"><a href="hamiltonian-monte-carlo-based-method.html"><i class="fa fa-check"></i><b>13</b> Hamiltonian Monte Carlo based method</a></li>
+<li class="chapter" data-level="14" data-path="section.html"><a href="section.html"><i class="fa fa-check"></i><b>14</b> …</a></li>
+<li class="chapter" data-level="15" data-path="automatic-differentiation.html"><a href="automatic-differentiation.html"><i class="fa fa-check"></i><b>15</b> Automatic Differentiation</a><ul>
+<li class="chapter" data-level="15.1" data-path="automatic-differentiation.html"><a href="automatic-differentiation.html#performing-autodiff-in-julia"><i class="fa fa-check"></i><b>15.1</b> Performing Autodiff in Julia</a><ul>
+<li class="chapter" data-level="15.1.1" data-path="automatic-differentiation.html"><a href="automatic-differentiation.html#using-flux"><i class="fa fa-check"></i><b>15.1.1</b> using Flux</a></li>
+<li class="chapter" data-level="15.1.2" data-path="automatic-differentiation.html"><a href="automatic-differentiation.html#using-zygote"><i class="fa fa-check"></i><b>15.1.2</b> using Zygote</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li> &nbsp;&nbsp; &nbsp;&nbsp; &#169; Rajesh Talluri</li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Understanding Deep Learning</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="representative-sampling-for-stochastic-gradient-descent-sgd" class="section level1">
+<h1><span class="header-section-number">Chapter 5</span> Representative sampling for stochastic gradient descent (SGD)</h1>
+<p>This aspect covers which samples are used to estimate the gradient in SGD</p>
+<blockquote>
+<p>What is the best subset to sample for gradient descent?</p>
+</blockquote>
+<p>To answer this question we could use concepts like importance sampling etc, to get the best subset for computing gradient in SGD, instead of sampling randomly. We could derive the estimated uncertainty in the estimated gradient (because of sampling 10% of the data the variance will be higher), and use that information in SGD to improve its performance. Some bootstrap theory to reduce bias in sampled gradient would help.</p>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="gradient-descent-algorithms.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="adaptive-batch-sizes.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "none"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
