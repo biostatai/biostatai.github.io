@@ -64,7 +64,7 @@
     "href": "table2b.html",
     "title": "Strides Data Analysis",
     "section": "",
-    "text": "Stratifying variable is clearance, persistence and disease as defined for Visit 1 and Visit 2 participants\n\nAll participantsAbove 30 years of ageBelow 30 years of ageWhite participantsBlack participantsAsian participantsOther Race participants",
+    "text": "Stratifying variable is clearance, persistence and disease as defined for Visit 1 and Visit 2 participants\nColumn percentages are in () and row percentages are in []\n\nAll participantsAbove 30 years of ageBelow 30 years of ageWhite participantsBlack participantsAsian participantsOther Race participants",
     "crumbs": [
       "Stratified Tables by disease, clearance and persistence"
     ]
@@ -74,7 +74,7 @@
     "href": "table2.html",
     "title": "Strides Data Analysis",
     "section": "",
-    "text": "Stratifying variable is smoking status at visit 1\n\nAll participantsAbove 30 years of ageBelow 30 years of ageWhite participantsBlack participantsAsian participantsOther Race participants",
+    "text": "Stratifying variable is smoking status at visit 1\nColumn percentages are in () and row percentages are in []\n\nAll participantsAbove 30 years of ageBelow 30 years of ageWhite participantsBlack participantsAsian participantsOther Race participants",
     "crumbs": [
       "Stratified Tables by Smoking status"
     ]
@@ -134,7 +134,7 @@
     "href": "table2a.html",
     "title": "Strides Data Analysis",
     "section": "",
-    "text": "Stratifying variable is 5 group HPV at visit 1 (hpv_hr_5gp_1)\n\nAll participantsAbove 30 years of ageBelow 30 years of ageWhite participantsBlack participantsAsian participantsOther Race participants",
+    "text": "Stratifying variable is 5 group HPV at visit 1 (hpv_hr_5gp_1)\nColumn percentages are in () and row percentages are in []\n\nAll participantsAbove 30 years of ageBelow 30 years of ageWhite participantsBlack participantsAsian participantsOther Race participants",
     "crumbs": [
       "Stratified Tables by Hpv Types 16 and 18"
     ]
