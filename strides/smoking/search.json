@@ -1,82 +1,102 @@
 [
   {
-    "objectID": "table3c.html",
-    "href": "table3c.html",
+    "objectID": "table3f.html",
+    "href": "table3f.html",
     "title": "Strides Data Analysis",
     "section": "",
     "text": "All participantsAbove 30 years of ageBelow 30 years of ageWhite participantsBlack participantsOther Race participants",
     "crumbs": [
-      "Regression Tables Hpv16+ vs other Hpv+ types"
+      "Regression Tables Hpv16+ vs other Hpv+ types for pariticpants with disease/persistence/clearance"
     ]
   },
   {
-    "objectID": "table3c.html#effect-of-smoking-on-hpv16-vs-other-hpv-types-in-participants-at-visit-1",
-    "href": "table3c.html#effect-of-smoking-on-hpv16-vs-other-hpv-types-in-participants-at-visit-1",
+    "objectID": "table3f.html#effect-of-smoking-on-hpv16-vs-other-hpv-types-in-participants-with-diseaseperisistenceclearance",
+    "href": "table3f.html#effect-of-smoking-on-hpv16-vs-other-hpv-types-in-participants-with-diseaseperisistenceclearance",
     "title": "Strides Data Analysis",
     "section": "",
     "text": "All participantsAbove 30 years of ageBelow 30 years of ageWhite participantsBlack participantsOther Race participants",
     "crumbs": [
-      "Regression Tables Hpv16+ vs other Hpv+ types"
+      "Regression Tables Hpv16+ vs other Hpv+ types for pariticpants with disease/persistence/clearance"
     ]
   },
   {
-    "objectID": "table3a.html",
-    "href": "table3a.html",
+    "objectID": "table3b.html",
+    "href": "table3b.html",
     "title": "Strides Data Analysis",
     "section": "",
     "text": "All participantsAbove 30 years of ageBelow 30 years of ageWhite participantsBlack participantsOther Race participants",
     "crumbs": [
-      "Regression Tables for disease/persistence vs clearance"
+      "Regression Tables for persistence vs clearance"
     ]
   },
   {
-    "objectID": "table3a.html#effect-of-smoking-on-diseasepersistence-vs-clearance-participants",
-    "href": "table3a.html#effect-of-smoking-on-diseasepersistence-vs-clearance-participants",
+    "objectID": "table3b.html#effect-of-smoking-on-persistence-vs-clearance-participants",
+    "href": "table3b.html#effect-of-smoking-on-persistence-vs-clearance-participants",
     "title": "Strides Data Analysis",
     "section": "",
     "text": "All participantsAbove 30 years of ageBelow 30 years of ageWhite participantsBlack participantsOther Race participants",
     "crumbs": [
-      "Regression Tables for disease/persistence vs clearance"
+      "Regression Tables for persistence vs clearance"
     ]
   },
   {
-    "objectID": "table3d.html",
-    "href": "table3d.html",
+    "objectID": "table3e.html",
+    "href": "table3e.html",
     "title": "Strides Data Analysis",
     "section": "",
     "text": "All participantsAbove 30 years of ageBelow 30 years of ageWhite participantsBlack participantsOther Race participants",
     "crumbs": [
-      "Regression Tables for disease vs non disease in HPV16+ participants"
+      "Regression Tables for disease vs non disease in Other HPV+ participants"
     ]
   },
   {
-    "objectID": "table3d.html#effect-of-smoking-on-disease-vs-non-disease-participants-in-participants-with-hpv-16-at-visit-1",
-    "href": "table3d.html#effect-of-smoking-on-disease-vs-non-disease-participants-in-participants-with-hpv-16-at-visit-1",
+    "objectID": "table3e.html#effect-of-smoking-on-disease-vs-non-disease-participants-in-participants-with-hpv-otherother-than-hpv-16-at-visit-1",
+    "href": "table3e.html#effect-of-smoking-on-disease-vs-non-disease-participants-in-participants-with-hpv-otherother-than-hpv-16-at-visit-1",
     "title": "Strides Data Analysis",
     "section": "",
     "text": "All participantsAbove 30 years of ageBelow 30 years of ageWhite participantsBlack participantsOther Race participants",
     "crumbs": [
-      "Regression Tables for disease vs non disease in HPV16+ participants"
+      "Regression Tables for disease vs non disease in Other HPV+ participants"
     ]
   },
   {
-    "objectID": "table2b.html",
-    "href": "table2b.html",
+    "objectID": "table3.html",
+    "href": "table3.html",
     "title": "Strides Data Analysis",
     "section": "",
-    "text": "Stratifying variable is clearance, persistence and disease as defined for Visit 1 and Visit 2 participants\nColumn percentages are in () and row percentages are in []\n\nAll participantsAbove 30 years of ageBelow 30 years of ageWhite participantsBlack participantsAsian participantsOther Race participants",
+    "text": "All participantsAbove 30 years of ageBelow 30 years of ageWhite participantsBlack participantsOther Race participants",
     "crumbs": [
-      "Stratified Tables by disease, clearance and persistence"
+      "Regression Tables for disease vs non disease"
     ]
   },
   {
-    "objectID": "table2.html",
-    "href": "table2.html",
+    "objectID": "table3.html#effect-of-smoking-on-disease-vs-non-disease-participants",
+    "href": "table3.html#effect-of-smoking-on-disease-vs-non-disease-participants",
     "title": "Strides Data Analysis",
     "section": "",
-    "text": "Stratifying variable is smoking status at visit 1\nColumn percentages are in () and row percentages are in []\n\nAll participantsAbove 30 years of ageBelow 30 years of ageWhite participantsBlack participantsAsian participantsOther Race participants",
+    "text": "All participantsAbove 30 years of ageBelow 30 years of ageWhite participantsBlack participantsOther Race participants",
     "crumbs": [
-      "Stratified Tables by Smoking status"
+      "Regression Tables for disease vs non disease"
+    ]
+  },
+  {
+    "objectID": "table2a.html",
+    "href": "table2a.html",
+    "title": "Strides Data Analysis",
+    "section": "",
+    "text": "Stratifying variable is 5 group HPV at visit 1 (hpv_hr_5gp_1)\nColumn percentages are in () and row percentages are in []\n\nAll participantsAbove 30 years of ageBelow 30 years of ageWhite participantsBlack participantsAsian participantsOther Race participants",
+    "crumbs": [
+      "Stratified Tables by Hpv Types 16 and 18"
+    ]
+  },
+  {
+    "objectID": "table1.html",
+    "href": "table1.html",
+    "title": "Strides Data Analysis",
+    "section": "",
+    "text": "Participants with disease/persistence/clearanceAll participantsAbove 30 years of ageBelow 30 years of ageWhite participantsBlack participantsAsian participantsOther Race participants",
+    "crumbs": [
+      "Descriptive Tables"
     ]
   },
   {
@@ -120,83 +140,83 @@
     ]
   },
   {
-    "objectID": "table1.html",
-    "href": "table1.html",
+    "objectID": "table2.html",
+    "href": "table2.html",
     "title": "Strides Data Analysis",
     "section": "",
-    "text": "All participantsAbove 30 years of ageBelow 30 years of ageWhite participantsBlack participantsAsian participantsOther Race participants",
+    "text": "Stratifying variable is smoking status at visit 1\nColumn percentages are in () and row percentages are in []\n\nParticipants with disease/persistence/clearanceAll participantsAbove 30 years of ageBelow 30 years of ageWhite participantsBlack participantsAsian participantsOther Race participants",
     "crumbs": [
-      "Descriptive Tables"
+      "Stratified Tables by Smoking status"
     ]
   },
   {
-    "objectID": "table2a.html",
-    "href": "table2a.html",
+    "objectID": "table2b.html",
+    "href": "table2b.html",
     "title": "Strides Data Analysis",
     "section": "",
-    "text": "Stratifying variable is 5 group HPV at visit 1 (hpv_hr_5gp_1)\nColumn percentages are in () and row percentages are in []\n\nAll participantsAbove 30 years of ageBelow 30 years of ageWhite participantsBlack participantsAsian participantsOther Race participants",
+    "text": "Stratifying variable is clearance, persistence and disease as defined for Visit 1 and Visit 2 participants\nColumn percentages are in () and row percentages are in []\n\nAll participantsAbove 30 years of ageBelow 30 years of ageWhite participantsBlack participantsAsian participantsOther Race participants",
     "crumbs": [
-      "Stratified Tables by Hpv Types 16 and 18"
+      "Stratified Tables by disease, clearance and persistence"
     ]
   },
   {
-    "objectID": "table3.html",
-    "href": "table3.html",
+    "objectID": "table3d.html",
+    "href": "table3d.html",
     "title": "Strides Data Analysis",
     "section": "",
     "text": "All participantsAbove 30 years of ageBelow 30 years of ageWhite participantsBlack participantsOther Race participants",
     "crumbs": [
-      "Regression Tables for disease vs non disease"
+      "Regression Tables for disease vs non disease in HPV16+ participants"
     ]
   },
   {
-    "objectID": "table3.html#effect-of-smoking-on-disease-vs-non-disease-participants",
-    "href": "table3.html#effect-of-smoking-on-disease-vs-non-disease-participants",
+    "objectID": "table3d.html#effect-of-smoking-on-disease-vs-non-disease-participants-in-participants-with-hpv-16-at-visit-1",
+    "href": "table3d.html#effect-of-smoking-on-disease-vs-non-disease-participants-in-participants-with-hpv-16-at-visit-1",
     "title": "Strides Data Analysis",
     "section": "",
     "text": "All participantsAbove 30 years of ageBelow 30 years of ageWhite participantsBlack participantsOther Race participants",
     "crumbs": [
-      "Regression Tables for disease vs non disease"
+      "Regression Tables for disease vs non disease in HPV16+ participants"
     ]
   },
   {
-    "objectID": "table3e.html",
-    "href": "table3e.html",
+    "objectID": "table3a.html",
+    "href": "table3a.html",
     "title": "Strides Data Analysis",
     "section": "",
     "text": "All participantsAbove 30 years of ageBelow 30 years of ageWhite participantsBlack participantsOther Race participants",
     "crumbs": [
-      "Regression Tables for disease vs non disease in Other HPV+ participants"
+      "Regression Tables for disease/persistence vs clearance"
     ]
   },
   {
-    "objectID": "table3e.html#effect-of-smoking-on-disease-vs-non-disease-participants-in-participants-with-hpv-otherother-than-hpv-16-at-visit-1",
-    "href": "table3e.html#effect-of-smoking-on-disease-vs-non-disease-participants-in-participants-with-hpv-otherother-than-hpv-16-at-visit-1",
+    "objectID": "table3a.html#effect-of-smoking-on-diseasepersistence-vs-clearance-participants",
+    "href": "table3a.html#effect-of-smoking-on-diseasepersistence-vs-clearance-participants",
     "title": "Strides Data Analysis",
     "section": "",
     "text": "All participantsAbove 30 years of ageBelow 30 years of ageWhite participantsBlack participantsOther Race participants",
     "crumbs": [
-      "Regression Tables for disease vs non disease in Other HPV+ participants"
+      "Regression Tables for disease/persistence vs clearance"
     ]
   },
   {
-    "objectID": "table3b.html",
-    "href": "table3b.html",
+    "objectID": "table3c.html",
+    "href": "table3c.html",
     "title": "Strides Data Analysis",
     "section": "",
     "text": "All participantsAbove 30 years of ageBelow 30 years of ageWhite participantsBlack participantsOther Race participants",
     "crumbs": [
-      "Regression Tables for persistence vs clearance"
+      "Regression Tables Hpv16+ vs other Hpv+ types for all participants"
     ]
   },
   {
-    "objectID": "table3b.html#effect-of-smoking-on-persistence-vs-clearance-participants",
-    "href": "table3b.html#effect-of-smoking-on-persistence-vs-clearance-participants",
+    "objectID": "table3c.html#effect-of-smoking-on-hpv16-vs-other-hpv-types-in-participants-at-visit-1",
+    "href": "table3c.html#effect-of-smoking-on-hpv16-vs-other-hpv-types-in-participants-at-visit-1",
     "title": "Strides Data Analysis",
     "section": "",
     "text": "All participantsAbove 30 years of ageBelow 30 years of ageWhite participantsBlack participantsOther Race participants",
     "crumbs": [
-      "Regression Tables for persistence vs clearance"
+      "Regression Tables Hpv16+ vs other Hpv+ types for all participants"
     ]
   }
 ]
