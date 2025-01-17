@@ -1,0 +1,82 @@
+[
+  {
+    "objectID": "table3.html",
+    "href": "table3.html",
+    "title": "Strides Data Analysis",
+    "section": "",
+    "text": "Differentially Significant Microbes with hpv_bv status\n\n\n\n\n\n\n\n\nDifferentially Significant Microbes with HPV status\n\n\n\n\n\n\n\n\nDifferentially Significant Microbes with BV status\n\n\n\n\n\n\n\n\nDifferentially Significant Microbes with Yeast status\n\n\n\n\n\n\n\n\nDifferentially Significant Microbes with smoking status",
+    "crumbs": [
+      "Differential Abundance Analysis"
+    ]
+  },
+  {
+    "objectID": "table1.html",
+    "href": "table1.html",
+    "title": "Strides Data Analysis",
+    "section": "",
+    "text": "By HPV/BVBy HPVBy BVBy EthnicityBy YeastBy Smoking\n\n\n\nGrouped samplesIndividual Samples\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGrouped samplesIndividual Samples\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGrouped samplesIndividual Samples\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGrouped samplesIndividual Samples\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGrouped samplesIndividual Samples\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGrouped samplesIndividual Samples",
+    "crumbs": [
+      "Relative Abundance Plots"
+    ]
+  },
+  {
+    "objectID": "table1.html#relative-abundance-plots-at-the-grouped-and-independent-level-of-samples",
+    "href": "table1.html#relative-abundance-plots-at-the-grouped-and-independent-level-of-samples",
+    "title": "Strides Data Analysis",
+    "section": "",
+    "text": "By HPV/BVBy HPVBy BVBy EthnicityBy YeastBy Smoking\n\n\n\nGrouped samplesIndividual Samples\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGrouped samplesIndividual Samples\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGrouped samplesIndividual Samples\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGrouped samplesIndividual Samples\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGrouped samplesIndividual Samples\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGrouped samplesIndividual Samples",
+    "crumbs": [
+      "Relative Abundance Plots"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "",
+    "section": "",
+    "text": "By Hpv_bvBy HpvBy BVBy YeastBy EthnicityBy SmokingBy BMI",
+    "crumbs": [
+      "Sample Data Characteristics"
+    ]
+  },
+  {
+    "objectID": "index.html#sample-data-characteristics",
+    "href": "index.html#sample-data-characteristics",
+    "title": "",
+    "section": "",
+    "text": "By Hpv_bvBy HpvBy BVBy YeastBy EthnicityBy SmokingBy BMI",
+    "crumbs": [
+      "Sample Data Characteristics"
+    ]
+  },
+  {
+    "objectID": "table2.html",
+    "href": "table2.html",
+    "title": "Strides Data Analysis",
+    "section": "",
+    "text": "HPV/BVHPVBVEthnicityYeastSmoking\n\n\n\n\n\n\n\n\n                              output\nMethod  Kruskal-Wallis rank sum test\nP-value            0.396506835660523\n\n\n\n\n\n\n\n\n\n\n        Wilcoxon rank sum test with continuity correction\nP-value                                         0.5017048\n        Welch Two Sample t-test\nP-value               0.5394252\n\n\n\n\n\n\n\n\n\n\n        Wilcoxon rank sum test with continuity correction\nP-value                                         0.6423114\n        Welch Two Sample t-test\nP-value               0.7832604\n\n\n\n\n\n\n\n\n\n\n                             Overall    Asian and Hispanic/Latina\nMethod  Kruskal-Wallis rank sum test Wilcoxon rank sum exact test\nP-value            0.300159745053739            0.154667357817135\n                         Non-Hispanic and Hispanic/Latina\nMethod  Wilcoxon rank sum test with continuity correction\nP-value                                 0.130049143348548\n                                   Non-Hispanic and Asian\nMethod  Wilcoxon rank sum test with continuity correction\nP-value                                 0.785470081657167\n        Asian and Hispanic/Latina Non-Hispanic and Hispanic/Latina\nMethod    Welch Two Sample t-test          Welch Two Sample t-test\nP-value         0.156094035946307                0.150604701176383\n         Non-Hispanic and Asian\nMethod  Welch Two Sample t-test\nP-value       0.785543000193074\n\n\n\n\n\n\n\n\n\n\n        Wilcoxon rank sum test with continuity correction\nP-value                                        0.05331873\n        Welch Two Sample t-test\nP-value              0.04751657\n\n\n\n\n\n\n\n\n\n\n                              output\nMethod  Kruskal-Wallis rank sum test\nP-value           0.0233140043568404",
+    "crumbs": [
+      "Diversity Analysis"
+    ]
+  },
+  {
+    "objectID": "table2.html#alpha-diversity-plots",
+    "href": "table2.html#alpha-diversity-plots",
+    "title": "Strides Data Analysis",
+    "section": "",
+    "text": "HPV/BVHPVBVEthnicityYeastSmoking\n\n\n\n\n\n\n\n\n                              output\nMethod  Kruskal-Wallis rank sum test\nP-value            0.396506835660523\n\n\n\n\n\n\n\n\n\n\n        Wilcoxon rank sum test with continuity correction\nP-value                                         0.5017048\n        Welch Two Sample t-test\nP-value               0.5394252\n\n\n\n\n\n\n\n\n\n\n        Wilcoxon rank sum test with continuity correction\nP-value                                         0.6423114\n        Welch Two Sample t-test\nP-value               0.7832604\n\n\n\n\n\n\n\n\n\n\n                             Overall    Asian and Hispanic/Latina\nMethod  Kruskal-Wallis rank sum test Wilcoxon rank sum exact test\nP-value            0.300159745053739            0.154667357817135\n                         Non-Hispanic and Hispanic/Latina\nMethod  Wilcoxon rank sum test with continuity correction\nP-value                                 0.130049143348548\n                                   Non-Hispanic and Asian\nMethod  Wilcoxon rank sum test with continuity correction\nP-value                                 0.785470081657167\n        Asian and Hispanic/Latina Non-Hispanic and Hispanic/Latina\nMethod    Welch Two Sample t-test          Welch Two Sample t-test\nP-value         0.156094035946307                0.150604701176383\n         Non-Hispanic and Asian\nMethod  Welch Two Sample t-test\nP-value       0.785543000193074\n\n\n\n\n\n\n\n\n\n\n        Wilcoxon rank sum test with continuity correction\nP-value                                        0.05331873\n        Welch Two Sample t-test\nP-value              0.04751657\n\n\n\n\n\n\n\n\n\n\n                              output\nMethod  Kruskal-Wallis rank sum test\nP-value           0.0233140043568404",
+    "crumbs": [
+      "Diversity Analysis"
+    ]
+  },
+  {
+    "objectID": "table2.html#beta-diversity",
+    "href": "table2.html#beta-diversity",
+    "title": "Strides Data Analysis",
+    "section": "Beta Diversity",
+    "text": "Beta Diversity\n\nHPV/BVHPVBVYeastSmoking",
+    "crumbs": [
+      "Diversity Analysis"
+    ]
+  }
+]
