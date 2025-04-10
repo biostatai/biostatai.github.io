@@ -1,0 +1,292 @@
+[
+  {
+    "objectID": "table2.html#venn-diagrams-shared-and-unique-features-by-pap-diagnosis",
+    "href": "table2.html#venn-diagrams-shared-and-unique-features-by-pap-diagnosis",
+    "title": "Strides Microbiome Data Analysis",
+    "section": "Venn Diagrams: Shared and Unique Features by PAP Diagnosis",
+    "text": "Venn Diagrams: Shared and Unique Features by PAP Diagnosis\nThese Venn diagrams illustrate the overlap of microbial features (likely Amplicon Sequence Variants - ASVs, or Operational Taxonomic Units - OTUs) across the different PAP diagnosis categories (pap_dx_category: NILM, ASCUS, LSIL, HSIL).\n\nNumber RatioSequence Ratio\n\n\n\n\n\n\n\nVenn diagram showing the number of shared and unique microbial features (e.g., ASVs/OTUs) across merged PAP diagnosis category groups.\n\n\n\n\n\n\n\n\n\n\n\nVenn diagram showing the relative abundance (proportion of total sequences) contributed by shared and unique microbial features across merged PAP diagnosis category groups.",
+    "crumbs": [
+      "Differential Analysis for Diagnosis"
+    ]
+  },
+  {
+    "objectID": "table2.html#relative-abundances",
+    "href": "table2.html#relative-abundances",
+    "title": "Strides Microbiome Data Analysis",
+    "section": "Relative Abundances",
+    "text": "Relative Abundances",
+    "crumbs": [
+      "Differential Analysis for Diagnosis"
+    ]
+  },
+  {
+    "objectID": "table2.html#diversity-metrics",
+    "href": "table2.html#diversity-metrics",
+    "title": "Strides Microbiome Data Analysis",
+    "section": "Diversity metrics",
+    "text": "Diversity metrics\n\nAlpha diversity",
+    "crumbs": [
+      "Differential Analysis for Diagnosis"
+    ]
+  },
+  {
+    "objectID": "table2.html#differential-analysis",
+    "href": "table2.html#differential-analysis",
+    "title": "Strides Microbiome Data Analysis",
+    "section": "Differential Analysis",
+    "text": "Differential Analysis\n\n\nERROR during LEfSe analysis:\n&lt;simpleError in private$check_taxa_number(sel_taxa, p_adjust_method): No significant feature found! To disable p value adjustment, please use p_adjust_method = \"none\"!&gt;\n\n\nNULL",
+    "crumbs": [
+      "Differential Analysis for Diagnosis"
+    ]
+  },
+  {
+    "objectID": "table2d.html#venn-diagrams",
+    "href": "table2d.html#venn-diagrams",
+    "title": "Strides Microbiome Data Analysis",
+    "section": "Venn Diagrams",
+    "text": "Venn Diagrams\nThese Venn diagrams illustrate the overlap of microbial features (likely Amplicon Sequence Variants - ASVs, or Operational Taxonomic Units - OTUs) across the different categories.\n\nNumber RatioSequence Ratio\n\n\n\n\n\n\n\nVenn diagram showing the number of shared and unique microbial features (e.g., ASVs/OTUs) across merged PAP diagnosis category groups.\n\n\n\n\n\n\n\n\n\n\n\nVenn diagram showing the relative abundance (proportion of total sequences) contributed by shared and unique microbial features across merged PAP diagnosis category groups.",
+    "crumbs": [
+      "Differential Analysis for HPV_Positive_ASCUS+(ASCUS,HSIL,LSIL) vs HPV_Negative_NILM"
+    ]
+  },
+  {
+    "objectID": "table2d.html#relative-abundances",
+    "href": "table2d.html#relative-abundances",
+    "title": "Strides Microbiome Data Analysis",
+    "section": "Relative Abundances",
+    "text": "Relative Abundances",
+    "crumbs": [
+      "Differential Analysis for HPV_Positive_ASCUS+(ASCUS,HSIL,LSIL) vs HPV_Negative_NILM"
+    ]
+  },
+  {
+    "objectID": "table2d.html#diversity-metrics",
+    "href": "table2d.html#diversity-metrics",
+    "title": "Strides Microbiome Data Analysis",
+    "section": "Diversity metrics",
+    "text": "Diversity metrics\n\nAlpha diversity",
+    "crumbs": [
+      "Differential Analysis for HPV_Positive_ASCUS+(ASCUS,HSIL,LSIL) vs HPV_Negative_NILM"
+    ]
+  },
+  {
+    "objectID": "table2d.html#differential-analysis",
+    "href": "table2d.html#differential-analysis",
+    "title": "Strides Microbiome Data Analysis",
+    "section": "Differential Analysis",
+    "text": "Differential Analysis\n\n\nERROR during LEfSe analysis:\n&lt;simpleError in private$check_taxa_number(sel_taxa, p_adjust_method): Only one significant feature found! Stop running subsequent process! To disable p value adjustment, please use p_adjust_method = \"none\"!&gt;\n\n\nNULL",
+    "crumbs": [
+      "Differential Analysis for HPV_Positive_ASCUS+(ASCUS,HSIL,LSIL) vs HPV_Negative_NILM"
+    ]
+  },
+  {
+    "objectID": "table2b.html#venn-diagrams",
+    "href": "table2b.html#venn-diagrams",
+    "title": "Strides Microbiome Data Analysis",
+    "section": "Venn Diagrams",
+    "text": "Venn Diagrams\nThese Venn diagrams illustrate the overlap of microbial features (likely Amplicon Sequence Variants - ASVs, or Operational Taxonomic Units - OTUs) across the different categories.\n\nNumber RatioSequence Ratio\n\n\n\n\n\n\n\nVenn diagram showing the number of shared and unique microbial features (e.g., ASVs/OTUs) across merged PAP diagnosis category groups.\n\n\n\n\n\n\n\n\n\n\n\nVenn diagram showing the relative abundance (proportion of total sequences) contributed by shared and unique microbial features across merged PAP diagnosis category groups.",
+    "crumbs": [
+      "Differential Analysis for HPV x Pap Diagnosis"
+    ]
+  },
+  {
+    "objectID": "table2b.html#relative-abundances",
+    "href": "table2b.html#relative-abundances",
+    "title": "Strides Microbiome Data Analysis",
+    "section": "Relative Abundances",
+    "text": "Relative Abundances",
+    "crumbs": [
+      "Differential Analysis for HPV x Pap Diagnosis"
+    ]
+  },
+  {
+    "objectID": "table2b.html#diversity-metrics",
+    "href": "table2b.html#diversity-metrics",
+    "title": "Strides Microbiome Data Analysis",
+    "section": "Diversity metrics",
+    "text": "Diversity metrics\n\nAlpha diversity",
+    "crumbs": [
+      "Differential Analysis for HPV x Pap Diagnosis"
+    ]
+  },
+  {
+    "objectID": "table2b.html#differential-analysis",
+    "href": "table2b.html#differential-analysis",
+    "title": "Strides Microbiome Data Analysis",
+    "section": "Differential Analysis",
+    "text": "Differential Analysis",
+    "crumbs": [
+      "Differential Analysis for HPV x Pap Diagnosis"
+    ]
+  },
+  {
+    "objectID": "table1.html",
+    "href": "table1.html",
+    "title": "Strides Microbiome Data Analysis",
+    "section": "",
+    "text": "This section visualizes the relative abundance of microbial taxa (at the Genus level) across different sample groups defined by key metadata variables, using the microeco package. The plots show abundances averaged across samples within each group. Plots involving combined factors (interactions) may become visually complex due to the large number of groups.\n\nBy HPV/BV GroupBy HPV StatusBy BV StatusBy PAP Diagnosis (4 Cat)By PAP Diagnosis (2 Cat)By Race (3 Categories)By Smoking Status (3 Cat)By Yeast StatusBy Race x HPV/BV GroupBy Race x PAP Dx (4 Cat)By Race x PAP Dx (2 Cat)By HPV/BV x PAP Dx (4 Cat)By HPV/BV x PAP Dx (2 Cat)",
+    "crumbs": [
+      "Relative Abundance Plots"
+    ]
+  },
+  {
+    "objectID": "table1.html#relative-abundance-by-key-sample-characteristics",
+    "href": "table1.html#relative-abundance-by-key-sample-characteristics",
+    "title": "Strides Microbiome Data Analysis",
+    "section": "",
+    "text": "This section visualizes the relative abundance of microbial taxa (at the Genus level) across different sample groups defined by key metadata variables, using the microeco package. The plots show abundances averaged across samples within each group. Plots involving combined factors (interactions) may become visually complex due to the large number of groups.\n\nBy HPV/BV GroupBy HPV StatusBy BV StatusBy PAP Diagnosis (4 Cat)By PAP Diagnosis (2 Cat)By Race (3 Categories)By Smoking Status (3 Cat)By Yeast StatusBy Race x HPV/BV GroupBy Race x PAP Dx (4 Cat)By Race x PAP Dx (2 Cat)By HPV/BV x PAP Dx (4 Cat)By HPV/BV x PAP Dx (2 Cat)",
+    "crumbs": [
+      "Relative Abundance Plots"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "HPV StatusHPV & BV GroupYeast StatusRace (3 Categories)Smoking Status (3 Categories)PAP DiagnosisPAP Diagnosis x HPV_BV (Grouped)PAP Diagnosis x HPV (Grouped)PAP 2 Diagnosis x HPV_BV (Grouped)",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#sample-data-characteristics",
+    "href": "index.html#sample-data-characteristics",
+    "title": "Introduction",
+    "section": "",
+    "text": "HPV StatusHPV & BV GroupYeast StatusRace (3 Categories)Smoking Status (3 Categories)PAP DiagnosisPAP Diagnosis x HPV_BV (Grouped)PAP Diagnosis x HPV (Grouped)PAP 2 Diagnosis x HPV_BV (Grouped)",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#descriptive-table",
+    "href": "index.html#descriptive-table",
+    "title": "Introduction",
+    "section": "Descriptive Table",
+    "text": "Descriptive Table",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "table2a.html#venn-diagrams",
+    "href": "table2a.html#venn-diagrams",
+    "title": "Strides Microbiome Data Analysis",
+    "section": "Venn Diagrams",
+    "text": "Venn Diagrams\nThese Venn diagrams illustrate the overlap of microbial features (likely Amplicon Sequence Variants - ASVs, or Operational Taxonomic Units - OTUs) across the different categories.\n\nNumber RatioSequence Ratio\n\n\n\n\n\n\n\nVenn diagram showing the number of shared and unique microbial features (e.g., ASVs/OTUs) across merged PAP diagnosis category groups.\n\n\n\n\n\n\n\n\n\n\n\nVenn diagram showing the relative abundance (proportion of total sequences) contributed by shared and unique microbial features across merged PAP diagnosis category groups.",
+    "crumbs": [
+      "Differential Analysis for race"
+    ]
+  },
+  {
+    "objectID": "table2a.html#relative-abundances",
+    "href": "table2a.html#relative-abundances",
+    "title": "Strides Microbiome Data Analysis",
+    "section": "Relative Abundances",
+    "text": "Relative Abundances",
+    "crumbs": [
+      "Differential Analysis for race"
+    ]
+  },
+  {
+    "objectID": "table2a.html#diversity-metrics",
+    "href": "table2a.html#diversity-metrics",
+    "title": "Strides Microbiome Data Analysis",
+    "section": "Diversity metrics",
+    "text": "Diversity metrics\n\nAlpha diversity",
+    "crumbs": [
+      "Differential Analysis for race"
+    ]
+  },
+  {
+    "objectID": "table2a.html#differential-analysis",
+    "href": "table2a.html#differential-analysis",
+    "title": "Strides Microbiome Data Analysis",
+    "section": "Differential Analysis",
+    "text": "Differential Analysis",
+    "crumbs": [
+      "Differential Analysis for race"
+    ]
+  },
+  {
+    "objectID": "table2c.html#venn-diagrams",
+    "href": "table2c.html#venn-diagrams",
+    "title": "Strides Microbiome Data Analysis",
+    "section": "Venn Diagrams",
+    "text": "Venn Diagrams\nThese Venn diagrams illustrate the overlap of microbial features (likely Amplicon Sequence Variants - ASVs, or Operational Taxonomic Units - OTUs) across the different categories.\n\nNumber RatioSequence Ratio\n\n\n\n\n\n\n\nVenn diagram showing the number of shared and unique microbial features (e.g., ASVs/OTUs) across merged PAP diagnosis category groups.\n\n\n\n\n\n\n\n\n\n\n\nVenn diagram showing the relative abundance (proportion of total sequences) contributed by shared and unique microbial features across merged PAP diagnosis category groups.",
+    "crumbs": [
+      "Differential Analysis for Race x Pap Diagnosis"
+    ]
+  },
+  {
+    "objectID": "table2c.html#relative-abundances",
+    "href": "table2c.html#relative-abundances",
+    "title": "Strides Microbiome Data Analysis",
+    "section": "Relative Abundances",
+    "text": "Relative Abundances",
+    "crumbs": [
+      "Differential Analysis for Race x Pap Diagnosis"
+    ]
+  },
+  {
+    "objectID": "table2c.html#diversity-metrics",
+    "href": "table2c.html#diversity-metrics",
+    "title": "Strides Microbiome Data Analysis",
+    "section": "Diversity metrics",
+    "text": "Diversity metrics\n\nAlpha diversity",
+    "crumbs": [
+      "Differential Analysis for Race x Pap Diagnosis"
+    ]
+  },
+  {
+    "objectID": "table2c.html#differential-analysis",
+    "href": "table2c.html#differential-analysis",
+    "title": "Strides Microbiome Data Analysis",
+    "section": "Differential Analysis",
+    "text": "Differential Analysis",
+    "crumbs": [
+      "Differential Analysis for Race x Pap Diagnosis"
+    ]
+  },
+  {
+    "objectID": "table2e.html#venn-diagrams",
+    "href": "table2e.html#venn-diagrams",
+    "title": "Strides Microbiome Data Analysis",
+    "section": "Venn Diagrams",
+    "text": "Venn Diagrams\nThese Venn diagrams illustrate the overlap of microbial features (likely Amplicon Sequence Variants - ASVs, or Operational Taxonomic Units - OTUs) across the different categories.\n\nNumber RatioSequence Ratio\n\n\n\n\n\n\n\nVenn diagram showing the number of shared and unique microbial features (e.g., ASVs/OTUs) across merged PAP diagnosis category groups.\n\n\n\n\n\n\n\n\n\n\n\nVenn diagram showing the relative abundance (proportion of total sequences) contributed by shared and unique microbial features across merged PAP diagnosis category groups.",
+    "crumbs": [
+      "Differential Analysis for HPV_Positive_HSIL HPV_Negative_NILM"
+    ]
+  },
+  {
+    "objectID": "table2e.html#relative-abundances",
+    "href": "table2e.html#relative-abundances",
+    "title": "Strides Microbiome Data Analysis",
+    "section": "Relative Abundances",
+    "text": "Relative Abundances",
+    "crumbs": [
+      "Differential Analysis for HPV_Positive_HSIL HPV_Negative_NILM"
+    ]
+  },
+  {
+    "objectID": "table2e.html#diversity-metrics",
+    "href": "table2e.html#diversity-metrics",
+    "title": "Strides Microbiome Data Analysis",
+    "section": "Diversity metrics",
+    "text": "Diversity metrics\n\nAlpha diversity",
+    "crumbs": [
+      "Differential Analysis for HPV_Positive_HSIL HPV_Negative_NILM"
+    ]
+  },
+  {
+    "objectID": "table2e.html#differential-analysis",
+    "href": "table2e.html#differential-analysis",
+    "title": "Strides Microbiome Data Analysis",
+    "section": "Differential Analysis",
+    "text": "Differential Analysis\n\n\nERROR during LEfSe analysis:\n&lt;simpleError in private$check_taxa_number(sel_taxa, p_adjust_method): No significant feature found! To disable p value adjustment, please use p_adjust_method = \"none\"!&gt;\n\n\nNULL",
+    "crumbs": [
+      "Differential Analysis for HPV_Positive_HSIL HPV_Negative_NILM"
+    ]
+  }
+]
