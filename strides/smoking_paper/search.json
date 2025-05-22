@@ -24,17 +24,7 @@
     "href": "visit_analysis.html#distribution-of-time-between-visits",
     "title": "STRIDES Visit Pattern Analysis",
     "section": "Distribution of Time Between Visits",
-    "text": "Distribution of Time Between Visits",
-    "crumbs": [
-      "Analysis Questions"
-    ]
-  },
-  {
-    "objectID": "visit_analysis.html#summary-of-findings",
-    "href": "visit_analysis.html#summary-of-findings",
-    "title": "STRIDES Visit Pattern Analysis",
-    "section": "Summary of Findings",
-    "text": "Summary of Findings",
+    "text": "Distribution of Time Between Visits\n\n\n\n\n\n\n\n\n\n\nQuestion 6: How many in persistence group had long follow-up periods?\n\n\n\nAnalysis of Long Follow-up Periods in Persistence Group\n\n\n\n\n\n\n\n\n\ntotal_persistence\npast_2_years\npercent_2_years\npast_3_years\npercent_3_years\n\n\n\n\n1216\n203\n16.7\n86\n7.1",
     "crumbs": [
       "Analysis Questions"
     ]
