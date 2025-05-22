@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.22">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Rajesh Talluri, PhD">
+
+<title>Introduction – Strides Microbiome Data Analysis</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./table1.html" rel="next">
+<link href="./logo.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b4406b7675125bc2ba204020e191172.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-597ac50c604f506121a64059cfce472f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<script src="site_libs/plotly-binding-4.10.4/plotly.js"></script>
+
+<script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+
+<link href="site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+
+<script src="site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+
+<link href="site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
+
+<script src="site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+
+<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
+
+<script src="site_libs/datatables-binding-0.33/datatables.js"></script>
+
+<link href="site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
+
+<link href="site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet">
+
+<script src="site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+
+<script src="site_libs/jszip-1.13.6/jszip.min.js"></script>
+
+<script src="site_libs/pdfmake-1.13.6/pdfmake.js"></script>
+
+<script src="site_libs/pdfmake-1.13.6/vfs_fonts.js"></script>
+
+<link href="site_libs/dt-ext-buttons-1.13.6/css/buttons.dataTables.min.css" rel="stylesheet">
+
+<script src="site_libs/dt-ext-buttons-1.13.6/js/dataTables.buttons.min.js"></script>
+
+<script src="site_libs/dt-ext-buttons-1.13.6/js/buttons.html5.min.js"></script>
+
+<script src="site_libs/dt-ext-buttons-1.13.6/js/buttons.colVis.min.js"></script>
+
+<script src="site_libs/dt-ext-buttons-1.13.6/js/buttons.print.min.js"></script>
+
+
+
+<link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="Introduction – Strides Microbiome Data Analysis">
+<meta property="og:site_name" content="Strides Microbiome Data Analysis">
+</head>
+
+<body class="nav-sidebar docked nav-fixed fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Strides Microbiome Data Analysis</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Introduction</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link active"><i class="bi bi-bookmark-fill" role="img">
+</i> 
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./table1.html" class="sidebar-item-text sidebar-link"><i class="bi bi-bookmark-fill" role="img">
+</i> 
+ <span class="menu-text">Relative Abundance Plots</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./table2a.html" class="sidebar-item-text sidebar-link"><i class="bi bi-bookmark-fill" role="img">
+</i> 
+ <span class="menu-text">Differential Analysis for race</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./table2.html" class="sidebar-item-text sidebar-link"><i class="bi bi-bookmark-fill" role="img">
+</i> 
+ <span class="menu-text">Differential Analysis for Diagnosis</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./table2c.html" class="sidebar-item-text sidebar-link"><i class="bi bi-bookmark-fill" role="img">
+</i> 
+ <span class="menu-text">Differential Analysis for Race x Pap Diagnosis</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./table2b.html" class="sidebar-item-text sidebar-link"><i class="bi bi-bookmark-fill" role="img">
+</i> 
+ <span class="menu-text">Differential Analysis for HPV x Pap Diagnosis</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./table2d.html" class="sidebar-item-text sidebar-link"><i class="bi bi-bookmark-fill" role="img">
+</i> 
+ <span class="menu-text">Differential Analysis for HPV_Positive_ASCUS+(ASCUS,HSIL,LSIL) vs HPV_Negative_NILM</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./table2e.html" class="sidebar-item-text sidebar-link"><i class="bi bi-bookmark-fill" role="img">
+</i> 
+ <span class="menu-text">Differential Analysis for HPV_Positive_HSIL HPV_Negative_NILM</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Introduction</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Rajesh Talluri, PhD </p>
+          </div>
+  </div>
+    
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">April 10, 2025</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<style>
+/* Custom CSS to adjust title styling */
+h1 {
+  border-bottom: 0px solid; /* Remove default bottom border for h1 */
+  padding: 0px;
+}
+/* Style the metadata block below the title */
+#title-block-header.quarto-title-block.default .quarto-title-meta {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Arrange meta items in one column */
+    justify-items: end; /* Align items to the right */
+    border-bottom: 1px solid; /* Add a bottom border to the meta block */
+}
+
+/* Ensure bold text uses the standard bold weight */
+b, strong {
+  font-weight: bold;
+}
+</style>
+<section id="sample-data-characteristics" class="level2">
+<h2 class="anchored" data-anchor-id="sample-data-characteristics">Sample Data Characteristics</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">HPV Status</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">HPV &amp; BV Group</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Yeast Status</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Race (3 Categories)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false">Smoking Status (3 Categories)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-6" role="tab" aria-controls="tabset-1-6" aria-selected="false">PAP Diagnosis</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-7" role="tab" aria-controls="tabset-1-7" aria-selected="false">PAP Diagnosis x HPV_BV (Grouped)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-8" role="tab" aria-controls="tabset-1-8" aria-selected="false">PAP Diagnosis x HPV (Grouped)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-9-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-9" role="tab" aria-controls="tabset-1-9" aria-selected="false">PAP 2 Diagnosis x HPV_BV (Grouped)</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-f7fe24cce635c7a2bceb" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-f7fe24cce635c7a2bceb">{"x":{"visdat":{"3e604ef3487a":["function () ","plotlyVisDat"]},"cur_data":"3e604ef3487a","attrs":{"3e604ef3487a":{"x":{},"y":{},"text":{},"textposition":"outside","textfont":{"color":"black"},"showlegend":false,"color":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"Distribution of HPV Status","xaxis":{"domain":[0,1],"automargin":true,"title":"HPV Status","type":"category","categoryorder":"array","categoryarray":["HPV_Negative","HPV_Positive"]},"yaxis":{"domain":[0,1],"automargin":true,"title":"Number of Samples"},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":["HPV_Negative"],"y":[177],"text":177,"textposition":"outside","textfont":{"color":"black"},"showlegend":false,"type":"bar","name":"HPV_Negative","marker":{"color":"rgba(102,194,165,1)","line":{"color":"rgba(102,194,165,1)"}},"error_y":{"color":"rgba(102,194,165,1)"},"error_x":{"color":"rgba(102,194,165,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["HPV_Positive"],"y":[303],"text":303,"textposition":"outside","textfont":{"color":"black"},"showlegend":false,"type":"bar","name":"HPV_Positive","marker":{"color":"rgba(141,160,203,1)","line":{"color":"rgba(141,160,203,1)"}},"error_y":{"color":"rgba(141,160,203,1)"},"error_x":{"color":"rgba(141,160,203,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-786db4aabcfd605709b1" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-786db4aabcfd605709b1">{"x":{"visdat":{"3e604139556d":["function () ","plotlyVisDat"]},"cur_data":"3e604139556d","attrs":{"3e604139556d":{"x":{},"y":{},"text":{},"textposition":"outside","textfont":{"color":"black"},"showlegend":false,"color":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"Distribution of Combined HPV & BV Status","xaxis":{"domain":[0,1],"automargin":true,"title":"HPV / BV Group","type":"category","categoryorder":"array","categoryarray":["HPV_Negative_BV_Negative","HPV_Negative_BV_Positive","HPV_Positive_BV_Negative","HPV_Positive_BV_Positive"]},"yaxis":{"domain":[0,1],"automargin":true,"title":"Number of Samples"},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":["HPV_Negative_BV_Negative"],"y":[116],"text":116,"textposition":"outside","textfont":{"color":"black"},"showlegend":false,"type":"bar","name":"HPV_Negative_BV_Negative","marker":{"color":"rgba(102,194,165,1)","line":{"color":"rgba(102,194,165,1)"}},"error_y":{"color":"rgba(102,194,165,1)"},"error_x":{"color":"rgba(102,194,165,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["HPV_Negative_BV_Positive"],"y":[61],"text":61,"textposition":"outside","textfont":{"color":"black"},"showlegend":false,"type":"bar","name":"HPV_Negative_BV_Positive","marker":{"color":"rgba(252,141,98,1)","line":{"color":"rgba(252,141,98,1)"}},"error_y":{"color":"rgba(252,141,98,1)"},"error_x":{"color":"rgba(252,141,98,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["HPV_Positive_BV_Negative"],"y":[187],"text":187,"textposition":"outside","textfont":{"color":"black"},"showlegend":false,"type":"bar","name":"HPV_Positive_BV_Negative","marker":{"color":"rgba(141,160,203,1)","line":{"color":"rgba(141,160,203,1)"}},"error_y":{"color":"rgba(141,160,203,1)"},"error_x":{"color":"rgba(141,160,203,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["HPV_Positive_BV_Positive"],"y":[116],"text":116,"textposition":"outside","textfont":{"color":"black"},"showlegend":false,"type":"bar","name":"HPV_Positive_BV_Positive","marker":{"color":"rgba(231,138,195,1)","line":{"color":"rgba(231,138,195,1)"}},"error_y":{"color":"rgba(231,138,195,1)"},"error_x":{"color":"rgba(231,138,195,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-fdf4a43ac596c6df7238" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-fdf4a43ac596c6df7238">{"x":{"visdat":{"3e60185e257f":["function () ","plotlyVisDat"]},"cur_data":"3e60185e257f","attrs":{"3e60185e257f":{"x":{},"y":{},"text":{},"textposition":"outside","textfont":{"color":"black"},"showlegend":false,"color":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"Distribution of Yeast Status","xaxis":{"domain":[0,1],"automargin":true,"title":"Yeast Status","type":"category","categoryorder":"array","categoryarray":["Yeast_Negative","Yeast_Positive"]},"yaxis":{"domain":[0,1],"automargin":true,"title":"Number of Samples"},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":["Yeast_Negative"],"y":[442],"text":442,"textposition":"outside","textfont":{"color":"black"},"showlegend":false,"type":"bar","name":"Yeast_Negative","marker":{"color":"rgba(102,194,165,1)","line":{"color":"rgba(102,194,165,1)"}},"error_y":{"color":"rgba(102,194,165,1)"},"error_x":{"color":"rgba(102,194,165,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Yeast_Positive"],"y":[38],"text":38,"textposition":"outside","textfont":{"color":"black"},"showlegend":false,"type":"bar","name":"Yeast_Positive","marker":{"color":"rgba(141,160,203,1)","line":{"color":"rgba(141,160,203,1)"}},"error_y":{"color":"rgba(141,160,203,1)"},"error_x":{"color":"rgba(141,160,203,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-2f9c9fa65d2e2c3b5ba8" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-2f9c9fa65d2e2c3b5ba8">{"x":{"visdat":{"3e606ab5330d":["function () ","plotlyVisDat"]},"cur_data":"3e606ab5330d","attrs":{"3e606ab5330d":{"x":{},"y":{},"text":{},"textposition":"outside","textfont":{"color":"black"},"showlegend":false,"color":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"Distribution of Race (3 Categories)","xaxis":{"domain":[0,1],"automargin":true,"title":"Race Category","type":"category","categoryorder":"array","categoryarray":["White","Black","Other","Unknown"]},"yaxis":{"domain":[0,1],"automargin":true,"title":"Number of Samples"},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":["White"],"y":[100],"text":100,"textposition":"outside","textfont":{"color":"black"},"showlegend":false,"type":"bar","name":"White","marker":{"color":"rgba(102,194,165,1)","line":{"color":"rgba(102,194,165,1)"}},"error_y":{"color":"rgba(102,194,165,1)"},"error_x":{"color":"rgba(102,194,165,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Black"],"y":[351],"text":351,"textposition":"outside","textfont":{"color":"black"},"showlegend":false,"type":"bar","name":"Black","marker":{"color":"rgba(252,141,98,1)","line":{"color":"rgba(252,141,98,1)"}},"error_y":{"color":"rgba(252,141,98,1)"},"error_x":{"color":"rgba(252,141,98,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Other"],"y":[12],"text":12,"textposition":"outside","textfont":{"color":"black"},"showlegend":false,"type":"bar","name":"Other","marker":{"color":"rgba(141,160,203,1)","line":{"color":"rgba(141,160,203,1)"}},"error_y":{"color":"rgba(141,160,203,1)"},"error_x":{"color":"rgba(141,160,203,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Unknown"],"y":[17],"text":17,"textposition":"outside","textfont":{"color":"black"},"showlegend":false,"type":"bar","name":"Unknown","marker":{"color":"rgba(231,138,195,1)","line":{"color":"rgba(231,138,195,1)"}},"error_y":{"color":"rgba(231,138,195,1)"},"error_x":{"color":"rgba(231,138,195,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-b3970c5a309d6713ebfe" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-b3970c5a309d6713ebfe">{"x":{"visdat":{"3e601fd84131":["function () ","plotlyVisDat"]},"cur_data":"3e601fd84131","attrs":{"3e601fd84131":{"x":{},"y":{},"text":{},"textposition":"outside","textfont":{"color":"black"},"showlegend":false,"color":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"Distribution of Smoking Status (3 Categories)","xaxis":{"domain":[0,1],"automargin":true,"title":"Smoking Status","type":"category","categoryorder":"array","categoryarray":["Never_Smoker","Former_Smoker","Current_Smoker","Unknown"]},"yaxis":{"domain":[0,1],"automargin":true,"title":"Number of Samples"},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":["Never_Smoker"],"y":[344],"text":344,"textposition":"outside","textfont":{"color":"black"},"showlegend":false,"type":"bar","name":"Never_Smoker","marker":{"color":"rgba(102,194,165,1)","line":{"color":"rgba(102,194,165,1)"}},"error_y":{"color":"rgba(102,194,165,1)"},"error_x":{"color":"rgba(102,194,165,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Former_Smoker"],"y":[65],"text":65,"textposition":"outside","textfont":{"color":"black"},"showlegend":false,"type":"bar","name":"Former_Smoker","marker":{"color":"rgba(252,141,98,1)","line":{"color":"rgba(252,141,98,1)"}},"error_y":{"color":"rgba(252,141,98,1)"},"error_x":{"color":"rgba(252,141,98,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Current_Smoker"],"y":[70],"text":70,"textposition":"outside","textfont":{"color":"black"},"showlegend":false,"type":"bar","name":"Current_Smoker","marker":{"color":"rgba(141,160,203,1)","line":{"color":"rgba(141,160,203,1)"}},"error_y":{"color":"rgba(141,160,203,1)"},"error_x":{"color":"rgba(141,160,203,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Unknown"],"y":[1],"text":1,"textposition":"outside","textfont":{"color":"black"},"showlegend":false,"type":"bar","name":"Unknown","marker":{"color":"rgba(231,138,195,1)","line":{"color":"rgba(231,138,195,1)"}},"error_y":{"color":"rgba(231,138,195,1)"},"error_x":{"color":"rgba(231,138,195,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="tabset-1-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-6-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-4f1444b69e527e0331ca" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-4f1444b69e527e0331ca">{"x":{"visdat":{"3e6063453d63":["function () ","plotlyVisDat"]},"cur_data":"3e6063453d63","attrs":{"3e6063453d63":{"x":{},"y":{},"text":{},"textposition":"outside","textfont":{"color":"black"},"showlegend":false,"color":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"Distribution of PAP Diagnosis Category","xaxis":{"domain":[0,1],"automargin":true,"title":"PAP Diagnosis","type":"category","categoryorder":"array","categoryarray":["NILM","ASCUS","LSIL","HSIL"]},"yaxis":{"domain":[0,1],"automargin":true,"title":"Number of Samples"},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":["NILM"],"y":[136],"text":136,"textposition":"outside","textfont":{"color":"black"},"showlegend":false,"type":"bar","name":"NILM","marker":{"color":"rgba(102,194,165,1)","line":{"color":"rgba(102,194,165,1)"}},"error_y":{"color":"rgba(102,194,165,1)"},"error_x":{"color":"rgba(102,194,165,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["ASCUS"],"y":[147],"text":147,"textposition":"outside","textfont":{"color":"black"},"showlegend":false,"type":"bar","name":"ASCUS","marker":{"color":"rgba(252,141,98,1)","line":{"color":"rgba(252,141,98,1)"}},"error_y":{"color":"rgba(252,141,98,1)"},"error_x":{"color":"rgba(252,141,98,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["LSIL"],"y":[166],"text":166,"textposition":"outside","textfont":{"color":"black"},"showlegend":false,"type":"bar","name":"LSIL","marker":{"color":"rgba(141,160,203,1)","line":{"color":"rgba(141,160,203,1)"}},"error_y":{"color":"rgba(141,160,203,1)"},"error_x":{"color":"rgba(141,160,203,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["HSIL"],"y":[31],"text":31,"textposition":"outside","textfont":{"color":"black"},"showlegend":false,"type":"bar","name":"HSIL","marker":{"color":"rgba(231,138,195,1)","line":{"color":"rgba(231,138,195,1)"}},"error_y":{"color":"rgba(231,138,195,1)"},"error_x":{"color":"rgba(231,138,195,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="tabset-1-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-7-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-dc5ed3cf8e2099f0b7fb" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-dc5ed3cf8e2099f0b7fb">{"x":{"visdat":{"3e6014152de3":["function () ","plotlyVisDat"]},"cur_data":"3e6014152de3","attrs":{"3e6014152de3":{"x":{},"y":{},"text":{},"textposition":"outside","textfont":{"color":"black","size":10},"color":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"Distribution of PAP Diagnosis by HPV/BV Status","xaxis":{"domain":[0,1],"automargin":true,"title":"HPV / BV Status","categoryorder":"array","categoryarray":["HPV_Negative_BV_Negative","HPV_Negative_BV_Positive","HPV_Positive_BV_Negative","HPV_Positive_BV_Positive"],"type":"category"},"yaxis":{"domain":[0,1],"automargin":true,"title":"Number of Samples"},"barmode":"group","legend":{"title":{"text":"<b>PAP Diagnosis<\/b>"}},"showlegend":true,"hovermode":"closest"},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":["HPV_Negative_BV_Negative","HPV_Negative_BV_Positive","HPV_Positive_BV_Negative","HPV_Positive_BV_Positive"],"y":[27,27,47,35],"text":[27,27,47,35],"textposition":["outside","outside","outside","outside"],"textfont":{"color":"black","size":10},"type":"bar","name":"NILM","marker":{"color":"rgba(102,194,165,1)","line":{"color":"rgba(102,194,165,1)"}},"error_y":{"color":"rgba(102,194,165,1)"},"error_x":{"color":"rgba(102,194,165,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["HPV_Negative_BV_Negative","HPV_Negative_BV_Positive","HPV_Positive_BV_Negative","HPV_Positive_BV_Positive"],"y":[33,16,59,39],"text":[33,16,59,39],"textposition":["outside","outside","outside","outside"],"textfont":{"color":"black","size":10},"type":"bar","name":"ASCUS","marker":{"color":"rgba(252,141,98,1)","line":{"color":"rgba(252,141,98,1)"}},"error_y":{"color":"rgba(252,141,98,1)"},"error_x":{"color":"rgba(252,141,98,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["HPV_Negative_BV_Negative","HPV_Negative_BV_Positive","HPV_Positive_BV_Negative","HPV_Positive_BV_Positive"],"y":[46,16,64,40],"text":[46,16,64,40],"textposition":["outside","outside","outside","outside"],"textfont":{"color":"black","size":10},"type":"bar","name":"LSIL","marker":{"color":"rgba(141,160,203,1)","line":{"color":"rgba(141,160,203,1)"}},"error_y":{"color":"rgba(141,160,203,1)"},"error_x":{"color":"rgba(141,160,203,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["HPV_Negative_BV_Negative","HPV_Negative_BV_Positive","HPV_Positive_BV_Negative","HPV_Positive_BV_Positive"],"y":[10,2,17,2],"text":[10,2,17,2],"textposition":["outside","outside","outside","outside"],"textfont":{"color":"black","size":10},"type":"bar","name":"HSIL","marker":{"color":"rgba(231,138,195,1)","line":{"color":"rgba(231,138,195,1)"}},"error_y":{"color":"rgba(231,138,195,1)"},"error_x":{"color":"rgba(231,138,195,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="tabset-1-8" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-8-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-cf94da4cacbb9b4cf728" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-cf94da4cacbb9b4cf728">{"x":{"visdat":{"3e60120f6bec":["function () ","plotlyVisDat"]},"cur_data":"3e60120f6bec","attrs":{"3e60120f6bec":{"x":{},"y":{},"text":{},"textposition":"outside","textfont":{"color":"black","size":10},"color":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"Distribution of PAP Diagnosis by HPV Status","xaxis":{"domain":[0,1],"automargin":true,"title":"HPV Status","categoryorder":"array","categoryarray":["HPV_Negative","HPV_Positive"],"type":"category"},"yaxis":{"domain":[0,1],"automargin":true,"title":"Number of Samples"},"barmode":"group","legend":{"title":{"text":"<b>PAP Diagnosis<\/b>"}},"showlegend":true,"hovermode":"closest"},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":["HPV_Negative","HPV_Positive"],"y":[54,82],"text":[54,82],"textposition":["outside","outside"],"textfont":{"color":"black","size":10},"type":"bar","name":"NILM","marker":{"color":"rgba(102,194,165,1)","line":{"color":"rgba(102,194,165,1)"}},"error_y":{"color":"rgba(102,194,165,1)"},"error_x":{"color":"rgba(102,194,165,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["HPV_Negative","HPV_Positive"],"y":[49,98],"text":[49,98],"textposition":["outside","outside"],"textfont":{"color":"black","size":10},"type":"bar","name":"ASCUS","marker":{"color":"rgba(252,141,98,1)","line":{"color":"rgba(252,141,98,1)"}},"error_y":{"color":"rgba(252,141,98,1)"},"error_x":{"color":"rgba(252,141,98,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["HPV_Negative","HPV_Positive"],"y":[62,104],"text":[62,104],"textposition":["outside","outside"],"textfont":{"color":"black","size":10},"type":"bar","name":"LSIL","marker":{"color":"rgba(141,160,203,1)","line":{"color":"rgba(141,160,203,1)"}},"error_y":{"color":"rgba(141,160,203,1)"},"error_x":{"color":"rgba(141,160,203,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["HPV_Negative","HPV_Positive"],"y":[12,19],"text":[12,19],"textposition":["outside","outside"],"textfont":{"color":"black","size":10},"type":"bar","name":"HSIL","marker":{"color":"rgba(231,138,195,1)","line":{"color":"rgba(231,138,195,1)"}},"error_y":{"color":"rgba(231,138,195,1)"},"error_x":{"color":"rgba(231,138,195,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="tabset-1-9" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-9-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-bf3b376ec9c08ba4198b" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-bf3b376ec9c08ba4198b">{"x":{"visdat":{"3e602cc39df":["function () ","plotlyVisDat"]},"cur_data":"3e602cc39df","attrs":{"3e602cc39df":{"x":{},"y":{},"text":{},"textposition":"outside","textfont":{"color":"black","size":10},"color":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"Distribution of PAP Diagnosis by HPV/BV Status","xaxis":{"domain":[0,1],"automargin":true,"title":"HPV / BV Status","categoryorder":"array","categoryarray":["HPV_Negative_BV_Negative","HPV_Negative_BV_Positive","HPV_Positive_BV_Negative","HPV_Positive_BV_Positive"],"type":"category"},"yaxis":{"domain":[0,1],"automargin":true,"title":"Number of Samples"},"barmode":"group","legend":{"title":{"text":"<b>PAP Diagnosis<\/b>"}},"showlegend":true,"hovermode":"closest"},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":["HPV_Negative_BV_Negative","HPV_Negative_BV_Positive","HPV_Positive_BV_Negative","HPV_Positive_BV_Positive"],"y":[27,27,47,35],"text":[27,27,47,35],"textposition":["outside","outside","outside","outside"],"textfont":{"color":"black","size":10},"type":"bar","name":"NILM","marker":{"color":"rgba(102,194,165,1)","line":{"color":"rgba(102,194,165,1)"}},"error_y":{"color":"rgba(102,194,165,1)"},"error_x":{"color":"rgba(102,194,165,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["HPV_Negative_BV_Negative","HPV_Negative_BV_Positive","HPV_Positive_BV_Negative","HPV_Positive_BV_Positive"],"y":[89,34,140,81],"text":[89,34,140,81],"textposition":["outside","outside","outside","outside"],"textfont":{"color":"black","size":10},"type":"bar","name":"Abnormal","marker":{"color":"rgba(141,160,203,1)","line":{"color":"rgba(141,160,203,1)"}},"error_y":{"color":"rgba(141,160,203,1)"},"error_x":{"color":"rgba(141,160,203,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="descriptive-table" class="level2">
+<h2 class="anchored" data-anchor-id="descriptive-table">Descriptive Table</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="datatables html-widget html-fill-item" id="htmlwidget-2893d80b1284375eb2a7" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-2893d80b1284375eb2a7">{"x":{"filter":"none","vertical":false,"extensions":["Buttons"],"data":[["n","age (mean (SD))","hpv_status (%)","","bv_status (%)","","yeast_status (%)","","ethnicity_cat (%)","","","race_cat (%)","","","","","","","","","","","race_3cat (%)","","","","bmi_3cat (%)","","","","","bmi_category_detailed (%)","","","","","","","smoking_status_3cat (%)","","","","smoking_status_detailed (%)","","","","","","","","","","pap_dx_category (%)","","","","hpv_16_status (%)","","hpv_18_status (%)","","hpv_other_status (%)","","chlamydia_status (%)","","gonorrhoeae_status (%)","","hiv_status (%)","","hpv_bv (%)","","","","data_source_cat (%)","","pap_dx_2cat (%)","","hpv_pap_dx (%)","","","","","","","","bv_pap_dx (%)","","","","","","","","hpv_bv_pap_dx (%)","","","","","","","","","","","","","","","","hpv_pap_dx_2cat (%)","","","","bv_pap_dx_2cat (%)","","","","hpv_bv_pap_dx_2cat (%)","","","","","","","","race_pap_dx (%)","","","","","","","","","","","","","","","","race_pap_dx_2cat (%)","","","","","","","","race_hpv_bv (%)","","","","","","","","","","","","","","","","race_hpv (%)","","","","","","","","race_bv (%)","","","","","","","","smoking_pap_dx (%)","","","","","","","","","","","","","","","","smoking_pap_dx_2cat (%)","","","","","","",""],["","","HPV_Negative","HPV_Positive","BV_Negative","BV_Positive","Yeast_Negative","Yeast_Positive","Non_Hispanic","Hispanic_Latina","Asian","Unknown","Patient_Refused","White","Black","Hispanic","Asian","Indian","Hawaiian","Choctaw","Multiracial","Other","White","Black","Other","Unknown","Underweight","Normal","Overweight","Obese","Unknown","Unknown","Underweight","Normal","Overweight","Obese","Very_Obese","Extremely_Obese","Never_Smoker","Former_Smoker","Current_Smoker","Unknown","Never_Assessed","Unknown_If_Ever_Smoked","Never_Smoker","Passive_Smoke_Exposure_Never_Smoker","Former_Smoker","Light_Tobacco_Smoker","Heavy_Tobacco_Smoker","Current_Some_Day_Smoker","Current_Every_Day_Smoker","Smoker_Current_Status_Unknown","NILM","ASCUS","LSIL","HSIL","No","Yes","No","Yes","No","Yes","Negative","Positive","Negative","Positive","Negative","Positive","HPV_Negative_BV_Negative","HPV_Negative_BV_Positive","HPV_Positive_BV_Negative","HPV_Positive_BV_Positive","UMC","MSDH","NILM","Abnormal","HPV_Negative_NILM","HPV_Negative_ASCUS","HPV_Negative_LSIL","HPV_Negative_HSIL","HPV_Positive_NILM","HPV_Positive_ASCUS","HPV_Positive_LSIL","HPV_Positive_HSIL","BV_Negative_NILM","BV_Negative_ASCUS","BV_Negative_LSIL","BV_Negative_HSIL","BV_Positive_NILM","BV_Positive_ASCUS","BV_Positive_LSIL","BV_Positive_HSIL","HPV_Negative_BV_Negative_NILM","HPV_Negative_BV_Negative_ASCUS","HPV_Negative_BV_Negative_LSIL","HPV_Negative_BV_Negative_HSIL","HPV_Negative_BV_Positive_NILM","HPV_Negative_BV_Positive_ASCUS","HPV_Negative_BV_Positive_LSIL","HPV_Negative_BV_Positive_HSIL","HPV_Positive_BV_Negative_NILM","HPV_Positive_BV_Negative_ASCUS","HPV_Positive_BV_Negative_LSIL","HPV_Positive_BV_Negative_HSIL","HPV_Positive_BV_Positive_NILM","HPV_Positive_BV_Positive_ASCUS","HPV_Positive_BV_Positive_LSIL","HPV_Positive_BV_Positive_HSIL","HPV_Negative_NILM","HPV_Negative_Abnormal","HPV_Positive_NILM","HPV_Positive_Abnormal","BV_Negative_NILM","BV_Negative_Abnormal","BV_Positive_NILM","BV_Positive_Abnormal","HPV_Negative_BV_Negative_NILM","HPV_Negative_BV_Negative_Abnormal","HPV_Negative_BV_Positive_NILM","HPV_Negative_BV_Positive_Abnormal","HPV_Positive_BV_Negative_NILM","HPV_Positive_BV_Negative_Abnormal","HPV_Positive_BV_Positive_NILM","HPV_Positive_BV_Positive_Abnormal","White_NILM","White_ASCUS","White_LSIL","White_HSIL","Black_NILM","Black_ASCUS","Black_LSIL","Black_HSIL","Other_NILM","Other_ASCUS","Other_LSIL","Other_HSIL","Unknown_NILM","Unknown_ASCUS","Unknown_LSIL","Unknown_HSIL","White_NILM","White_Abnormal","Black_NILM","Black_Abnormal","Other_NILM","Other_Abnormal","Unknown_NILM","Unknown_Abnormal","White_HPV_Negative_BV_Negative","White_HPV_Negative_BV_Positive","White_HPV_Positive_BV_Negative","White_HPV_Positive_BV_Positive","Black_HPV_Negative_BV_Negative","Black_HPV_Negative_BV_Positive","Black_HPV_Positive_BV_Negative","Black_HPV_Positive_BV_Positive","Other_HPV_Negative_BV_Negative","Other_HPV_Negative_BV_Positive","Other_HPV_Positive_BV_Negative","Other_HPV_Positive_BV_Positive","Unknown_HPV_Negative_BV_Negative","Unknown_HPV_Negative_BV_Positive","Unknown_HPV_Positive_BV_Negative","Unknown_HPV_Positive_BV_Positive","White_HPV_Negative","White_HPV_Positive","Black_HPV_Negative","Black_HPV_Positive","Other_HPV_Negative","Other_HPV_Positive","Unknown_HPV_Negative","Unknown_HPV_Positive","White_BV_Negative","White_BV_Positive","Black_BV_Negative","Black_BV_Positive","Other_BV_Negative","Other_BV_Positive","Unknown_BV_Negative","Unknown_BV_Positive","Never_Smoker_NILM","Never_Smoker_ASCUS","Never_Smoker_LSIL","Never_Smoker_HSIL","Former_Smoker_NILM","Former_Smoker_ASCUS","Former_Smoker_LSIL","Former_Smoker_HSIL","Current_Smoker_NILM","Current_Smoker_ASCUS","Current_Smoker_LSIL","Current_Smoker_HSIL","Unknown_NILM","Unknown_ASCUS","Unknown_LSIL","Unknown_HSIL","Never_Smoker_NILM","Never_Smoker_Abnormal","Former_Smoker_NILM","Former_Smoker_Abnormal","Current_Smoker_NILM","Current_Smoker_Abnormal","Unknown_NILM","Unknown_Abnormal"],["480","22.69 (1.19)","177 (36.9)","303 (63.1)","303 (63.1)","177 (36.9)","442 (92.1)","38 (7.9)","438 (91.2)","11 (2.3)","31 (6.5)","5 (1.0)","12 (2.5)","100 (20.8)","351 (73.1)","0 (0.0)","0 (0.0)","1 (0.2)","0 (0.0)","0 (0.0)","2 (0.4)","9 (1.9)","100 (20.8)","351 (73.1)","12 (2.5)","17 (3.5)","20 (4.2)","158 (32.9)","107 (22.3)","180 (37.5)","15 (3.1)","15 (3.1)","20 (4.2)","158 (32.9)","107 (22.3)","72 (15.0)","57 (11.9)","51 (10.6)","344 (71.7)","65 (13.5)","70 (14.6)","1 (0.2)","0 (0.0)","1 (0.2)","343 (71.5)","1 (0.2)","65 (13.5)","5 (1.0)","1 (0.2)","24 (5.0)","39 (8.1)","1 (0.2)","136 (28.3)","147 (30.6)","166 (34.6)","31 (6.5)","451 (94.0)","29 (6.0)","464 (96.7)","16 (3.3)","189 (39.4)","291 (60.6)","443 (92.7)","35 (7.3)","443 (92.3)","37 (7.7)","455 (94.8)","25 (5.2)","116 (24.2)","61 (12.7)","187 (39.0)","116 (24.2)","101 (21.0)","379 (79.0)","136 (28.3)","344 (71.7)","54 (11.2)","49 (10.2)","62 (12.9)","12 (2.5)","82 (17.1)","98 (20.4)","104 (21.7)","19 (4.0)","74 (15.4)","92 (19.2)","110 (22.9)","27 (5.6)","62 (12.9)","55 (11.5)","56 (11.7)","4 (0.8)","27 (5.6)","33 (6.9)","46 (9.6)","10 (2.1)","27 (5.6)","16 (3.3)","16 (3.3)","2 (0.4)","47 (9.8)","59 (12.3)","64 (13.3)","17 (3.5)","35 (7.3)","39 (8.1)","40 (8.3)","2 (0.4)","54 (11.2)","123 (25.6)","82 (17.1)","221 (46.0)","74 (15.4)","229 (47.7)","62 (12.9)","115 (24.0)","27 (5.6)","89 (18.5)","27 (5.6)","34 (7.1)","47 (9.8)","140 (29.2)","35 (7.3)","81 (16.9)","33 (6.9)","27 (5.6)","33 (6.9)","7 (1.5)","96 (20.0)","113 (23.5)","121 (25.2)","21 (4.4)","4 (0.8)","0 (0.0)","8 (1.7)","0 (0.0)","3 (0.6)","7 (1.5)","4 (0.8)","3 (0.6)","33 (6.9)","67 (14.0)","96 (20.0)","255 (53.1)","4 (0.8)","8 (1.7)","3 (0.6)","14 (2.9)","29 (6.0)","11 (2.3)","33 (6.9)","27 (5.6)","81 (16.9)","49 (10.2)","143 (29.8)","78 (16.2)","3 (0.6)","1 (0.2)","4 (0.8)","4 (0.8)","3 (0.6)","0 (0.0)","7 (1.5)","7 (1.5)","40 (8.3)","60 (12.5)","130 (27.1)","221 (46.0)","4 (0.8)","8 (1.7)","3 (0.6)","14 (2.9)","62 (12.9)","38 (7.9)","224 (46.7)","127 (26.5)","7 (1.5)","5 (1.0)","10 (2.1)","7 (1.5)","96 (20.0)","116 (24.2)","113 (23.5)","19 (4.0)","21 (4.4)","14 (2.9)","24 (5.0)","6 (1.2)","19 (4.0)","17 (3.5)","28 (5.8)","6 (1.2)","0 (0.0)","0 (0.0)","1 (0.2)","0 (0.0)","96 (20.0)","248 (51.7)","21 (4.4)","44 (9.2)","19 (4.0)","51 (10.6)","0 (0.0)","1 (0.2)"],["","0.0","0.0","","0.0","","0.0","","0.0","","","0.0","","","","","","","","","","","0.0","","","","0.0","","","","","0.0","","","","","","","0.0","","","","0.0","","","","","","","","","","0.0","","","","0.0","","0.0","","0.0","","0.4","","0.0","","0.0","","0.0","","","","0.0","","0.0","","0.0","","","","","","","","0.0","","","","","","","","0.0","","","","","","","","","","","","","","","","0.0","","","","0.0","","","","0.0","","","","","","","","0.0","","","","","","","","","","","","","","","","0.0","","","","","","","","0.0","","","","","","","","","","","","","","","","0.0","","","","","","","","0.0","","","","","","","","0.0","","","","","","","","","","","","","","","","0.0","","","","","","",""]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Variable<\/th>\n      <th>level<\/th>\n      <th>Overall<\/th>\n      <th>Missing<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":15,"dom":"Blfrtip","buttons":["copy","csv","excel","pdf","print"],"columnDefs":[{"name":"Variable","targets":0},{"name":"level","targets":1},{"name":"Overall","targets":2},{"name":"Missing","targets":3}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[10,15,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./table1.html" class="pagination-link" aria-label="Relative Abundance Plots">
+        <span class="nav-page-text">Relative Abundance Plots</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

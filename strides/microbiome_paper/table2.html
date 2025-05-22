@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.22">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>table2 – Strides Microbiome Data Analysis</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./table2c.html" rel="next">
+<link href="./table2a.html" rel="prev">
+<link href="./logo.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b4406b7675125bc2ba204020e191172.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-597ac50c604f506121a64059cfce472f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<script src="site_libs/plotly-binding-4.10.4/plotly.js"></script>
+
+<script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+
+<script src="site_libs/jquery-3.5.1/jquery.min.js"></script>
+
+<link href="site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+
+<script src="site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+
+<link href="site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
+
+<script src="site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+
+
+
+<link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="Strides Microbiome Data Analysis">
+<meta property="og:description" content="">
+<meta property="og:image" content="table2_files/figure-html/plot-venn-numratio-1.png">
+<meta property="og:site_name" content="Strides Microbiome Data Analysis">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Strides Microbiome Data Analysis</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./table2.html">Differential Analysis for Diagnosis</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><i class="bi bi-bookmark-fill" role="img">
+</i> 
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./table1.html" class="sidebar-item-text sidebar-link"><i class="bi bi-bookmark-fill" role="img">
+</i> 
+ <span class="menu-text">Relative Abundance Plots</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./table2a.html" class="sidebar-item-text sidebar-link"><i class="bi bi-bookmark-fill" role="img">
+</i> 
+ <span class="menu-text">Differential Analysis for race</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./table2.html" class="sidebar-item-text sidebar-link active"><i class="bi bi-bookmark-fill" role="img">
+</i> 
+ <span class="menu-text">Differential Analysis for Diagnosis</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./table2c.html" class="sidebar-item-text sidebar-link"><i class="bi bi-bookmark-fill" role="img">
+</i> 
+ <span class="menu-text">Differential Analysis for Race x Pap Diagnosis</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./table2b.html" class="sidebar-item-text sidebar-link"><i class="bi bi-bookmark-fill" role="img">
+</i> 
+ <span class="menu-text">Differential Analysis for HPV x Pap Diagnosis</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./table2d.html" class="sidebar-item-text sidebar-link"><i class="bi bi-bookmark-fill" role="img">
+</i> 
+ <span class="menu-text">Differential Analysis for HPV_Positive_ASCUS+(ASCUS,HSIL,LSIL) vs HPV_Negative_NILM</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./table2e.html" class="sidebar-item-text sidebar-link"><i class="bi bi-bookmark-fill" role="img">
+</i> 
+ <span class="menu-text">Differential Analysis for HPV_Positive_HSIL HPV_Negative_NILM</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#differential-analysis-of-pap-diagnosis" id="toc-differential-analysis-of-pap-diagnosis" class="nav-link active" data-scroll-target="#differential-analysis-of-pap-diagnosis">Differential Analysis of PAP Diagnosis</a></li>
+  <li><a href="#venn-diagrams-shared-and-unique-features-by-pap-diagnosis" id="toc-venn-diagrams-shared-and-unique-features-by-pap-diagnosis" class="nav-link" data-scroll-target="#venn-diagrams-shared-and-unique-features-by-pap-diagnosis">Venn Diagrams: Shared and Unique Features by PAP Diagnosis</a></li>
+  <li><a href="#relative-abundances" id="toc-relative-abundances" class="nav-link" data-scroll-target="#relative-abundances">Relative Abundances</a></li>
+  <li><a href="#diversity-metrics" id="toc-diversity-metrics" class="nav-link" data-scroll-target="#diversity-metrics">Diversity metrics</a>
+  <ul class="collapse">
+  <li><a href="#alpha-diversity" id="toc-alpha-diversity" class="nav-link" data-scroll-target="#alpha-diversity">Alpha diversity</a></li>
+  </ul></li>
+  <li><a href="#differential-analysis" id="toc-differential-analysis" class="nav-link" data-scroll-target="#differential-analysis">Differential Analysis</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<section id="differential-analysis-of-pap-diagnosis" class="level2">
+<h2 class="anchored" data-anchor-id="differential-analysis-of-pap-diagnosis">Differential Analysis of PAP Diagnosis</h2>
+</section>
+<section id="venn-diagrams-shared-and-unique-features-by-pap-diagnosis" class="level2">
+<h2 class="anchored" data-anchor-id="venn-diagrams-shared-and-unique-features-by-pap-diagnosis">Venn Diagrams: Shared and Unique Features by PAP Diagnosis</h2>
+<p>These Venn diagrams illustrate the overlap of microbial features (likely Amplicon Sequence Variants - ASVs, or Operational Taxonomic Units - OTUs) across the different PAP diagnosis categories (<code>pap_dx_category</code>: NILM, ASCUS, LSIL, HSIL).</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Number Ratio</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Sequence Ratio</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="table2_files/figure-html/plot-venn-numratio-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption>Venn diagram showing the number of shared and unique microbial features (e.g., ASVs/OTUs) across merged PAP diagnosis category groups.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="table2_files/figure-html/plot-venn-seqratio-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption>Venn diagram showing the relative abundance (proportion of total sequences) contributed by shared and unique microbial features across merged PAP diagnosis category groups.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="relative-abundances" class="level2">
+<h2 class="anchored" data-anchor-id="relative-abundances">Relative Abundances</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-c700f3d53bf0a7660a63" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-c700f3d53bf0a7660a63">{"x":{"data":[{"orientation":"h","width":[0.89999999999999991,0.90000000000000013,0.90000000000000036,0.90000000000000036],"base":[90.962336186319362,92.35589826932825,89.995826918706726,88.93728577438705],"x":[9.0376638136806378,7.6441017306717498,10.004173081293274,11.06271422561295],"y":[1,2,3,4],"text":["Taxonomy: Others<br />Sample: NILM<br />Abundance:  9.03766381","Taxonomy: Others<br />Sample: ASCUS<br />Abundance:  7.64410173","Taxonomy: Others<br />Sample: LSIL<br />Abundance: 10.00417308","Taxonomy: Others<br />Sample: HSIL<br />Abundance: 11.06271423"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(179,179,179,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Others","legendgroup":"Others","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"h","width":[0.89999999999999991,0.90000000000000013,0.90000000000000036,0.90000000000000036],"base":[90.234506398853668,91.639945700357245,88.876812698445661,88.539537899497986],"x":[0.72782978746569427,0.71595256897100512,1.1190142202610645,0.39774787488906327],"y":[1,2,3,4],"text":["Taxonomy: Mobiluncus<br />Sample: NILM<br />Abundance:  0.72782979","Taxonomy: Mobiluncus<br />Sample: ASCUS<br />Abundance:  0.71595257","Taxonomy: Mobiluncus<br />Sample: LSIL<br />Abundance:  1.11901422","Taxonomy: Mobiluncus<br />Sample: HSIL<br />Abundance:  0.39774787"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(236,175,128,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Mobiluncus","legendgroup":"Mobiluncus","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"h","width":[0.89999999999999991,0.90000000000000013,0.90000000000000036,0.90000000000000036],"base":[89.684762348875765,90.787431890906831,87.512297214992614,88.444743070040019],"x":[0.54974404997790316,0.85251380945041433,1.3645154834530473,0.094794829457967467],"y":[1,2,3,4],"text":["Taxonomy: Streptococcus<br />Sample: NILM<br />Abundance:  0.54974405","Taxonomy: Streptococcus<br />Sample: ASCUS<br />Abundance:  0.85251381","Taxonomy: Streptococcus<br />Sample: LSIL<br />Abundance:  1.36451548","Taxonomy: Streptococcus<br />Sample: HSIL<br />Abundance:  0.09479483"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(141,206,187,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Streptococcus","legendgroup":"Streptococcus","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"h","width":[0.89999999999999991,0.90000000000000013,0.90000000000000036,0.90000000000000036],"base":[88.592223412320266,89.87598014245701,86.470793287545504,87.432149487827033],"x":[1.0925389365554992,0.9114517484498208,1.0415039274471098,1.0125935822129861],"y":[1,2,3,4],"text":["Taxonomy: Dialister<br />Sample: NILM<br />Abundance:  1.09253894","Taxonomy: Dialister<br />Sample: ASCUS<br />Abundance:  0.91145175","Taxonomy: Dialister<br />Sample: LSIL<br />Abundance:  1.04150393","Taxonomy: Dialister<br />Sample: HSIL<br />Abundance:  1.01259358"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(102,102,102,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Dialister","legendgroup":"Dialister","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"h","width":[0.89999999999999991,0.90000000000000013,0.90000000000000036,0.90000000000000036],"base":[84.939553454546044,85.203306624123215,82.448389362028152,81.331509517269126],"x":[3.6526699577742221,4.6726735183337951,4.0224039255173523,6.1006399705579071],"y":[1,2,3,4],"text":["Taxonomy: Atopobium<br />Sample: NILM<br />Abundance:  3.65266996","Taxonomy: Atopobium<br />Sample: ASCUS<br />Abundance:  4.67267352","Taxonomy: Atopobium<br />Sample: LSIL<br />Abundance:  4.02240393","Taxonomy: Atopobium<br />Sample: HSIL<br />Abundance:  6.10063997"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(166,118,29,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Atopobium","legendgroup":"Atopobium","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"h","width":[0.89999999999999991,0.90000000000000013,0.90000000000000036,0.90000000000000036],"base":[80.523348066338471,81.785565291953148,77.207765455220056,76.077045026010254],"x":[4.4162053882075725,3.4177413321700669,5.2406239068080964,5.2544644912588723],"y":[1,2,3,4],"text":["Taxonomy: Sneathia<br />Sample: NILM<br />Abundance:  4.41620539","Taxonomy: Sneathia<br />Sample: ASCUS<br />Abundance:  3.41774133","Taxonomy: Sneathia<br />Sample: LSIL<br />Abundance:  5.24062391","Taxonomy: Sneathia<br />Sample: HSIL<br />Abundance:  5.25446449"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(230,171,2,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Sneathia","legendgroup":"Sneathia","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"h","width":[0.89999999999999991,0.90000000000000013,0.90000000000000036,0.90000000000000036],"base":[74.257696290626214,76.093416746406476,70.121178218135782,68.628013026177811],"x":[6.2656517757122572,5.6921485455466723,7.0865872370842737,7.4490319998324424],"y":[1,2,3,4],"text":["Taxonomy: Prevotella<br />Sample: NILM<br />Abundance:  6.26565178","Taxonomy: Prevotella<br />Sample: ASCUS<br />Abundance:  5.69214855","Taxonomy: Prevotella<br />Sample: LSIL<br />Abundance:  7.08658724","Taxonomy: Prevotella<br />Sample: HSIL<br />Abundance:  7.44903200"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(102,166,30,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Prevotella","legendgroup":"Prevotella","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"h","width":[0.89999999999999991,0.90000000000000013,0.90000000000000036,0.90000000000000036],"base":[68.469858643866871,69.611106939248316,63.354451731522715,59.54170008358448],"x":[5.7878376467593426,6.4823098071581597,6.7667264866130665,9.0863129425933309],"y":[1,2,3,4],"text":["Taxonomy: Megasphaera<br />Sample: NILM<br />Abundance:  5.78783765","Taxonomy: Megasphaera<br />Sample: ASCUS<br />Abundance:  6.48230981","Taxonomy: Megasphaera<br />Sample: LSIL<br />Abundance:  6.76672649","Taxonomy: Megasphaera<br />Sample: HSIL<br />Abundance:  9.08631294"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(231,41,138,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Megasphaera","legendgroup":"Megasphaera","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"h","width":[0.89999999999999991,0.90000000000000013,0.90000000000000036,0.90000000000000036],"base":[61.893456424467054,60.665054537050352,54.277014555813544,49.935284953617384],"x":[6.5764022193998173,8.9460524021979637,9.0774371757091714,9.6064151299670968],"y":[1,2,3,4],"text":["Taxonomy: Shuttleworthia<br />Sample: NILM<br />Abundance:  6.57640222","Taxonomy: Shuttleworthia<br />Sample: ASCUS<br />Abundance:  8.94605240","Taxonomy: Shuttleworthia<br />Sample: LSIL<br />Abundance:  9.07743718","Taxonomy: Shuttleworthia<br />Sample: HSIL<br />Abundance:  9.60641513"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(117,112,179,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Shuttleworthia","legendgroup":"Shuttleworthia","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"h","width":[0.89999999999999991,0.90000000000000013,0.90000000000000036,0.90000000000000036],"base":[46.21246815224476,44.262849853604791,38.306933160083915,30.866687484477435],"x":[15.680988272222294,16.402204683445561,15.970081395729629,19.068597469139949],"y":[1,2,3,4],"text":["Taxonomy: Gardnerella<br />Sample: NILM<br />Abundance: 15.68098827","Taxonomy: Gardnerella<br />Sample: ASCUS<br />Abundance: 16.40220468","Taxonomy: Gardnerella<br />Sample: LSIL<br />Abundance: 15.97008140","Taxonomy: Gardnerella<br />Sample: HSIL<br />Abundance: 19.06859747"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(217,95,2,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Gardnerella","legendgroup":"Gardnerella","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"h","width":[0.89999999999999991,0.90000000000000013,0.90000000000000036,0.90000000000000036],"base":[0,0,0,0],"x":[46.21246815224476,44.262849853604791,38.306933160083915,30.866687484477435],"y":[1,2,3,4],"text":["Taxonomy: Lactobacillus<br />Sample: NILM<br />Abundance: 46.21246815","Taxonomy: Lactobacillus<br />Sample: ASCUS<br />Abundance: 44.26284985","Taxonomy: Lactobacillus<br />Sample: LSIL<br />Abundance: 38.30693316","Taxonomy: Lactobacillus<br />Sample: HSIL<br />Abundance: 30.86668748"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(27,158,119,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Lactobacillus","legendgroup":"Lactobacillus","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":26.228310502283104,"r":7.3059360730593621,"b":40.182648401826491,"l":40.182648401826491},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0,100],"tickmode":"array","ticktext":["0","25","50","75","100"],"tickvals":[0,25,50,75,100],"categoryorder":"array","categoryarray":["0","25","50","75","100"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.66417600664176002,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"Relative abundance (%)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,4.5999999999999996],"tickmode":"array","ticktext":["NILM","ASCUS","LSIL","HSIL"],"tickvals":[1,2,3,4],"categoryorder":"array","categoryarray":["NILM","ASCUS","LSIL","HSIL"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.66417600664176002,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":23.910336239103366}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498},"title":{"text":"Genus","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"47b826421fcc":{"fill":{},"x":{},"y":{},"type":"bar"}},"cur_data":"47b826421fcc","visdat":{"47b826421fcc":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="table2_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="diversity-metrics" class="level2">
+<h2 class="anchored" data-anchor-id="diversity-metrics">Diversity metrics</h2>
+<section id="alpha-diversity" class="level3">
+<h3 class="anchored" data-anchor-id="alpha-diversity">Alpha diversity</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="table2_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="differential-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="differential-analysis">Differential Analysis</h2>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>ERROR during LEfSe analysis:
+&lt;simpleError in private$check_taxa_number(sel_taxa, p_adjust_method): No significant feature found! To disable p value adjustment, please use p_adjust_method = "none"!&gt;</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>NULL</code></pre>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./table2a.html" class="pagination-link" aria-label="Differential Analysis for race">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Differential Analysis for race</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./table2c.html" class="pagination-link" aria-label="Differential Analysis for Race x Pap Diagnosis">
+        <span class="nav-page-text">Differential Analysis for Race x Pap Diagnosis</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
