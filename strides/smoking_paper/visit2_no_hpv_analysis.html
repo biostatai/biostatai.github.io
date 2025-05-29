@@ -198,6 +198,9 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#cytology-breakdown" id="toc-cytology-breakdown" class="nav-link" data-scroll-target="#cytology-breakdown">Cytology Breakdown</a></li>
   <li><a href="#biopsy-breakdown" id="toc-biopsy-breakdown" class="nav-link" data-scroll-target="#biopsy-breakdown">Biopsy Breakdown</a></li>
   <li><a href="#any-result-at-visit-2" id="toc-any-result-at-visit-2" class="nav-link" data-scroll-target="#any-result-at-visit-2">Any Result at Visit 2</a></li>
+  <li><a href="#cytology-breakdown-by-age-group" id="toc-cytology-breakdown-by-age-group" class="nav-link" data-scroll-target="#cytology-breakdown-by-age-group">Cytology Breakdown by Age Group</a></li>
+  <li><a href="#biopsy-breakdown-by-age-group" id="toc-biopsy-breakdown-by-age-group" class="nav-link" data-scroll-target="#biopsy-breakdown-by-age-group">Biopsy Breakdown by Age Group</a></li>
+  <li><a href="#any-result-at-visit-2-by-age-group" id="toc-any-result-at-visit-2-by-age-group" class="nav-link" data-scroll-target="#any-result-at-visit-2-by-age-group">Any Result at Visit 2 by Age Group</a></li>
   <li><a href="#export-subsets-to-excel" id="toc-export-subsets-to-excel" class="nav-link" data-scroll-target="#export-subsets-to-excel">Export Subsets to Excel</a></li>
   </ul></li>
   </ul></li>
@@ -403,9 +406,230 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
+<section id="cytology-breakdown-by-age-group" class="level3">
+<h3 class="anchored" data-anchor-id="cytology-breakdown-by-age-group">Cytology Breakdown by Age Group</h3>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Cytology Results at Visit 2 (No HPV Data, No CIN2+) by Age Group</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">age_group</th>
+<th style="text-align: left;">cyto_cat</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">percent</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">&lt;30</td>
+<td style="text-align: left;">ASC-H</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">0.5027652</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">&lt;30</td>
+<td style="text-align: left;">ASC-US</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.0502765</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">&lt;30</td>
+<td style="text-align: left;">HSIL+</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">0.5027652</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">&lt;30</td>
+<td style="text-align: left;">Inadequate</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">0.3016591</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">&lt;30</td>
+<td style="text-align: left;">LSIL</td>
+<td style="text-align: right;">82</td>
+<td style="text-align: right;">4.1226747</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">&lt;30</td>
+<td style="text-align: left;">NILM</td>
+<td style="text-align: right;">411</td>
+<td style="text-align: right;">20.6636501</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">&lt;30</td>
+<td style="text-align: left;">No Cytology</td>
+<td style="text-align: right;">1469</td>
+<td style="text-align: right;">73.8562092</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">&gt;=30</td>
+<td style="text-align: left;">ASC-H</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.0516529</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">&gt;=30</td>
+<td style="text-align: left;">ASC-US</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">0.3099174</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">&gt;=30</td>
+<td style="text-align: left;">Atyp/EM/Glandular</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.0516529</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">&gt;=30</td>
+<td style="text-align: left;">HSIL+</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0.2066116</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">&gt;=30</td>
+<td style="text-align: left;">Inadequate</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0.2066116</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">&gt;=30</td>
+<td style="text-align: left;">LSIL</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">0.3099174</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">&gt;=30</td>
+<td style="text-align: left;">NILM</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">0.9297521</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">&gt;=30</td>
+<td style="text-align: left;">No Cytology</td>
+<td style="text-align: right;">1896</td>
+<td style="text-align: right;">97.9338843</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="biopsy-breakdown-by-age-group" class="level3">
+<h3 class="anchored" data-anchor-id="biopsy-breakdown-by-age-group">Biopsy Breakdown by Age Group</h3>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Biopsy Results at Visit 2 (No HPV Data, No CIN2+) by Age Group</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">age_group</th>
+<th style="text-align: left;">biopsy_cat</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">percent</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">&lt;30</td>
+<td style="text-align: left;">&lt;CIN2+</td>
+<td style="text-align: right;">28</td>
+<td style="text-align: right;">1.4077426</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">&lt;30</td>
+<td style="text-align: left;">&gt;=CIN2+</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">0.5530417</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">&lt;30</td>
+<td style="text-align: left;">Insufficient for Dx</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.0502765</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">&lt;30</td>
+<td style="text-align: left;">Missing cervical Dx</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.1005530</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">&lt;30</td>
+<td style="text-align: left;">No Biopsy</td>
+<td style="text-align: right;">1947</td>
+<td style="text-align: right;">97.8883861</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">&gt;=30</td>
+<td style="text-align: left;">&lt;CIN2+</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">0.5681818</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">&gt;=30</td>
+<td style="text-align: left;">&gt;=CIN2+</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.1033058</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">&gt;=30</td>
+<td style="text-align: left;">No Biopsy</td>
+<td style="text-align: right;">1923</td>
+<td style="text-align: right;">99.3285124</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="any-result-at-visit-2-by-age-group" class="level3">
+<h3 class="anchored" data-anchor-id="any-result-at-visit-2-by-age-group">Any Result at Visit 2 by Age Group</h3>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Any Result at Visit 2 (No HPV Data, No CIN2+) by Age Group</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">age_group</th>
+<th style="text-align: left;">any_result</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">percent</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">&lt;30</td>
+<td style="text-align: left;">Has Result</td>
+<td style="text-align: right;">520</td>
+<td style="text-align: right;">26.143791</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">&lt;30</td>
+<td style="text-align: left;">No Result</td>
+<td style="text-align: right;">1469</td>
+<td style="text-align: right;">73.856209</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">&gt;=30</td>
+<td style="text-align: left;">Has Result</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">2.066116</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">&gt;=30</td>
+<td style="text-align: left;">No Result</td>
+<td style="text-align: right;">1896</td>
+<td style="text-align: right;">97.933884</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
 <section id="export-subsets-to-excel" class="level3">
 <h3 class="anchored" data-anchor-id="export-subsets-to-excel">Export Subsets to Excel</h3>
-<hr>
 
 
 </section>
