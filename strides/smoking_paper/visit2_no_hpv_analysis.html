@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>STRIDES Visit Pattern Analysis – Strides Data Analysis</title>
+<title>Exclusions Visit 2 HPV Data Analysis – Strides Data Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./visit2_no_hpv_analysis.html" rel="next">
-<link href="./table3e.html" rel="prev">
+<link href="./visit_analysis.html" rel="prev">
 <link href="./logo.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -72,8 +71,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="STRIDES Visit Pattern Analysis – Strides Data Analysis">
-<meta property="og:image" content="visit_analysis_files/figure-html/visit_time_distribution-1.png">
+<meta property="og:title" content="Exclusions Visit 2 HPV Data Analysis – Strides Data Analysis">
 <meta property="og:site_name" content="Strides Data Analysis">
 </head>
 
@@ -105,7 +103,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./visit_analysis.html">Analysis Questions</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./visit2_no_hpv_analysis.html">Analysis Questions for Visit 2 without HPV</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -169,14 +167,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./visit_analysis.html" class="sidebar-item-text sidebar-link active"><i class="bi bi-bookmark-fill" role="img">
+  <a href="./visit_analysis.html" class="sidebar-item-text sidebar-link"><i class="bi bi-bookmark-fill" role="img">
 </i> 
  <span class="menu-text">Analysis Questions</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./visit2_no_hpv_analysis.html" class="sidebar-item-text sidebar-link"><i class="bi bi-bookmark-fill" role="img">
+  <a href="./visit2_no_hpv_analysis.html" class="sidebar-item-text sidebar-link active"><i class="bi bi-bookmark-fill" role="img">
 </i> 
  <span class="menu-text">Analysis Questions for Visit 2 without HPV</span></a>
   </div>
@@ -191,17 +189,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#time-between-visits-analysis" id="toc-time-between-visits-analysis" class="nav-link active" data-scroll-target="#time-between-visits-analysis">Time Between Visits Analysis</a>
+  <li><a href="#analysis-of-visit-2-exclusions-no-hpv-or-cin2-at-visit-2" id="toc-analysis-of-visit-2-exclusions-no-hpv-or-cin2-at-visit-2" class="nav-link active" data-scroll-target="#analysis-of-visit-2-exclusions-no-hpv-or-cin2-at-visit-2">Analysis of Visit 2 Exclusions: No HPV or CIN2+ at Visit 2</a>
   <ul class="collapse">
-  <li><a href="#question-1-what-is-the-time-frame-between-visits-for-clearance-and-persistence-groups" id="toc-question-1-what-is-the-time-frame-between-visits-for-clearance-and-persistence-groups" class="nav-link" data-scroll-target="#question-1-what-is-the-time-frame-between-visits-for-clearance-and-persistence-groups">Question 1: What is the time frame between visits for clearance and persistence groups?</a></li>
-  <li><a href="#question-2-why-were-so-many-excluded-without-hpv-at-second-visit" id="toc-question-2-why-were-so-many-excluded-without-hpv-at-second-visit" class="nav-link" data-scroll-target="#question-2-why-were-so-many-excluded-without-hpv-at-second-visit">Question 2: Why were so many excluded without HPV at second visit?</a></li>
-  <li><a href="#question-3-how-many-only-had-1-visit" id="toc-question-3-how-many-only-had-1-visit" class="nav-link" data-scroll-target="#question-3-how-many-only-had-1-visit">Question 3: How many only had 1 visit?</a></li>
-  <li><a href="#question-4-under-30-ascus-hpv-analysis" id="toc-question-4-under-30-ascus-hpv-analysis" class="nav-link" data-scroll-target="#question-4-under-30-ascus-hpv-analysis">Question 4: Under 30 ASCUS HPV+ Analysis</a></li>
-  <li><a href="#question-5-short-interval-follow-up-analysis" id="toc-question-5-short-interval-follow-up-analysis" class="nav-link" data-scroll-target="#question-5-short-interval-follow-up-analysis">Question 5: Short Interval Follow-up Analysis</a></li>
+  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a></li>
+  <li><a href="#data-extraction-and-breakdown" id="toc-data-extraction-and-breakdown" class="nav-link" data-scroll-target="#data-extraction-and-breakdown">Data Extraction and Breakdown</a></li>
+  <li><a href="#results-for-missing-hpv-at-visit-2" id="toc-results-for-missing-hpv-at-visit-2" class="nav-link" data-scroll-target="#results-for-missing-hpv-at-visit-2">Results for Missing HPV at Visit 2</a>
+  <ul class="collapse">
+  <li><a href="#cytology-breakdown" id="toc-cytology-breakdown" class="nav-link" data-scroll-target="#cytology-breakdown">Cytology Breakdown</a></li>
+  <li><a href="#biopsy-breakdown" id="toc-biopsy-breakdown" class="nav-link" data-scroll-target="#biopsy-breakdown">Biopsy Breakdown</a></li>
+  <li><a href="#any-result-at-visit-2" id="toc-any-result-at-visit-2" class="nav-link" data-scroll-target="#any-result-at-visit-2">Any Result at Visit 2</a></li>
+  <li><a href="#export-subsets-to-excel" id="toc-export-subsets-to-excel" class="nav-link" data-scroll-target="#export-subsets-to-excel">Export Subsets to Excel</a></li>
   </ul></li>
-  <li><a href="#distribution-of-time-between-visits" id="toc-distribution-of-time-between-visits" class="nav-link" data-scroll-target="#distribution-of-time-between-visits">Distribution of Time Between Visits</a>
-  <ul class="collapse">
-  <li><a href="#question-6-how-many-in-persistence-group-had-long-follow-up-periods" id="toc-question-6-how-many-in-persistence-group-had-long-follow-up-periods" class="nav-link" data-scroll-target="#question-6-how-many-in-persistence-group-had-long-follow-up-periods">Question 6: How many in persistence group had long follow-up periods?</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -211,7 +209,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">STRIDES Visit Pattern Analysis</h1>
+<h1 class="title">Exclusions Visit 2 HPV Data Analysis</h1>
 </div>
 
 
@@ -228,261 +226,189 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="time-between-visits-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="time-between-visits-analysis">Time Between Visits Analysis</h2>
-<section id="question-1-what-is-the-time-frame-between-visits-for-clearance-and-persistence-groups" class="level3">
-<h3 class="anchored" data-anchor-id="question-1-what-is-the-time-frame-between-visits-for-clearance-and-persistence-groups">Question 1: What is the time frame between visits for clearance and persistence groups?</h3>
+<section id="analysis-of-visit-2-exclusions-no-hpv-or-cin2-at-visit-2" class="level1">
+<h1>Analysis of Visit 2 Exclusions: No HPV or CIN2+ at Visit 2</h1>
+<section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">Background</h2>
+<p>Individuals were excluded for either having CIN2+ at visit 1 or 2, or for missing HPV data at visit 2. This analysis addresses:</p>
+<ul>
+<li>What are the characteristics of these exclusions?</li>
+<li>Did these individuals have cytology at visit 2, and if so, what were the results (NILM, ASC-US, LSIL, HSIL)?</li>
+<li>Did they have a biopsy at visit 2, and if so, was it &lt;CIN2+?</li>
+<li>Did they have any result at all at visit 2?</li>
+<li>Export the full subset and both subgroups to Excel for further review.</li>
+</ul>
+</section>
+<section id="data-extraction-and-breakdown" class="level2">
+<h2 class="anchored" data-anchor-id="data-extraction-and-breakdown">Data Extraction and Breakdown</h2>
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
-<caption>Time Between Visits by HPV Status</caption>
-<colgroup>
-<col style="width: 15%">
-<col style="width: 5%">
-<col style="width: 11%">
-<col style="width: 13%">
-<col style="width: 16%">
-<col style="width: 11%">
-<col style="width: 12%">
-<col style="width: 12%">
-</colgroup>
+<caption>Summary of Exclusion Groups</caption>
 <thead>
 <tr class="header">
-<th style="text-align: left;">status_v1_v2</th>
-<th style="text-align: right;">n</th>
-<th style="text-align: right;">mean_days</th>
-<th style="text-align: right;">mean_months</th>
-<th style="text-align: right;">median_months</th>
-<th style="text-align: right;">sd_months</th>
-<th style="text-align: right;">min_months</th>
-<th style="text-align: right;">max_months</th>
+<th style="text-align: left;">Category</th>
+<th style="text-align: right;">N</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Clearance</td>
-<td style="text-align: right;">879</td>
-<td style="text-align: right;">662.3</td>
-<td style="text-align: right;">21.8</td>
-<td style="text-align: right;">15.8</td>
-<td style="text-align: right;">12.5</td>
-<td style="text-align: right;">1.0</td>
-<td style="text-align: right;">61.3</td>
+<td style="text-align: left;">Total exclusions (CIN2+ or missing HPV at Visit 2)</td>
+<td style="text-align: right;">4279</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Disease</td>
+<td style="text-align: left;">CIN2+ at Visit 1 or 2</td>
 <td style="text-align: right;">354</td>
-<td style="text-align: right;">502.4</td>
-<td style="text-align: right;">16.5</td>
-<td style="text-align: right;">13.8</td>
-<td style="text-align: right;">8.8</td>
-<td style="text-align: right;">3.3</td>
-<td style="text-align: right;">53.4</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Persistence</td>
-<td style="text-align: right;">1216</td>
-<td style="text-align: right;">509.1</td>
-<td style="text-align: right;">16.7</td>
-<td style="text-align: right;">13.6</td>
-<td style="text-align: right;">9.7</td>
-<td style="text-align: right;">0.1</td>
-<td style="text-align: right;">62.3</td>
+<td style="text-align: left;">Excluded for missing HPV at Visit 2 (no CIN2+)</td>
+<td style="text-align: right;">3925</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 </section>
-<section id="question-2-why-were-so-many-excluded-without-hpv-at-second-visit" class="level3">
-<h3 class="anchored" data-anchor-id="question-2-why-were-so-many-excluded-without-hpv-at-second-visit">Question 2: Why were so many excluded without HPV at second visit?</h3>
+<section id="results-for-missing-hpv-at-visit-2" class="level2">
+<h2 class="anchored" data-anchor-id="results-for-missing-hpv-at-visit-2">Results for Missing HPV at Visit 2</h2>
+<section id="cytology-breakdown" class="level3">
+<h3 class="anchored" data-anchor-id="cytology-breakdown">Cytology Breakdown</h3>
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
-<caption>Analysis of Missing HPV Results at Visit 2</caption>
+<caption>Cytology Results at Visit 2 (No HPV Data, No CIN2+)</caption>
 <thead>
 <tr class="header">
-<th style="text-align: right;">total_missing</th>
-<th style="text-align: right;">no_visit_2</th>
-<th style="text-align: right;">has_visit_2_no_hpv</th>
+<th style="text-align: left;">cyto_cat</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">percent</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">35450</td>
-<td style="text-align: right;">32392</td>
-<td style="text-align: right;">3058</td>
+<td style="text-align: left;">ASC-H</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">0.2802548</td>
 </tr>
-</tbody>
-</table>
-</div>
-</div>
-</section>
-<section id="question-3-how-many-only-had-1-visit" class="level3">
-<h3 class="anchored" data-anchor-id="question-3-how-many-only-had-1-visit">Question 3: How many only had 1 visit?</h3>
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<caption>Single Visit Analysis</caption>
-<thead>
-<tr class="header">
-<th style="text-align: right;">total_participants</th>
-<th style="text-align: right;">single_visit</th>
-<th style="text-align: right;">percent_single_visit</th>
+<tr class="even">
+<td style="text-align: left;">ASC-US</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">0.1783439</td>
 </tr>
-</thead>
-<tbody>
 <tr class="odd">
-<td style="text-align: right;">44071</td>
-<td style="text-align: right;">32398</td>
-<td style="text-align: right;">73.51319</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</section>
-<section id="question-4-under-30-ascus-hpv-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="question-4-under-30-ascus-hpv-analysis">Question 4: Under 30 ASCUS HPV+ Analysis</h3>
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<caption>Under 30 ASCUS HPV+ Analysis</caption>
-<thead>
-<tr class="header">
-<th style="text-align: right;">total</th>
-<th style="text-align: right;">single_visit</th>
-<th style="text-align: right;">percent_single_visit</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">840</td>
-<td style="text-align: right;">447</td>
-<td style="text-align: right;">53.21429</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</section>
-<section id="question-5-short-interval-follow-up-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="question-5-short-interval-follow-up-analysis">Question 5: Short Interval Follow-up Analysis</h3>
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<caption>Analysis of Short Interval Follow-ups (&lt;6 months)</caption>
-<colgroup>
-<col style="width: 10%">
-<col style="width: 12%">
-<col style="width: 17%">
-<col style="width: 19%">
-<col style="width: 19%">
-<col style="width: 21%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">status_v1_v2</th>
-<th style="text-align: right;">total_followup</th>
-<th style="text-align: right;">short_interval_count</th>
-<th style="text-align: right;">percent_short_interval</th>
-<th style="text-align: right;">short_with_prev_cancer</th>
-<th style="text-align: right;">short_without_prev_cancer</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Clearance</td>
-<td style="text-align: right;">879</td>
-<td style="text-align: right;">15</td>
-<td style="text-align: right;">1.706485</td>
+<td style="text-align: left;">Atyp/EM/Glandular</td>
 <td style="text-align: right;">1</td>
-<td style="text-align: right;">14</td>
+<td style="text-align: right;">0.0254777</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Disease</td>
-<td style="text-align: right;">248</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">1.209677</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">3</td>
+<td style="text-align: left;">HSIL+</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">0.3566879</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Persistence</td>
-<td style="text-align: right;">1216</td>
-<td style="text-align: right;">62</td>
-<td style="text-align: right;">5.098684</td>
-<td style="text-align: right;">12</td>
-<td style="text-align: right;">50</td>
+<td style="text-align: left;">Inadequate</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">0.2547771</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">NA</td>
-<td style="text-align: right;">9330</td>
-<td style="text-align: right;">551</td>
-<td style="text-align: right;">5.905681</td>
-<td style="text-align: right;">188</td>
-<td style="text-align: right;">363</td>
+<td style="text-align: left;">LSIL</td>
+<td style="text-align: right;">88</td>
+<td style="text-align: right;">2.2420382</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NILM</td>
+<td style="text-align: right;">429</td>
+<td style="text-align: right;">10.9299363</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">No Cytology</td>
+<td style="text-align: right;">3365</td>
+<td style="text-align: right;">85.7324841</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 </section>
-</section>
-<section id="distribution-of-time-between-visits" class="level2">
-<h2 class="anchored" data-anchor-id="distribution-of-time-between-visits">Distribution of Time Between Visits</h2>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="visit_analysis_files/figure-html/visit_time_distribution-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<section id="question-6-how-many-in-persistence-group-had-long-follow-up-periods" class="level3">
-<h3 class="anchored" data-anchor-id="question-6-how-many-in-persistence-group-had-long-follow-up-periods">Question 6: How many in persistence group had long follow-up periods?</h3>
+<section id="biopsy-breakdown" class="level3">
+<h3 class="anchored" data-anchor-id="biopsy-breakdown">Biopsy Breakdown</h3>
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
-<caption>Analysis of Long Follow-up Periods in Persistence Group</caption>
-<colgroup>
-<col style="width: 23%">
-<col style="width: 17%">
-<col style="width: 21%">
-<col style="width: 17%">
-<col style="width: 21%">
-</colgroup>
+<caption>Biopsy Results at Visit 2 (No HPV Data, No CIN2+)</caption>
 <thead>
 <tr class="header">
-<th style="text-align: right;">total_persistence</th>
-<th style="text-align: right;">past_2_years</th>
-<th style="text-align: right;">percent_2_years</th>
-<th style="text-align: right;">past_3_years</th>
-<th style="text-align: right;">percent_3_years</th>
+<th style="text-align: left;">biopsy_cat</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">percent</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">1216</td>
-<td style="text-align: right;">203</td>
-<td style="text-align: right;">16.7</td>
-<td style="text-align: right;">86</td>
-<td style="text-align: right;">7.1</td>
+<td style="text-align: left;">&lt;CIN2+</td>
+<td style="text-align: right;">39</td>
+<td style="text-align: right;">0.9936306</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">&gt;=CIN2+</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">0.3312102</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Insufficient for Dx</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.0254777</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Missing cervical Dx</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.0509554</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">No Biopsy</td>
+<td style="text-align: right;">3870</td>
+<td style="text-align: right;">98.5987261</td>
 </tr>
 </tbody>
 </table>
 </div>
+</div>
+</section>
+<section id="any-result-at-visit-2" class="level3">
+<h3 class="anchored" data-anchor-id="any-result-at-visit-2">Any Result at Visit 2</h3>
+<div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="visit_analysis_files/figure-html/long_followup_analysis-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
+<table class="caption-top table table-sm table-striped small">
+<caption>Any Result at Visit 2 (No HPV Data, No CIN2+)</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">any_result</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">percent</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Has Result</td>
+<td style="text-align: right;">560</td>
+<td style="text-align: right;">14.26752</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">No Result</td>
+<td style="text-align: right;">3365</td>
+<td style="text-align: right;">85.73248</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
-</div>
+</section>
+<section id="export-subsets-to-excel" class="level3">
+<h3 class="anchored" data-anchor-id="export-subsets-to-excel">Export Subsets to Excel</h3>
+<hr>
 
 
+</section>
 </section>
 </section>
 
@@ -906,14 +832,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./table3e.html" class="pagination-link" aria-label="Regression Tables for disease vs non disease in Other HPV+ participants">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Regression Tables for disease vs non disease in Other HPV+ participants</span>
+      <a href="./visit_analysis.html" class="pagination-link" aria-label="Analysis Questions">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Analysis Questions</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./visit2_no_hpv_analysis.html" class="pagination-link" aria-label="Analysis Questions for Visit 2 without HPV">
-        <span class="nav-page-text">Analysis Questions for Visit 2 without HPV</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
