@@ -1,0 +1,222 @@
+[
+  {
+    "objectID": "visit2_no_hpv_analysis.html",
+    "href": "visit2_no_hpv_analysis.html",
+    "title": "Exclusions Visit 2 HPV Data Analysis",
+    "section": "",
+    "text": "Individuals were excluded for either having CIN2+ at visit 1 or 2, or for missing HPV data at visit 2. This analysis addresses:\n\nWhat are the characteristics of these exclusions?\nDid these individuals have cytology at visit 2, and if so, what were the results (NILM, ASC-US, LSIL, HSIL)?\nDid they have a biopsy at visit 2, and if so, was it &lt;CIN2+?\nDid they have any result at all at visit 2?\nExport the full subset and both subgroups to Excel for further review.\n\n\n\n\n\n\n\nSummary of Exclusion Groups\n\n\nCategory\nN\n\n\n\n\nTotal exclusions (CIN2+ or missing HPV at Visit 2)\n4279\n\n\nCIN2+ at Visit 1 or 2\n354\n\n\nExcluded for missing HPV at Visit 2 (no CIN2+)\n3925\n\n\n\n\n\n\n\n\n\n\n\n\n\nCytology Results at Visit 2 (No HPV Data, No CIN2+)\n\n\ncyto_cat\nn\npercent\n\n\n\n\nASC-H\n11\n0.2802548\n\n\nASC-US\n7\n0.1783439\n\n\nAtyp/EM/Glandular\n1\n0.0254777\n\n\nHSIL+\n14\n0.3566879\n\n\nInadequate\n10\n0.2547771\n\n\nLSIL\n88\n2.2420382\n\n\nNILM\n429\n10.9299363\n\n\nNo Cytology\n3365\n85.7324841\n\n\n\n\n\n\n\n\n\n\n\nBiopsy Results at Visit 2 (No HPV Data, No CIN2+)\n\n\nbiopsy_cat\nn\npercent\n\n\n\n\n&lt;CIN2+\n39\n0.9936306\n\n\n&gt;=CIN2+\n13\n0.3312102\n\n\nInsufficient for Dx\n1\n0.0254777\n\n\nMissing cervical Dx\n2\n0.0509554\n\n\nNo Biopsy\n3870\n98.5987261\n\n\n\n\n\n\n\n\n\n\n\nAny Result at Visit 2 (No HPV Data, No CIN2+)\n\n\nany_result\nn\npercent\n\n\n\n\nHas Result\n560\n14.26752\n\n\nNo Result\n3365\n85.73248\n\n\n\n\n\n\n\n\n\n\n\nCytology Results at Visit 2 (No HPV Data, No CIN2+) by Age Group\n\n\nage_group\ncyto_cat\nn\npercent\n\n\n\n\n&lt;30\nASC-H\n10\n0.5027652\n\n\n&lt;30\nASC-US\n1\n0.0502765\n\n\n&lt;30\nHSIL+\n10\n0.5027652\n\n\n&lt;30\nInadequate\n6\n0.3016591\n\n\n&lt;30\nLSIL\n82\n4.1226747\n\n\n&lt;30\nNILM\n411\n20.6636501\n\n\n&lt;30\nNo Cytology\n1469\n73.8562092\n\n\n&gt;=30\nASC-H\n1\n0.0516529\n\n\n&gt;=30\nASC-US\n6\n0.3099174\n\n\n&gt;=30\nAtyp/EM/Glandular\n1\n0.0516529\n\n\n&gt;=30\nHSIL+\n4\n0.2066116\n\n\n&gt;=30\nInadequate\n4\n0.2066116\n\n\n&gt;=30\nLSIL\n6\n0.3099174\n\n\n&gt;=30\nNILM\n18\n0.9297521\n\n\n&gt;=30\nNo Cytology\n1896\n97.9338843\n\n\n\n\n\n\n\n\n\n\n\nBiopsy Results at Visit 2 (No HPV Data, No CIN2+) by Age Group\n\n\nage_group\nbiopsy_cat\nn\npercent\n\n\n\n\n&lt;30\n&lt;CIN2+\n28\n1.4077426\n\n\n&lt;30\n&gt;=CIN2+\n11\n0.5530417\n\n\n&lt;30\nInsufficient for Dx\n1\n0.0502765\n\n\n&lt;30\nMissing cervical Dx\n2\n0.1005530\n\n\n&lt;30\nNo Biopsy\n1947\n97.8883861\n\n\n&gt;=30\n&lt;CIN2+\n11\n0.5681818\n\n\n&gt;=30\n&gt;=CIN2+\n2\n0.1033058\n\n\n&gt;=30\nNo Biopsy\n1923\n99.3285124\n\n\n\n\n\n\n\n\n\n\n\nAny Result at Visit 2 (No HPV Data, No CIN2+) by Age Group\n\n\nage_group\nany_result\nn\npercent\n\n\n\n\n&lt;30\nHas Result\n520\n26.143791\n\n\n&lt;30\nNo Result\n1469\n73.856209\n\n\n&gt;=30\nHas Result\n40\n2.066116\n\n\n&gt;=30\nNo Result\n1896\n97.933884\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTiming Between Visit 1 and Visit 2 by HPV Result Status at Visit 2\n\n\nGroup\nN\nMean_days\nMedian_days\nSD_days\n\n\n\n\nMissing HPV Result at Visit 2\n560\n693.6607\n545.5\n389.3485\n\n\nHPV Result at Visit 2\n2315\n566.7204\n429.0\n337.4267\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThird Visit Within a Year After Second Visit (No HPV Result at Visit 2, but biopsy/cytology result available)\n\n\nN_with_third_visit\nN_within_1yr\nPercent_within_1yr\n\n\n\n\n191\n51\n26.70157",
+    "crumbs": [
+      "Analysis Questions for Visit 2 without HPV"
+    ]
+  },
+  {
+    "objectID": "visit2_no_hpv_analysis.html#background",
+    "href": "visit2_no_hpv_analysis.html#background",
+    "title": "Exclusions Visit 2 HPV Data Analysis",
+    "section": "",
+    "text": "Individuals were excluded for either having CIN2+ at visit 1 or 2, or for missing HPV data at visit 2. This analysis addresses:\n\nWhat are the characteristics of these exclusions?\nDid these individuals have cytology at visit 2, and if so, what were the results (NILM, ASC-US, LSIL, HSIL)?\nDid they have a biopsy at visit 2, and if so, was it &lt;CIN2+?\nDid they have any result at all at visit 2?\nExport the full subset and both subgroups to Excel for further review.",
+    "crumbs": [
+      "Analysis Questions for Visit 2 without HPV"
+    ]
+  },
+  {
+    "objectID": "visit2_no_hpv_analysis.html#data-extraction-and-breakdown",
+    "href": "visit2_no_hpv_analysis.html#data-extraction-and-breakdown",
+    "title": "Exclusions Visit 2 HPV Data Analysis",
+    "section": "",
+    "text": "Summary of Exclusion Groups\n\n\nCategory\nN\n\n\n\n\nTotal exclusions (CIN2+ or missing HPV at Visit 2)\n4279\n\n\nCIN2+ at Visit 1 or 2\n354\n\n\nExcluded for missing HPV at Visit 2 (no CIN2+)\n3925",
+    "crumbs": [
+      "Analysis Questions for Visit 2 without HPV"
+    ]
+  },
+  {
+    "objectID": "visit2_no_hpv_analysis.html#results-for-missing-hpv-at-visit-2",
+    "href": "visit2_no_hpv_analysis.html#results-for-missing-hpv-at-visit-2",
+    "title": "Exclusions Visit 2 HPV Data Analysis",
+    "section": "",
+    "text": "Cytology Results at Visit 2 (No HPV Data, No CIN2+)\n\n\ncyto_cat\nn\npercent\n\n\n\n\nASC-H\n11\n0.2802548\n\n\nASC-US\n7\n0.1783439\n\n\nAtyp/EM/Glandular\n1\n0.0254777\n\n\nHSIL+\n14\n0.3566879\n\n\nInadequate\n10\n0.2547771\n\n\nLSIL\n88\n2.2420382\n\n\nNILM\n429\n10.9299363\n\n\nNo Cytology\n3365\n85.7324841\n\n\n\n\n\n\n\n\n\n\n\nBiopsy Results at Visit 2 (No HPV Data, No CIN2+)\n\n\nbiopsy_cat\nn\npercent\n\n\n\n\n&lt;CIN2+\n39\n0.9936306\n\n\n&gt;=CIN2+\n13\n0.3312102\n\n\nInsufficient for Dx\n1\n0.0254777\n\n\nMissing cervical Dx\n2\n0.0509554\n\n\nNo Biopsy\n3870\n98.5987261\n\n\n\n\n\n\n\n\n\n\n\nAny Result at Visit 2 (No HPV Data, No CIN2+)\n\n\nany_result\nn\npercent\n\n\n\n\nHas Result\n560\n14.26752\n\n\nNo Result\n3365\n85.73248\n\n\n\n\n\n\n\n\n\n\n\nCytology Results at Visit 2 (No HPV Data, No CIN2+) by Age Group\n\n\nage_group\ncyto_cat\nn\npercent\n\n\n\n\n&lt;30\nASC-H\n10\n0.5027652\n\n\n&lt;30\nASC-US\n1\n0.0502765\n\n\n&lt;30\nHSIL+\n10\n0.5027652\n\n\n&lt;30\nInadequate\n6\n0.3016591\n\n\n&lt;30\nLSIL\n82\n4.1226747\n\n\n&lt;30\nNILM\n411\n20.6636501\n\n\n&lt;30\nNo Cytology\n1469\n73.8562092\n\n\n&gt;=30\nASC-H\n1\n0.0516529\n\n\n&gt;=30\nASC-US\n6\n0.3099174\n\n\n&gt;=30\nAtyp/EM/Glandular\n1\n0.0516529\n\n\n&gt;=30\nHSIL+\n4\n0.2066116\n\n\n&gt;=30\nInadequate\n4\n0.2066116\n\n\n&gt;=30\nLSIL\n6\n0.3099174\n\n\n&gt;=30\nNILM\n18\n0.9297521\n\n\n&gt;=30\nNo Cytology\n1896\n97.9338843\n\n\n\n\n\n\n\n\n\n\n\nBiopsy Results at Visit 2 (No HPV Data, No CIN2+) by Age Group\n\n\nage_group\nbiopsy_cat\nn\npercent\n\n\n\n\n&lt;30\n&lt;CIN2+\n28\n1.4077426\n\n\n&lt;30\n&gt;=CIN2+\n11\n0.5530417\n\n\n&lt;30\nInsufficient for Dx\n1\n0.0502765\n\n\n&lt;30\nMissing cervical Dx\n2\n0.1005530\n\n\n&lt;30\nNo Biopsy\n1947\n97.8883861\n\n\n&gt;=30\n&lt;CIN2+\n11\n0.5681818\n\n\n&gt;=30\n&gt;=CIN2+\n2\n0.1033058\n\n\n&gt;=30\nNo Biopsy\n1923\n99.3285124\n\n\n\n\n\n\n\n\n\n\n\nAny Result at Visit 2 (No HPV Data, No CIN2+) by Age Group\n\n\nage_group\nany_result\nn\npercent\n\n\n\n\n&lt;30\nHas Result\n520\n26.143791\n\n\n&lt;30\nNo Result\n1469\n73.856209\n\n\n&gt;=30\nHas Result\n40\n2.066116\n\n\n&gt;=30\nNo Result\n1896\n97.933884",
+    "crumbs": [
+      "Analysis Questions for Visit 2 without HPV"
+    ]
+  },
+  {
+    "objectID": "visit2_no_hpv_analysis.html#additional-questions",
+    "href": "visit2_no_hpv_analysis.html#additional-questions",
+    "title": "Exclusions Visit 2 HPV Data Analysis",
+    "section": "",
+    "text": "Timing Between Visit 1 and Visit 2 by HPV Result Status at Visit 2\n\n\nGroup\nN\nMean_days\nMedian_days\nSD_days\n\n\n\n\nMissing HPV Result at Visit 2\n560\n693.6607\n545.5\n389.3485\n\n\nHPV Result at Visit 2\n2315\n566.7204\n429.0\n337.4267\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThird Visit Within a Year After Second Visit (No HPV Result at Visit 2, but biopsy/cytology result available)\n\n\nN_with_third_visit\nN_within_1yr\nPercent_within_1yr\n\n\n\n\n191\n51\n26.70157",
+    "crumbs": [
+      "Analysis Questions for Visit 2 without HPV"
+    ]
+  },
+  {
+    "objectID": "table4.html",
+    "href": "table4.html",
+    "title": "Strides Data Analysis",
+    "section": "",
+    "text": "All participantsAbove 30 years of ageWhite participants above 30 years of ageBlack participants above 30 years of age",
+    "crumbs": [
+      "Regression Tables for persistence vs clearance"
+    ]
+  },
+  {
+    "objectID": "table4.html#effect-of-smoking-on-persistence-vs-clearance-participants",
+    "href": "table4.html#effect-of-smoking-on-persistence-vs-clearance-participants",
+    "title": "Strides Data Analysis",
+    "section": "",
+    "text": "All participantsAbove 30 years of ageWhite participants above 30 years of ageBlack participants above 30 years of age",
+    "crumbs": [
+      "Regression Tables for persistence vs clearance"
+    ]
+  },
+  {
+    "objectID": "table3d.html",
+    "href": "table3d.html",
+    "title": "Strides Data Analysis",
+    "section": "",
+    "text": "All participantsAll participants above 30 years of ageWhite participants above 30 years of ageBlack participants above 30 years of age",
+    "crumbs": [
+      "Regression Tables for disease vs non disease in HPV16+ participants"
+    ]
+  },
+  {
+    "objectID": "table3d.html#effect-of-smoking-on-disease-vs-non-disease-participants-in-participants-with-hpv-16-at-visit-1-over-30-years-of-age",
+    "href": "table3d.html#effect-of-smoking-on-disease-vs-non-disease-participants-in-participants-with-hpv-16-at-visit-1-over-30-years-of-age",
+    "title": "Strides Data Analysis",
+    "section": "",
+    "text": "All participantsAll participants above 30 years of ageWhite participants above 30 years of ageBlack participants above 30 years of age",
+    "crumbs": [
+      "Regression Tables for disease vs non disease in HPV16+ participants"
+    ]
+  },
+  {
+    "objectID": "table2.html",
+    "href": "table2.html",
+    "title": "Strides Data Analysis",
+    "section": "",
+    "text": "Stratifying variable is smoking status at visit 1\nColumn percentages are in () and row percentages are in []\n\nParticipants with disease/persistence/clearanceParticipants with disease/persistence/clearance above 30 years of ageParticipants with disease/persistence/clearance below 30 years of ageWhite participants above 30 years of ageBlack participants above 30 years of age",
+    "crumbs": [
+      "Stratified Tables by Smoking status"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "",
+    "section": "",
+    "text": "To understand the effect of Smoking and other factors such as race, bmi, age and HPV type (16, 18 or other) in individuals with HPV persistence and clearance and disease in two consecutive vists of the STRIDES study.",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#goals",
+    "href": "index.html#goals",
+    "title": "",
+    "section": "",
+    "text": "To understand the effect of Smoking and other factors such as race, bmi, age and HPV type (16, 18 or other) in individuals with HPV persistence and clearance and disease in two consecutive vists of the STRIDES study.",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#study-sample",
+    "href": "index.html#study-sample",
+    "title": "",
+    "section": "Study Sample",
+    "text": "Study Sample\nStudy sample description: Sample of Individuals Who participated in STRIDES V16 Study. The study only includes participants who attended Visit 1 and Visit 2 who were HPV positive at Visit 1. The study sample is further divided into 3 groups:\n\nHPV Disease: Participants who were HPV positive at Visit 1 and Visit 2 and had CIN2+ at Visit 1 or Visit 2.\nHPV Persistence: Participants who were HPV positive at Visit 1 and Visit 2 and are not CIN2+ at Visit 1 or Visit 2.\nHPV Clearance: Participants who were HPV positive at Visit 1 and HPV negative at Visit 2 and are not CIN2+ at Visit 1 or Visit 2.",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#flowchart-of-study-sample",
+    "href": "index.html#flowchart-of-study-sample",
+    "title": "",
+    "section": "Flowchart of Study Sample",
+    "text": "Flowchart of Study Sample\nNote: This flowchart is based on unique participants who were enrolled in Visit 1 The first participant enrolled on 2018-01-04 and the last participant enrolled on 2023-07-31\n\nAll participantsAbove 30 years of ageBelow 30 years of ageWhite participantsBlack participantsAsian participantsOther Race participants",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "table1.html",
+    "href": "table1.html",
+    "title": "Strides Data Analysis",
+    "section": "",
+    "text": "Participants with disease/persistence/clearanceParticipants with disease/persistence/clearance above 30 years of ageParticipants with disease/persistence/clearance below 30 years of ageWhite participants above 30 years of ageBlack participants above 30 years of age",
+    "crumbs": [
+      "Descriptive Tables"
+    ]
+  },
+  {
+    "objectID": "table3.html",
+    "href": "table3.html",
+    "title": "Strides Data Analysis",
+    "section": "",
+    "text": "All participantsAbove 30 years of ageWhite participants above 30 years of ageBlack participants above 30 years of age",
+    "crumbs": [
+      "Regression Tables for disease vs non disease"
+    ]
+  },
+  {
+    "objectID": "table3.html#effect-of-smoking-on-disease-vs-non-disease-participants",
+    "href": "table3.html#effect-of-smoking-on-disease-vs-non-disease-participants",
+    "title": "Strides Data Analysis",
+    "section": "",
+    "text": "All participantsAbove 30 years of ageWhite participants above 30 years of ageBlack participants above 30 years of age",
+    "crumbs": [
+      "Regression Tables for disease vs non disease"
+    ]
+  },
+  {
+    "objectID": "table3e.html",
+    "href": "table3e.html",
+    "title": "Strides Data Analysis",
+    "section": "",
+    "text": "All participantsAll participants above 30 years of ageWhite participants above 30 years of ageBlack participants above 30 years of age",
+    "crumbs": [
+      "Regression Tables for disease vs non disease in Other HPV+ participants"
+    ]
+  },
+  {
+    "objectID": "table3e.html#effect-of-smoking-on-disease-vs-non-disease-participants-in-participants-with-hpv-otherother-than-hpv-16-at-visit-1",
+    "href": "table3e.html#effect-of-smoking-on-disease-vs-non-disease-participants-in-participants-with-hpv-otherother-than-hpv-16-at-visit-1",
+    "title": "Strides Data Analysis",
+    "section": "",
+    "text": "All participantsAll participants above 30 years of ageWhite participants above 30 years of ageBlack participants above 30 years of age",
+    "crumbs": [
+      "Regression Tables for disease vs non disease in Other HPV+ participants"
+    ]
+  },
+  {
+    "objectID": "visit_analysis.html",
+    "href": "visit_analysis.html",
+    "title": "STRIDES Visit Pattern Analysis",
+    "section": "",
+    "text": "Time Between Visits by HPV Status\n\n\n\n\n\n\n\n\n\n\n\n\nstatus_v1_v2\nn\nmean_days\nmean_months\nmedian_months\nsd_months\nmin_months\nmax_months\n\n\n\n\nClearance\n879\n662.3\n21.8\n15.8\n12.5\n1.0\n61.3\n\n\nDisease\n354\n502.4\n16.5\n13.8\n8.8\n3.3\n53.4\n\n\nPersistence\n1216\n509.1\n16.7\n13.6\n9.7\n0.1\n62.3\n\n\n\n\n\n\n\n\n\n\n\nAnalysis of Missing HPV Results at Visit 2\n\n\ntotal_missing\nno_visit_2\nhas_visit_2_no_hpv\n\n\n\n\n35450\n32392\n3058\n\n\n\n\n\n\n\n\n\n\n\nSingle Visit Analysis\n\n\ntotal_participants\nsingle_visit\npercent_single_visit\n\n\n\n\n44071\n32398\n73.51319\n\n\n\n\n\n\n\n\n\n\n\nUnder 30 ASCUS HPV+ Analysis\n\n\ntotal\nsingle_visit\npercent_single_visit\n\n\n\n\n840\n447\n53.21429\n\n\n\n\n\n\n\n\n\n\n\nAnalysis of Short Interval Follow-ups (&lt;6 months)\n\n\n\n\n\n\n\n\n\n\nstatus_v1_v2\ntotal_followup\nshort_interval_count\npercent_short_interval\nshort_with_prev_cancer\nshort_without_prev_cancer\n\n\n\n\nClearance\n879\n15\n1.706485\n1\n14\n\n\nDisease\n248\n3\n1.209677\n0\n3\n\n\nPersistence\n1216\n62\n5.098684\n12\n50\n\n\nNA\n9330\n551\n5.905681\n188\n363",
+    "crumbs": [
+      "Analysis Questions"
+    ]
+  },
+  {
+    "objectID": "visit_analysis.html#time-between-visits-analysis",
+    "href": "visit_analysis.html#time-between-visits-analysis",
+    "title": "STRIDES Visit Pattern Analysis",
+    "section": "",
+    "text": "Time Between Visits by HPV Status\n\n\n\n\n\n\n\n\n\n\n\n\nstatus_v1_v2\nn\nmean_days\nmean_months\nmedian_months\nsd_months\nmin_months\nmax_months\n\n\n\n\nClearance\n879\n662.3\n21.8\n15.8\n12.5\n1.0\n61.3\n\n\nDisease\n354\n502.4\n16.5\n13.8\n8.8\n3.3\n53.4\n\n\nPersistence\n1216\n509.1\n16.7\n13.6\n9.7\n0.1\n62.3\n\n\n\n\n\n\n\n\n\n\n\nAnalysis of Missing HPV Results at Visit 2\n\n\ntotal_missing\nno_visit_2\nhas_visit_2_no_hpv\n\n\n\n\n35450\n32392\n3058\n\n\n\n\n\n\n\n\n\n\n\nSingle Visit Analysis\n\n\ntotal_participants\nsingle_visit\npercent_single_visit\n\n\n\n\n44071\n32398\n73.51319\n\n\n\n\n\n\n\n\n\n\n\nUnder 30 ASCUS HPV+ Analysis\n\n\ntotal\nsingle_visit\npercent_single_visit\n\n\n\n\n840\n447\n53.21429\n\n\n\n\n\n\n\n\n\n\n\nAnalysis of Short Interval Follow-ups (&lt;6 months)\n\n\n\n\n\n\n\n\n\n\nstatus_v1_v2\ntotal_followup\nshort_interval_count\npercent_short_interval\nshort_with_prev_cancer\nshort_without_prev_cancer\n\n\n\n\nClearance\n879\n15\n1.706485\n1\n14\n\n\nDisease\n248\n3\n1.209677\n0\n3\n\n\nPersistence\n1216\n62\n5.098684\n12\n50\n\n\nNA\n9330\n551\n5.905681\n188\n363",
+    "crumbs": [
+      "Analysis Questions"
+    ]
+  },
+  {
+    "objectID": "visit_analysis.html#distribution-of-time-between-visits",
+    "href": "visit_analysis.html#distribution-of-time-between-visits",
+    "title": "STRIDES Visit Pattern Analysis",
+    "section": "Distribution of Time Between Visits",
+    "text": "Distribution of Time Between Visits\n\n\n\n\n\n\n\n\n\n\nQuestion 6: How many in persistence group had long follow-up periods?\n\n\n\nAnalysis of Long Follow-up Periods in Persistence Group\n\n\n\n\n\n\n\n\n\ntotal_persistence\npast_2_years\npercent_2_years\npast_3_years\npercent_3_years\n\n\n\n\n1216\n203\n16.7\n86\n7.1",
+    "crumbs": [
+      "Analysis Questions"
+    ]
+  }
+]
