@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>STRIDES Visit Pattern Analysis – Strides Data Analysis</title>
+<title>Diagnosis Variable Comparison: WORST_GOLDDX vs WORST_DISCRETEDX – Strides Data Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./visit2_no_hpv_analysis.html" rel="next">
-<link href="./table4.html" rel="prev">
+<link href="./table1.html" rel="next">
+<link href="./index.html" rel="prev">
 <link href="./logo.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -73,8 +73,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="STRIDES Visit Pattern Analysis – Strides Data Analysis">
-<meta property="og:image" content="visit_analysis_files/figure-html/visit_time_distribution-1.png">
+<meta property="og:title" content="Diagnosis Variable Comparison: WORST_GOLDDX vs WORST_DISCRETEDX – Strides Data Analysis">
+<meta property="og:description" content="">
 <meta property="og:site_name" content="Strides Data Analysis">
 </head>
 
@@ -106,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./visit_analysis.html">Analysis Questions</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./diagnosis_comparison.html">Diagnosis Comparison (GOLDDX vs DISCRETEDX)</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -135,7 +135,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./diagnosis_comparison.html" class="sidebar-item-text sidebar-link"><i class="bi bi-bookmark-fill" role="img">
+  <a href="./diagnosis_comparison.html" class="sidebar-item-text sidebar-link active"><i class="bi bi-bookmark-fill" role="img">
 </i> 
  <span class="menu-text">Diagnosis Comparison (GOLDDX vs DISCRETEDX)</span></a>
   </div>
@@ -184,7 +184,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./visit_analysis.html" class="sidebar-item-text sidebar-link active"><i class="bi bi-bookmark-fill" role="img">
+  <a href="./visit_analysis.html" class="sidebar-item-text sidebar-link"><i class="bi bi-bookmark-fill" role="img">
 </i> 
  <span class="menu-text">Analysis Questions</span></a>
   </div>
@@ -206,18 +206,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#time-between-visits-analysis" id="toc-time-between-visits-analysis" class="nav-link active" data-scroll-target="#time-between-visits-analysis">Time Between Visits Analysis</a>
+  <li><a href="#overall-agreement-between-variables" id="toc-overall-agreement-between-variables" class="nav-link active" data-scroll-target="#overall-agreement-between-variables">Overall Agreement Between Variables</a>
   <ul class="collapse">
-  <li><a href="#question-1-what-is-the-time-frame-between-visits-for-clearance-and-persistence-groups" id="toc-question-1-what-is-the-time-frame-between-visits-for-clearance-and-persistence-groups" class="nav-link" data-scroll-target="#question-1-what-is-the-time-frame-between-visits-for-clearance-and-persistence-groups">Question 1: What is the time frame between visits for clearance and persistence groups?</a></li>
-  <li><a href="#question-2-why-were-so-many-excluded-without-hpv-at-second-visit" id="toc-question-2-why-were-so-many-excluded-without-hpv-at-second-visit" class="nav-link" data-scroll-target="#question-2-why-were-so-many-excluded-without-hpv-at-second-visit">Question 2: Why were so many excluded without HPV at second visit?</a></li>
-  <li><a href="#question-3-how-many-only-had-1-visit" id="toc-question-3-how-many-only-had-1-visit" class="nav-link" data-scroll-target="#question-3-how-many-only-had-1-visit">Question 3: How many only had 1 visit?</a></li>
-  <li><a href="#question-4-under-30-ascus-hpv-analysis" id="toc-question-4-under-30-ascus-hpv-analysis" class="nav-link" data-scroll-target="#question-4-under-30-ascus-hpv-analysis">Question 4: Under 30 ASCUS HPV+ Analysis</a></li>
-  <li><a href="#question-5-short-interval-follow-up-analysis" id="toc-question-5-short-interval-follow-up-analysis" class="nav-link" data-scroll-target="#question-5-short-interval-follow-up-analysis">Question 5: Short Interval Follow-up Analysis</a></li>
+  <li><a href="#visit-1-diagnosis-comparison" id="toc-visit-1-diagnosis-comparison" class="nav-link" data-scroll-target="#visit-1-diagnosis-comparison">Visit 1 Diagnosis Comparison</a></li>
+  <li><a href="#visit-2-diagnosis-comparison" id="toc-visit-2-diagnosis-comparison" class="nav-link" data-scroll-target="#visit-2-diagnosis-comparison">Visit 2 Diagnosis Comparison</a></li>
   </ul></li>
-  <li><a href="#distribution-of-time-between-visits" id="toc-distribution-of-time-between-visits" class="nav-link" data-scroll-target="#distribution-of-time-between-visits">Distribution of Time Between Visits</a>
-  <ul class="collapse">
-  <li><a href="#question-6-how-many-in-persistence-group-had-long-follow-up-periods" id="toc-question-6-how-many-in-persistence-group-had-long-follow-up-periods" class="nav-link" data-scroll-target="#question-6-how-many-in-persistence-group-had-long-follow-up-periods">Question 6: How many in persistence group had long follow-up periods?</a></li>
-  </ul></li>
+  <li><a href="#missing-data-comparison" id="toc-missing-data-comparison" class="nav-link" data-scroll-target="#missing-data-comparison">Missing Data Comparison</a></li>
+  <li><a href="#cin2-classification-differences" id="toc-cin2-classification-differences" class="nav-link" data-scroll-target="#cin2-classification-differences">CIN2+ Classification Differences</a></li>
+  <li><a href="#impact-on-study-group-classification" id="toc-impact-on-study-group-classification" class="nav-link" data-scroll-target="#impact-on-study-group-classification">Impact on Study Group Classification</a></li>
+  <li><a href="#summary-statistics-by-diagnosis-source" id="toc-summary-statistics-by-diagnosis-source" class="nav-link" data-scroll-target="#summary-statistics-by-diagnosis-source">Summary Statistics by Diagnosis Source</a></li>
+  <li><a href="#recommendations" id="toc-recommendations" class="nav-link" data-scroll-target="#recommendations">Recommendations</a></li>
   </ul>
 </nav>
     </div>
@@ -226,7 +224,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">STRIDES Visit Pattern Analysis</h1>
+<h1 class="title">Diagnosis Variable Comparison: WORST_GOLDDX vs WORST_DISCRETEDX</h1>
 </div>
 
 
@@ -243,262 +241,560 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="time-between-visits-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="time-between-visits-analysis">Time Between Visits Analysis</h2>
-<section id="question-1-what-is-the-time-frame-between-visits-for-clearance-and-persistence-groups" class="level3">
-<h3 class="anchored" data-anchor-id="question-1-what-is-the-time-frame-between-visits-for-clearance-and-persistence-groups">Question 1: What is the time frame between visits for clearance and persistence groups?</h3>
+<p>This page compares the two diagnosis variables to help determine which is better for outcome classification:</p>
+<ul>
+<li><strong>diagnosis_3cat (WORST_GOLDDX)</strong>: “GOLD” reviewer histology diagnosis - manually reviewed</li>
+<li><strong>discretedx_3cat (WORST_DISCRETEDX)</strong>: Discrete/automated diagnosis</li>
+</ul>
+<section id="overall-agreement-between-variables" class="level2">
+<h2 class="anchored" data-anchor-id="overall-agreement-between-variables">Overall Agreement Between Variables</h2>
+<section id="visit-1-diagnosis-comparison" class="level3">
+<h3 class="anchored" data-anchor-id="visit-1-diagnosis-comparison">Visit 1 Diagnosis Comparison</h3>
 <div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Cross-tabulation: WORST_GOLDDX (rows) vs WORST_DISCRETEDX (columns) at Visit 1</code></pre>
+</div>
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
-<caption>Time Between Visits by HPV Status</caption>
-<colgroup>
-<col style="width: 15%">
-<col style="width: 5%">
-<col style="width: 11%">
-<col style="width: 13%">
-<col style="width: 16%">
-<col style="width: 11%">
-<col style="width: 12%">
-<col style="width: 12%">
-</colgroup>
+<caption>Visit 1: diagnosis_3cat_1 (GOLDDX) vs discretedx_3cat_1 (DISCRETEDX)</caption>
 <thead>
 <tr class="header">
-<th style="text-align: left;">status_v1_v2</th>
-<th style="text-align: right;">n</th>
-<th style="text-align: right;">mean_days</th>
-<th style="text-align: right;">mean_months</th>
-<th style="text-align: right;">median_months</th>
-<th style="text-align: right;">sd_months</th>
-<th style="text-align: right;">min_months</th>
-<th style="text-align: right;">max_months</th>
+<th style="text-align: left;"></th>
+<th style="text-align: right;">Normal</th>
+<th style="text-align: right;">CIN1</th>
+<th style="text-align: right;">CIN2+</th>
+<th style="text-align: right;">Unknown</th>
+<th style="text-align: right;">Sum</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Clearance</td>
-<td style="text-align: right;">1273</td>
-<td style="text-align: right;">748.4</td>
-<td style="text-align: right;">24.6</td>
-<td style="text-align: right;">16.7</td>
-<td style="text-align: right;">16.4</td>
-<td style="text-align: right;">0.3</td>
-<td style="text-align: right;">84.6</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Disease</td>
-<td style="text-align: right;">421</td>
-<td style="text-align: right;">508.7</td>
-<td style="text-align: right;">16.7</td>
-<td style="text-align: right;">13.8</td>
-<td style="text-align: right;">9.7</td>
-<td style="text-align: right;">0.7</td>
-<td style="text-align: right;">69.7</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Persistence</td>
-<td style="text-align: right;">1614</td>
-<td style="text-align: right;">529.2</td>
-<td style="text-align: right;">17.4</td>
-<td style="text-align: right;">13.3</td>
-<td style="text-align: right;">11.4</td>
-<td style="text-align: right;">0.2</td>
-<td style="text-align: right;">80.5</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</section>
-<section id="question-2-why-were-so-many-excluded-without-hpv-at-second-visit" class="level3">
-<h3 class="anchored" data-anchor-id="question-2-why-were-so-many-excluded-without-hpv-at-second-visit">Question 2: Why were so many excluded without HPV at second visit?</h3>
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<caption>Analysis of Missing HPV Results at Visit 2</caption>
-<thead>
-<tr class="header">
-<th style="text-align: right;">total_missing</th>
-<th style="text-align: right;">no_visit_2</th>
-<th style="text-align: right;">has_visit_2_no_hpv</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">41993</td>
-<td style="text-align: right;">37637</td>
-<td style="text-align: right;">4356</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</section>
-<section id="question-3-how-many-only-had-1-visit" class="level3">
-<h3 class="anchored" data-anchor-id="question-3-how-many-only-had-1-visit">Question 3: How many only had 1 visit?</h3>
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<caption>Single Visit Analysis</caption>
-<thead>
-<tr class="header">
-<th style="text-align: right;">total_participants</th>
-<th style="text-align: right;">single_visit</th>
-<th style="text-align: right;">percent_single_visit</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">55002</td>
-<td style="text-align: right;">37637</td>
-<td style="text-align: right;">68.42842</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</section>
-<section id="question-4-under-30-ascus-hpv-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="question-4-under-30-ascus-hpv-analysis">Question 4: Under 30 ASCUS HPV+ Analysis</h3>
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<caption>Under 30 ASCUS HPV+ Analysis</caption>
-<thead>
-<tr class="header">
-<th style="text-align: right;">total</th>
-<th style="text-align: right;">single_visit</th>
-<th style="text-align: right;">percent_single_visit</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">1073</td>
-<td style="text-align: right;">514</td>
-<td style="text-align: right;">47.90308</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</section>
-<section id="question-5-short-interval-follow-up-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="question-5-short-interval-follow-up-analysis">Question 5: Short Interval Follow-up Analysis</h3>
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<caption>Analysis of Short Interval Follow-ups (&lt;6 months)</caption>
-<colgroup>
-<col style="width: 10%">
-<col style="width: 12%">
-<col style="width: 17%">
-<col style="width: 19%">
-<col style="width: 19%">
-<col style="width: 21%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">status_v1_v2</th>
-<th style="text-align: right;">total_followup</th>
-<th style="text-align: right;">short_interval_count</th>
-<th style="text-align: right;">percent_short_interval</th>
-<th style="text-align: right;">short_with_prev_cancer</th>
-<th style="text-align: right;">short_without_prev_cancer</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Clearance</td>
-<td style="text-align: right;">1273</td>
-<td style="text-align: right;">21</td>
-<td style="text-align: right;">1.649647</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">20</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Disease</td>
-<td style="text-align: right;">308</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">1.298701</td>
+<td style="text-align: left;">Normal</td>
+<td style="text-align: right;">34</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">4</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Persistence</td>
-<td style="text-align: right;">1614</td>
-<td style="text-align: right;">78</td>
-<td style="text-align: right;">4.832714</td>
-<td style="text-align: right;">12</td>
-<td style="text-align: right;">66</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">143</td>
+<td style="text-align: right;">177</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">NA</td>
-<td style="text-align: right;">14170</td>
-<td style="text-align: right;">707</td>
-<td style="text-align: right;">4.989414</td>
-<td style="text-align: right;">195</td>
-<td style="text-align: right;">512</td>
+<td style="text-align: left;">CIN1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">449</td>
+<td style="text-align: right;">487</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CIN2+</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">37</td>
+<td style="text-align: right;">307</td>
+<td style="text-align: right;">347</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Unknown</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">2260</td>
+<td style="text-align: right;">2297</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Sum</td>
+<td style="text-align: right;">53</td>
+<td style="text-align: right;">53</td>
+<td style="text-align: right;">43</td>
+<td style="text-align: right;">3159</td>
+<td style="text-align: right;">3308</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
-</section>
-</section>
-<section id="distribution-of-time-between-visits" class="level2">
-<h2 class="anchored" data-anchor-id="distribution-of-time-between-visits">Distribution of Time Between Visits</h2>
 <div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="visit_analysis_files/figure-html/visit_time_distribution-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Overall Agreement at Visit 1: 71.6%</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Number of disagreements: 939 out of 3308 (28.4%)</code></pre>
 </div>
 </div>
-</div>
-<section id="question-6-how-many-in-persistence-group-had-long-follow-up-periods" class="level3">
-<h3 class="anchored" data-anchor-id="question-6-how-many-in-persistence-group-had-long-follow-up-periods">Question 6: How many in persistence group had long follow-up periods?</h3>
+</section>
+<section id="visit-2-diagnosis-comparison" class="level3">
+<h3 class="anchored" data-anchor-id="visit-2-diagnosis-comparison">Visit 2 Diagnosis Comparison</h3>
 <div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Cross-tabulation: WORST_GOLDDX (rows) vs WORST_DISCRETEDX (columns) at Visit 2</code></pre>
+</div>
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
-<caption>Analysis of Long Follow-up Periods in Persistence Group</caption>
-<colgroup>
-<col style="width: 23%">
-<col style="width: 17%">
-<col style="width: 21%">
-<col style="width: 17%">
-<col style="width: 21%">
-</colgroup>
+<caption>Visit 2: diagnosis_3cat_2 (GOLDDX) vs discretedx_3cat_2 (DISCRETEDX)</caption>
 <thead>
 <tr class="header">
-<th style="text-align: right;">total_persistence</th>
-<th style="text-align: right;">past_2_years</th>
-<th style="text-align: right;">percent_2_years</th>
-<th style="text-align: right;">past_3_years</th>
-<th style="text-align: right;">percent_3_years</th>
+<th style="text-align: left;"></th>
+<th style="text-align: right;">Normal</th>
+<th style="text-align: right;">CIN1</th>
+<th style="text-align: right;">CIN2+</th>
+<th style="text-align: right;">Unknown</th>
+<th style="text-align: right;">Sum</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">1614</td>
-<td style="text-align: right;">282</td>
-<td style="text-align: right;">17.5</td>
-<td style="text-align: right;">138</td>
-<td style="text-align: right;">8.6</td>
+<td style="text-align: left;">Normal</td>
+<td style="text-align: right;">29</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">92</td>
+<td style="text-align: right;">121</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CIN1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">54</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">385</td>
+<td style="text-align: right;">441</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CIN2+</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">82</td>
+<td style="text-align: right;">94</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Unknown</td>
+<td style="text-align: right;">61</td>
+<td style="text-align: right;">69</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">2505</td>
+<td style="text-align: right;">2652</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Sum</td>
+<td style="text-align: right;">91</td>
+<td style="text-align: right;">123</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">3064</td>
+<td style="text-align: right;">3308</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="visit_analysis_files/figure-html/long_followup_analysis-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Overall Agreement at Visit 2: 78.6%</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Number of disagreements: 709 out of 3308 (21.4%)</code></pre>
 </div>
 </div>
-</div>
-
-
 </section>
+</section>
+<section id="missing-data-comparison" class="level2">
+<h2 class="anchored" data-anchor-id="missing-data-comparison">Missing Data Comparison</h2>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Missing Data Summary</code></pre>
+</div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Variable</th>
+<th style="text-align: right;">N Missing</th>
+<th style="text-align: left;">% Missing</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">diagnosis_3cat_1 (GOLDDX)</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">0.0%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">discretedx_3cat_1 (DISCRETEDX)</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">0.0%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">diagnosis_3cat_2 (GOLDDX)</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">0.0%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">discretedx_3cat_2 (DISCRETEDX)</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">0.0%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="cin2-classification-differences" class="level2">
+<h2 class="anchored" data-anchor-id="cin2-classification-differences">CIN2+ Classification Differences</h2>
+<p>This is critical for determining Disease/Persistence/Clearance status.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Visit 1 CIN2+ Classification:</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  GOLDDX CIN2+: 347 (10.5%)</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  DISCRETEDX CIN2+: 43 (1.3%)</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Visit 2 CIN2+ Classification:</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  GOLDDX CIN2+: 94 (2.8%)</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  DISCRETEDX CIN2+: 30 (0.9%)</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+CIN2+ Cross-tabulation at Visit 1:</code></pre>
+</div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: right;">FALSE</th>
+<th style="text-align: right;">TRUE</th>
+<th style="text-align: right;">Sum</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">FALSE</td>
+<td style="text-align: right;">2955</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">2961</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TRUE</td>
+<td style="text-align: right;">310</td>
+<td style="text-align: right;">37</td>
+<td style="text-align: right;">347</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Sum</td>
+<td style="text-align: right;">3265</td>
+<td style="text-align: right;">43</td>
+<td style="text-align: right;">3308</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+CIN2+ Cross-tabulation at Visit 2:</code></pre>
+</div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: right;">FALSE</th>
+<th style="text-align: right;">TRUE</th>
+<th style="text-align: right;">Sum</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">FALSE</td>
+<td style="text-align: right;">3195</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">3214</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TRUE</td>
+<td style="text-align: right;">83</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">94</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Sum</td>
+<td style="text-align: right;">3278</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">3308</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="impact-on-study-group-classification" class="level2">
+<h2 class="anchored" data-anchor-id="impact-on-study-group-classification">Impact on Study Group Classification</h2>
+<p>Compare how using GOLDDX vs DISCRETEDX would affect Disease/Persistence/Clearance classification.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Study Group Classification Comparison:</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Using GOLDDX (current):</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+  Clearance     Disease Persistence 
+       1273         421        1614 </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Using DISCRETEDX:</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Disease Persistence   Clearance        &lt;NA&gt; 
+         69        1764        1347         128 </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Cross-tabulation: GOLDDX status (rows) vs DISCRETEDX status (columns):</code></pre>
+</div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: right;">Disease</th>
+<th style="text-align: right;">Persistence</th>
+<th style="text-align: right;">Clearance</th>
+<th style="text-align: right;">NA</th>
+<th style="text-align: right;">Sum</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Clearance</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1267</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1273</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Disease</td>
+<td style="text-align: right;">49</td>
+<td style="text-align: right;">165</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">127</td>
+<td style="text-align: right;">421</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Persistence</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">1599</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1614</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sum</td>
+<td style="text-align: right;">69</td>
+<td style="text-align: right;">1764</td>
+<td style="text-align: right;">1347</td>
+<td style="text-align: right;">128</td>
+<td style="text-align: right;">3308</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Number of cases with different status classification: 393 (11.9%)</code></pre>
+</div>
+</div>
+</section>
+<section id="summary-statistics-by-diagnosis-source" class="level2">
+<h2 class="anchored" data-anchor-id="summary-statistics-by-diagnosis-source">Summary Statistics by Diagnosis Source</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Using GOLDDX (Current)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Using DISCRETEDX</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">level</th>
+<th style="text-align: left;">Overall</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">n</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">3308</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">diagnosis_3cat_1 (%)</td>
+<td style="text-align: left;">Normal</td>
+<td style="text-align: left;">177 ( 5.4)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">CIN1</td>
+<td style="text-align: left;">487 (14.7)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">CIN2+</td>
+<td style="text-align: left;">347 (10.5)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Unknown</td>
+<td style="text-align: left;">2297 (69.4)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">diagnosis_3cat_2 (%)</td>
+<td style="text-align: left;">Normal</td>
+<td style="text-align: left;">121 ( 3.7)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">CIN1</td>
+<td style="text-align: left;">441 (13.3)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">CIN2+</td>
+<td style="text-align: left;">94 ( 2.8)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Unknown</td>
+<td style="text-align: left;">2652 (80.2)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">status_v1_v2 (%)</td>
+<td style="text-align: left;">Clearance</td>
+<td style="text-align: left;">1273 (38.5)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Disease</td>
+<td style="text-align: left;">421 (12.7)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Persistence</td>
+<td style="text-align: left;">1614 (48.8)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">level</th>
+<th style="text-align: left;">Overall</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">n</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">3308</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">discretedx_3cat_1 (%)</td>
+<td style="text-align: left;">Normal</td>
+<td style="text-align: left;">53 ( 1.6)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">CIN1</td>
+<td style="text-align: left;">53 ( 1.6)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">CIN2+</td>
+<td style="text-align: left;">43 ( 1.3)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Unknown</td>
+<td style="text-align: left;">3159 (95.5)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">discretedx_3cat_2 (%)</td>
+<td style="text-align: left;">Normal</td>
+<td style="text-align: left;">91 ( 2.8)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">CIN1</td>
+<td style="text-align: left;">123 ( 3.7)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">CIN2+</td>
+<td style="text-align: left;">30 ( 0.9)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Unknown</td>
+<td style="text-align: left;">3064 (92.6)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">status_discretedx (%)</td>
+<td style="text-align: left;">Disease</td>
+<td style="text-align: left;">69 ( 2.2)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Persistence</td>
+<td style="text-align: left;">1764 (55.5)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Clearance</td>
+<td style="text-align: left;">1347 (42.4)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="recommendations" class="level2">
+<h2 class="anchored" data-anchor-id="recommendations">Recommendations</h2>
+<p>Based on this comparison:</p>
+<ol type="1">
+<li><strong>Agreement Rate</strong>: Check the overall agreement rate between GOLDDX and DISCRETEDX</li>
+<li><strong>Missing Data</strong>: Compare which variable has fewer missing values</li>
+<li><strong>CIN2+ Classification</strong>: The key determination for Disease classification</li>
+<li><strong>Clinical Relevance</strong>: GOLDDX is manually reviewed and may be more accurate, but DISCRETEDX may be more complete</li>
+</ol>
+<p><strong>Note</strong>: The current analysis uses GOLDDX (<code>diagnosis_3cat</code>) for outcome classification. If DISCRETEDX shows better data quality or completeness, consider switching to DISCRETEDX-based classification.</p>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -903,13 +1199,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./table4.html" class="pagination-link" aria-label="Regression Tables for persistence vs clearance">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Regression Tables for persistence vs clearance</span>
+      <a href="./index.html" class="pagination-link" aria-label="Introduction">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Introduction</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./visit2_no_hpv_analysis.html" class="pagination-link" aria-label="Analysis Questions for Visit 2 without HPV">
-        <span class="nav-page-text">Analysis Questions for Visit 2 without HPV</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./table1.html" class="pagination-link" aria-label="Descriptive Tables">
+        <span class="nav-page-text">Descriptive Tables</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

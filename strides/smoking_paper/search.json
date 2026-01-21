@@ -4,7 +4,7 @@
     "href": "visit2_no_hpv_analysis.html",
     "title": "Exclusions Visit 2 HPV Data Analysis",
     "section": "",
-    "text": "Individuals were excluded for either having CIN2+ at visit 1 or 2, or for missing HPV data at visit 2. This analysis addresses:\n\nWhat are the characteristics of these exclusions?\nDid these individuals have cytology at visit 2, and if so, what were the results (NILM, ASC-US, LSIL, HSIL)?\nDid they have a biopsy at visit 2, and if so, was it &lt;CIN2+?\nDid they have any result at all at visit 2?\nExport the full subset and both subgroups to Excel for further review.\n\n\n\n\n\n\n\nSummary of Exclusion Groups\n\n\nCategory\nN\n\n\n\n\nTotal exclusions (CIN2+ or missing HPV at Visit 2)\n4279\n\n\nCIN2+ at Visit 1 or 2\n354\n\n\nExcluded for missing HPV at Visit 2 (no CIN2+)\n3925\n\n\n\n\n\n\n\n\n\n\n\n\n\nCytology Results at Visit 2 (No HPV Data, No CIN2+)\n\n\ncyto_cat\nn\npercent\n\n\n\n\nASC-H\n11\n0.2802548\n\n\nASC-US\n7\n0.1783439\n\n\nAtyp/EM/Glandular\n1\n0.0254777\n\n\nHSIL+\n14\n0.3566879\n\n\nInadequate\n10\n0.2547771\n\n\nLSIL\n88\n2.2420382\n\n\nNILM\n429\n10.9299363\n\n\nNo Cytology\n3365\n85.7324841\n\n\n\n\n\n\n\n\n\n\n\nBiopsy Results at Visit 2 (No HPV Data, No CIN2+)\n\n\nbiopsy_cat\nn\npercent\n\n\n\n\n&lt;CIN2+\n39\n0.9936306\n\n\n&gt;=CIN2+\n13\n0.3312102\n\n\nInsufficient for Dx\n1\n0.0254777\n\n\nMissing cervical Dx\n2\n0.0509554\n\n\nNo Biopsy\n3870\n98.5987261\n\n\n\n\n\n\n\n\n\n\n\nAny Result at Visit 2 (No HPV Data, No CIN2+)\n\n\nany_result\nn\npercent\n\n\n\n\nHas Result\n560\n14.26752\n\n\nNo Result\n3365\n85.73248\n\n\n\n\n\n\n\n\n\n\n\nCytology Results at Visit 2 (No HPV Data, No CIN2+) by Age Group\n\n\nage_group\ncyto_cat\nn\npercent\n\n\n\n\n&lt;30\nASC-H\n10\n0.5027652\n\n\n&lt;30\nASC-US\n1\n0.0502765\n\n\n&lt;30\nHSIL+\n10\n0.5027652\n\n\n&lt;30\nInadequate\n6\n0.3016591\n\n\n&lt;30\nLSIL\n82\n4.1226747\n\n\n&lt;30\nNILM\n411\n20.6636501\n\n\n&lt;30\nNo Cytology\n1469\n73.8562092\n\n\n&gt;=30\nASC-H\n1\n0.0516529\n\n\n&gt;=30\nASC-US\n6\n0.3099174\n\n\n&gt;=30\nAtyp/EM/Glandular\n1\n0.0516529\n\n\n&gt;=30\nHSIL+\n4\n0.2066116\n\n\n&gt;=30\nInadequate\n4\n0.2066116\n\n\n&gt;=30\nLSIL\n6\n0.3099174\n\n\n&gt;=30\nNILM\n18\n0.9297521\n\n\n&gt;=30\nNo Cytology\n1896\n97.9338843\n\n\n\n\n\n\n\n\n\n\n\nBiopsy Results at Visit 2 (No HPV Data, No CIN2+) by Age Group\n\n\nage_group\nbiopsy_cat\nn\npercent\n\n\n\n\n&lt;30\n&lt;CIN2+\n28\n1.4077426\n\n\n&lt;30\n&gt;=CIN2+\n11\n0.5530417\n\n\n&lt;30\nInsufficient for Dx\n1\n0.0502765\n\n\n&lt;30\nMissing cervical Dx\n2\n0.1005530\n\n\n&lt;30\nNo Biopsy\n1947\n97.8883861\n\n\n&gt;=30\n&lt;CIN2+\n11\n0.5681818\n\n\n&gt;=30\n&gt;=CIN2+\n2\n0.1033058\n\n\n&gt;=30\nNo Biopsy\n1923\n99.3285124\n\n\n\n\n\n\n\n\n\n\n\nAny Result at Visit 2 (No HPV Data, No CIN2+) by Age Group\n\n\nage_group\nany_result\nn\npercent\n\n\n\n\n&lt;30\nHas Result\n520\n26.143791\n\n\n&lt;30\nNo Result\n1469\n73.856209\n\n\n&gt;=30\nHas Result\n40\n2.066116\n\n\n&gt;=30\nNo Result\n1896\n97.933884\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTiming Between Visit 1 and Visit 2 by HPV Result Status at Visit 2\n\n\nGroup\nN\nMean_days\nMedian_days\nSD_days\n\n\n\n\nMissing HPV Result at Visit 2\n560\n693.6607\n545.5\n389.3485\n\n\nHPV Result at Visit 2\n2315\n566.7204\n429.0\n337.4267\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThird Visit Within a Year After Second Visit (No HPV Result at Visit 2, but biopsy/cytology result available)\n\n\nN_with_third_visit\nN_within_1yr\nPercent_within_1yr\n\n\n\n\n191\n51\n26.70157",
+    "text": "Individuals were excluded for either having CIN2+ at visit 1 or 2, or for missing HPV data at visit 2. This analysis addresses:\n\nWhat are the characteristics of these exclusions?\nDid these individuals have cytology at visit 2, and if so, what were the results (NILM, ASC-US, LSIL, HSIL)?\nDid they have a biopsy at visit 2, and if so, was it &lt;CIN2+?\nDid they have any result at all at visit 2?\nExport the full subset and both subgroups to Excel for further review.\n\n\n\n\n\n\n\nSummary of Exclusion Groups\n\n\nCategory\nN\n\n\n\n\nTotal exclusions (CIN2+ or missing HPV at Visit 2)\n4962\n\n\nCIN2+ at Visit 1 or 2\n421\n\n\nExcluded for missing HPV at Visit 2 (no CIN2+)\n4541\n\n\n\n\n\n\n\n\n\n\n\n\n\nCytology Results at Visit 2 (No HPV Data, No CIN2+)\n\n\ncyto_cat\nn\npercent\n\n\n\n\nASC-H\n14\n0.3083021\n\n\nASC-US\n8\n0.1761726\n\n\nAtyp/EM/Glandular\n2\n0.0440432\n\n\nHSIL+\n16\n0.3523453\n\n\nInadequate\n16\n0.3523453\n\n\nLSIL\n120\n2.6425897\n\n\nNILM\n580\n12.7725171\n\n\nNo Cytology\n3785\n83.3516847\n\n\n\n\n\n\n\n\n\n\n\nBiopsy Results at Visit 2 (No HPV Data, No CIN2+)\n\n\nbiopsy_cat\nn\npercent\n\n\n\n\n&lt;CIN2+\n45\n0.9909712\n\n\n&gt;=CIN2+\n13\n0.2862806\n\n\nInsufficient for Dx\n1\n0.0220216\n\n\nMissing cervical Dx\n2\n0.0440432\n\n\nNo Biopsy\n4480\n98.6566835\n\n\n\n\n\n\n\n\n\n\n\nAny Result at Visit 2 (No HPV Data, No CIN2+)\n\n\nany_result\nn\npercent\n\n\n\n\nHas Result\n756\n16.64832\n\n\nNo Result\n3785\n83.35168\n\n\n\n\n\n\n\n\n\n\n\nCytology Results at Visit 2 (No HPV Data, No CIN2+) by Age Group\n\n\nage_group\ncyto_cat\nn\npercent\n\n\n\n\n&lt;30\nASC-H\n13\n0.5731922\n\n\n&lt;30\nASC-US\n2\n0.0881834\n\n\n&lt;30\nAtyp/EM/Glandular\n1\n0.0440917\n\n\n&lt;30\nHSIL+\n12\n0.5291005\n\n\n&lt;30\nInadequate\n9\n0.3968254\n\n\n&lt;30\nLSIL\n111\n4.8941799\n\n\n&lt;30\nNILM\n545\n24.0299824\n\n\n&lt;30\nNo Cytology\n1575\n69.4444444\n\n\n&gt;=30\nASC-H\n1\n0.0439947\n\n\n&gt;=30\nASC-US\n6\n0.2639683\n\n\n&gt;=30\nAtyp/EM/Glandular\n1\n0.0439947\n\n\n&gt;=30\nHSIL+\n4\n0.1759789\n\n\n&gt;=30\nInadequate\n7\n0.3079630\n\n\n&gt;=30\nLSIL\n9\n0.3959525\n\n\n&gt;=30\nNILM\n35\n1.5398152\n\n\n&gt;=30\nNo Cytology\n2210\n97.2283326\n\n\n\n\n\n\n\n\n\n\n\nBiopsy Results at Visit 2 (No HPV Data, No CIN2+) by Age Group\n\n\nage_group\nbiopsy_cat\nn\npercent\n\n\n\n\n&lt;30\n&lt;CIN2+\n34\n1.4991182\n\n\n&lt;30\n&gt;=CIN2+\n10\n0.4409171\n\n\n&lt;30\nInsufficient for Dx\n1\n0.0440917\n\n\n&lt;30\nMissing cervical Dx\n2\n0.0881834\n\n\n&lt;30\nNo Biopsy\n2221\n97.9276896\n\n\n&gt;=30\n&lt;CIN2+\n11\n0.4839419\n\n\n&gt;=30\n&gt;=CIN2+\n3\n0.1319842\n\n\n&gt;=30\nNo Biopsy\n2259\n99.3840739\n\n\n\n\n\n\n\n\n\n\n\nAny Result at Visit 2 (No HPV Data, No CIN2+) by Age Group\n\n\nage_group\nany_result\nn\npercent\n\n\n\n\n&lt;30\nHas Result\n693\n30.555556\n\n\n&lt;30\nNo Result\n1575\n69.444444\n\n\n&gt;=30\nHas Result\n63\n2.771667\n\n\n&gt;=30\nNo Result\n2210\n97.228333\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTiming Between Visit 1 and Visit 2 by HPV Result Status at Visit 2\n\n\nGroup\nN\nMean_days\nMedian_days\nSD_days\n\n\n\n\nMissing HPV Result at Visit 2\n3785\nNaN\nNA\nNA\n\n\nHPV Result at Visit 2\n3160\n615.2066\n431\n425.2917\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThird Visit Within a Year After Second Visit (No HPV Result at Visit 2, but biopsy/cytology result available)\n\n\nN_with_third_visit\nN_within_1yr\nPercent_within_1yr\n\n\n\n\n0\n0\nNaN",
     "crumbs": [
       "Analysis Questions for Visit 2 without HPV"
     ]
@@ -24,7 +24,7 @@
     "href": "visit2_no_hpv_analysis.html#data-extraction-and-breakdown",
     "title": "Exclusions Visit 2 HPV Data Analysis",
     "section": "",
-    "text": "Summary of Exclusion Groups\n\n\nCategory\nN\n\n\n\n\nTotal exclusions (CIN2+ or missing HPV at Visit 2)\n4279\n\n\nCIN2+ at Visit 1 or 2\n354\n\n\nExcluded for missing HPV at Visit 2 (no CIN2+)\n3925",
+    "text": "Summary of Exclusion Groups\n\n\nCategory\nN\n\n\n\n\nTotal exclusions (CIN2+ or missing HPV at Visit 2)\n4962\n\n\nCIN2+ at Visit 1 or 2\n421\n\n\nExcluded for missing HPV at Visit 2 (no CIN2+)\n4541",
     "crumbs": [
       "Analysis Questions for Visit 2 without HPV"
     ]
@@ -34,7 +34,7 @@
     "href": "visit2_no_hpv_analysis.html#results-for-missing-hpv-at-visit-2",
     "title": "Exclusions Visit 2 HPV Data Analysis",
     "section": "",
-    "text": "Cytology Results at Visit 2 (No HPV Data, No CIN2+)\n\n\ncyto_cat\nn\npercent\n\n\n\n\nASC-H\n11\n0.2802548\n\n\nASC-US\n7\n0.1783439\n\n\nAtyp/EM/Glandular\n1\n0.0254777\n\n\nHSIL+\n14\n0.3566879\n\n\nInadequate\n10\n0.2547771\n\n\nLSIL\n88\n2.2420382\n\n\nNILM\n429\n10.9299363\n\n\nNo Cytology\n3365\n85.7324841\n\n\n\n\n\n\n\n\n\n\n\nBiopsy Results at Visit 2 (No HPV Data, No CIN2+)\n\n\nbiopsy_cat\nn\npercent\n\n\n\n\n&lt;CIN2+\n39\n0.9936306\n\n\n&gt;=CIN2+\n13\n0.3312102\n\n\nInsufficient for Dx\n1\n0.0254777\n\n\nMissing cervical Dx\n2\n0.0509554\n\n\nNo Biopsy\n3870\n98.5987261\n\n\n\n\n\n\n\n\n\n\n\nAny Result at Visit 2 (No HPV Data, No CIN2+)\n\n\nany_result\nn\npercent\n\n\n\n\nHas Result\n560\n14.26752\n\n\nNo Result\n3365\n85.73248\n\n\n\n\n\n\n\n\n\n\n\nCytology Results at Visit 2 (No HPV Data, No CIN2+) by Age Group\n\n\nage_group\ncyto_cat\nn\npercent\n\n\n\n\n&lt;30\nASC-H\n10\n0.5027652\n\n\n&lt;30\nASC-US\n1\n0.0502765\n\n\n&lt;30\nHSIL+\n10\n0.5027652\n\n\n&lt;30\nInadequate\n6\n0.3016591\n\n\n&lt;30\nLSIL\n82\n4.1226747\n\n\n&lt;30\nNILM\n411\n20.6636501\n\n\n&lt;30\nNo Cytology\n1469\n73.8562092\n\n\n&gt;=30\nASC-H\n1\n0.0516529\n\n\n&gt;=30\nASC-US\n6\n0.3099174\n\n\n&gt;=30\nAtyp/EM/Glandular\n1\n0.0516529\n\n\n&gt;=30\nHSIL+\n4\n0.2066116\n\n\n&gt;=30\nInadequate\n4\n0.2066116\n\n\n&gt;=30\nLSIL\n6\n0.3099174\n\n\n&gt;=30\nNILM\n18\n0.9297521\n\n\n&gt;=30\nNo Cytology\n1896\n97.9338843\n\n\n\n\n\n\n\n\n\n\n\nBiopsy Results at Visit 2 (No HPV Data, No CIN2+) by Age Group\n\n\nage_group\nbiopsy_cat\nn\npercent\n\n\n\n\n&lt;30\n&lt;CIN2+\n28\n1.4077426\n\n\n&lt;30\n&gt;=CIN2+\n11\n0.5530417\n\n\n&lt;30\nInsufficient for Dx\n1\n0.0502765\n\n\n&lt;30\nMissing cervical Dx\n2\n0.1005530\n\n\n&lt;30\nNo Biopsy\n1947\n97.8883861\n\n\n&gt;=30\n&lt;CIN2+\n11\n0.5681818\n\n\n&gt;=30\n&gt;=CIN2+\n2\n0.1033058\n\n\n&gt;=30\nNo Biopsy\n1923\n99.3285124\n\n\n\n\n\n\n\n\n\n\n\nAny Result at Visit 2 (No HPV Data, No CIN2+) by Age Group\n\n\nage_group\nany_result\nn\npercent\n\n\n\n\n&lt;30\nHas Result\n520\n26.143791\n\n\n&lt;30\nNo Result\n1469\n73.856209\n\n\n&gt;=30\nHas Result\n40\n2.066116\n\n\n&gt;=30\nNo Result\n1896\n97.933884",
+    "text": "Cytology Results at Visit 2 (No HPV Data, No CIN2+)\n\n\ncyto_cat\nn\npercent\n\n\n\n\nASC-H\n14\n0.3083021\n\n\nASC-US\n8\n0.1761726\n\n\nAtyp/EM/Glandular\n2\n0.0440432\n\n\nHSIL+\n16\n0.3523453\n\n\nInadequate\n16\n0.3523453\n\n\nLSIL\n120\n2.6425897\n\n\nNILM\n580\n12.7725171\n\n\nNo Cytology\n3785\n83.3516847\n\n\n\n\n\n\n\n\n\n\n\nBiopsy Results at Visit 2 (No HPV Data, No CIN2+)\n\n\nbiopsy_cat\nn\npercent\n\n\n\n\n&lt;CIN2+\n45\n0.9909712\n\n\n&gt;=CIN2+\n13\n0.2862806\n\n\nInsufficient for Dx\n1\n0.0220216\n\n\nMissing cervical Dx\n2\n0.0440432\n\n\nNo Biopsy\n4480\n98.6566835\n\n\n\n\n\n\n\n\n\n\n\nAny Result at Visit 2 (No HPV Data, No CIN2+)\n\n\nany_result\nn\npercent\n\n\n\n\nHas Result\n756\n16.64832\n\n\nNo Result\n3785\n83.35168\n\n\n\n\n\n\n\n\n\n\n\nCytology Results at Visit 2 (No HPV Data, No CIN2+) by Age Group\n\n\nage_group\ncyto_cat\nn\npercent\n\n\n\n\n&lt;30\nASC-H\n13\n0.5731922\n\n\n&lt;30\nASC-US\n2\n0.0881834\n\n\n&lt;30\nAtyp/EM/Glandular\n1\n0.0440917\n\n\n&lt;30\nHSIL+\n12\n0.5291005\n\n\n&lt;30\nInadequate\n9\n0.3968254\n\n\n&lt;30\nLSIL\n111\n4.8941799\n\n\n&lt;30\nNILM\n545\n24.0299824\n\n\n&lt;30\nNo Cytology\n1575\n69.4444444\n\n\n&gt;=30\nASC-H\n1\n0.0439947\n\n\n&gt;=30\nASC-US\n6\n0.2639683\n\n\n&gt;=30\nAtyp/EM/Glandular\n1\n0.0439947\n\n\n&gt;=30\nHSIL+\n4\n0.1759789\n\n\n&gt;=30\nInadequate\n7\n0.3079630\n\n\n&gt;=30\nLSIL\n9\n0.3959525\n\n\n&gt;=30\nNILM\n35\n1.5398152\n\n\n&gt;=30\nNo Cytology\n2210\n97.2283326\n\n\n\n\n\n\n\n\n\n\n\nBiopsy Results at Visit 2 (No HPV Data, No CIN2+) by Age Group\n\n\nage_group\nbiopsy_cat\nn\npercent\n\n\n\n\n&lt;30\n&lt;CIN2+\n34\n1.4991182\n\n\n&lt;30\n&gt;=CIN2+\n10\n0.4409171\n\n\n&lt;30\nInsufficient for Dx\n1\n0.0440917\n\n\n&lt;30\nMissing cervical Dx\n2\n0.0881834\n\n\n&lt;30\nNo Biopsy\n2221\n97.9276896\n\n\n&gt;=30\n&lt;CIN2+\n11\n0.4839419\n\n\n&gt;=30\n&gt;=CIN2+\n3\n0.1319842\n\n\n&gt;=30\nNo Biopsy\n2259\n99.3840739\n\n\n\n\n\n\n\n\n\n\n\nAny Result at Visit 2 (No HPV Data, No CIN2+) by Age Group\n\n\nage_group\nany_result\nn\npercent\n\n\n\n\n&lt;30\nHas Result\n693\n30.555556\n\n\n&lt;30\nNo Result\n1575\n69.444444\n\n\n&gt;=30\nHas Result\n63\n2.771667\n\n\n&gt;=30\nNo Result\n2210\n97.228333",
     "crumbs": [
       "Analysis Questions for Visit 2 without HPV"
     ]
@@ -44,7 +44,7 @@
     "href": "visit2_no_hpv_analysis.html#additional-questions",
     "title": "Exclusions Visit 2 HPV Data Analysis",
     "section": "",
-    "text": "Timing Between Visit 1 and Visit 2 by HPV Result Status at Visit 2\n\n\nGroup\nN\nMean_days\nMedian_days\nSD_days\n\n\n\n\nMissing HPV Result at Visit 2\n560\n693.6607\n545.5\n389.3485\n\n\nHPV Result at Visit 2\n2315\n566.7204\n429.0\n337.4267\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThird Visit Within a Year After Second Visit (No HPV Result at Visit 2, but biopsy/cytology result available)\n\n\nN_with_third_visit\nN_within_1yr\nPercent_within_1yr\n\n\n\n\n191\n51\n26.70157",
+    "text": "Timing Between Visit 1 and Visit 2 by HPV Result Status at Visit 2\n\n\nGroup\nN\nMean_days\nMedian_days\nSD_days\n\n\n\n\nMissing HPV Result at Visit 2\n3785\nNaN\nNA\nNA\n\n\nHPV Result at Visit 2\n3160\n615.2066\n431\n425.2917\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThird Visit Within a Year After Second Visit (No HPV Result at Visit 2, but biopsy/cytology result available)\n\n\nN_with_third_visit\nN_within_1yr\nPercent_within_1yr\n\n\n\n\n0\n0\nNaN",
     "crumbs": [
       "Analysis Questions for Visit 2 without HPV"
     ]
@@ -100,6 +100,76 @@
     ]
   },
   {
+    "objectID": "diagnosis_comparison.html",
+    "href": "diagnosis_comparison.html",
+    "title": "Diagnosis Variable Comparison: WORST_GOLDDX vs WORST_DISCRETEDX",
+    "section": "",
+    "text": "This page compares the two diagnosis variables to help determine which is better for outcome classification:",
+    "crumbs": [
+      "Diagnosis Comparison (GOLDDX vs DISCRETEDX)"
+    ]
+  },
+  {
+    "objectID": "diagnosis_comparison.html#overall-agreement-between-variables",
+    "href": "diagnosis_comparison.html#overall-agreement-between-variables",
+    "title": "Diagnosis Variable Comparison: WORST_GOLDDX vs WORST_DISCRETEDX",
+    "section": "Overall Agreement Between Variables",
+    "text": "Overall Agreement Between Variables\n\nVisit 1 Diagnosis Comparison\n\n\nCross-tabulation: WORST_GOLDDX (rows) vs WORST_DISCRETEDX (columns) at Visit 1\n\n\n\nVisit 1: diagnosis_3cat_1 (GOLDDX) vs discretedx_3cat_1 (DISCRETEDX)\n\n\n\nNormal\nCIN1\nCIN2+\nUnknown\nSum\n\n\n\n\nNormal\n34\n0\n0\n143\n177\n\n\nCIN1\n0\n38\n0\n449\n487\n\n\nCIN2+\n1\n2\n37\n307\n347\n\n\nUnknown\n18\n13\n6\n2260\n2297\n\n\nSum\n53\n53\n43\n3159\n3308\n\n\n\n\n\n\n\n\nOverall Agreement at Visit 1: 71.6%\n\n\nNumber of disagreements: 939 out of 3308 (28.4%)\n\n\n\n\nVisit 2 Diagnosis Comparison\n\n\nCross-tabulation: WORST_GOLDDX (rows) vs WORST_DISCRETEDX (columns) at Visit 2\n\n\n\nVisit 2: diagnosis_3cat_2 (GOLDDX) vs discretedx_3cat_2 (DISCRETEDX)\n\n\n\nNormal\nCIN1\nCIN2+\nUnknown\nSum\n\n\n\n\nNormal\n29\n0\n0\n92\n121\n\n\nCIN1\n0\n54\n2\n385\n441\n\n\nCIN2+\n1\n0\n11\n82\n94\n\n\nUnknown\n61\n69\n17\n2505\n2652\n\n\nSum\n91\n123\n30\n3064\n3308\n\n\n\n\n\n\n\n\nOverall Agreement at Visit 2: 78.6%\n\n\nNumber of disagreements: 709 out of 3308 (21.4%)",
+    "crumbs": [
+      "Diagnosis Comparison (GOLDDX vs DISCRETEDX)"
+    ]
+  },
+  {
+    "objectID": "diagnosis_comparison.html#missing-data-comparison",
+    "href": "diagnosis_comparison.html#missing-data-comparison",
+    "title": "Diagnosis Variable Comparison: WORST_GOLDDX vs WORST_DISCRETEDX",
+    "section": "Missing Data Comparison",
+    "text": "Missing Data Comparison\n\n\nMissing Data Summary\n\n\n\n\n\nVariable\nN Missing\n% Missing\n\n\n\n\ndiagnosis_3cat_1 (GOLDDX)\n0\n0.0%\n\n\ndiscretedx_3cat_1 (DISCRETEDX)\n0\n0.0%\n\n\ndiagnosis_3cat_2 (GOLDDX)\n0\n0.0%\n\n\ndiscretedx_3cat_2 (DISCRETEDX)\n0\n0.0%",
+    "crumbs": [
+      "Diagnosis Comparison (GOLDDX vs DISCRETEDX)"
+    ]
+  },
+  {
+    "objectID": "diagnosis_comparison.html#cin2-classification-differences",
+    "href": "diagnosis_comparison.html#cin2-classification-differences",
+    "title": "Diagnosis Variable Comparison: WORST_GOLDDX vs WORST_DISCRETEDX",
+    "section": "CIN2+ Classification Differences",
+    "text": "CIN2+ Classification Differences\nThis is critical for determining Disease/Persistence/Clearance status.\n\n\nVisit 1 CIN2+ Classification:\n\n\n  GOLDDX CIN2+: 347 (10.5%)\n\n\n  DISCRETEDX CIN2+: 43 (1.3%)\n\n\n\nVisit 2 CIN2+ Classification:\n\n\n  GOLDDX CIN2+: 94 (2.8%)\n\n\n  DISCRETEDX CIN2+: 30 (0.9%)\n\n\n\n\n\nCIN2+ Cross-tabulation at Visit 1:\n\n\n\n\n\n\nFALSE\nTRUE\nSum\n\n\n\n\nFALSE\n2955\n6\n2961\n\n\nTRUE\n310\n37\n347\n\n\nSum\n3265\n43\n3308\n\n\n\n\n\n\nCIN2+ Cross-tabulation at Visit 2:\n\n\n\n\n\n\nFALSE\nTRUE\nSum\n\n\n\n\nFALSE\n3195\n19\n3214\n\n\nTRUE\n83\n11\n94\n\n\nSum\n3278\n30\n3308",
+    "crumbs": [
+      "Diagnosis Comparison (GOLDDX vs DISCRETEDX)"
+    ]
+  },
+  {
+    "objectID": "diagnosis_comparison.html#impact-on-study-group-classification",
+    "href": "diagnosis_comparison.html#impact-on-study-group-classification",
+    "title": "Diagnosis Variable Comparison: WORST_GOLDDX vs WORST_DISCRETEDX",
+    "section": "Impact on Study Group Classification",
+    "text": "Impact on Study Group Classification\nCompare how using GOLDDX vs DISCRETEDX would affect Disease/Persistence/Clearance classification.\n\n\nStudy Group Classification Comparison:\n\n\nUsing GOLDDX (current):\n\n\n\n  Clearance     Disease Persistence \n       1273         421        1614 \n\n\n\nUsing DISCRETEDX:\n\n\n\n    Disease Persistence   Clearance        &lt;NA&gt; \n         69        1764        1347         128 \n\n\n\nCross-tabulation: GOLDDX status (rows) vs DISCRETEDX status (columns):\n\n\n\n\n\n\nDisease\nPersistence\nClearance\nNA\nSum\n\n\n\n\nClearance\n5\n0\n1267\n1\n1273\n\n\nDisease\n49\n165\n80\n127\n421\n\n\nPersistence\n15\n1599\n0\n0\n1614\n\n\nSum\n69\n1764\n1347\n128\n3308\n\n\n\n\n\n\n\n\nNumber of cases with different status classification: 393 (11.9%)",
+    "crumbs": [
+      "Diagnosis Comparison (GOLDDX vs DISCRETEDX)"
+    ]
+  },
+  {
+    "objectID": "diagnosis_comparison.html#summary-statistics-by-diagnosis-source",
+    "href": "diagnosis_comparison.html#summary-statistics-by-diagnosis-source",
+    "title": "Diagnosis Variable Comparison: WORST_GOLDDX vs WORST_DISCRETEDX",
+    "section": "Summary Statistics by Diagnosis Source",
+    "text": "Summary Statistics by Diagnosis Source\n\nUsing GOLDDX (Current)Using DISCRETEDX\n\n\n\n\n\n\n\n\nlevel\nOverall\n\n\n\n\nn\n\n3308\n\n\ndiagnosis_3cat_1 (%)\nNormal\n177 ( 5.4)\n\n\n\nCIN1\n487 (14.7)\n\n\n\nCIN2+\n347 (10.5)\n\n\n\nUnknown\n2297 (69.4)\n\n\ndiagnosis_3cat_2 (%)\nNormal\n121 ( 3.7)\n\n\n\nCIN1\n441 (13.3)\n\n\n\nCIN2+\n94 ( 2.8)\n\n\n\nUnknown\n2652 (80.2)\n\n\nstatus_v1_v2 (%)\nClearance\n1273 (38.5)\n\n\n\nDisease\n421 (12.7)\n\n\n\nPersistence\n1614 (48.8)\n\n\n\n\n\n\n\n\n\n\n\n\n\nlevel\nOverall\n\n\n\n\nn\n\n3308\n\n\ndiscretedx_3cat_1 (%)\nNormal\n53 ( 1.6)\n\n\n\nCIN1\n53 ( 1.6)\n\n\n\nCIN2+\n43 ( 1.3)\n\n\n\nUnknown\n3159 (95.5)\n\n\ndiscretedx_3cat_2 (%)\nNormal\n91 ( 2.8)\n\n\n\nCIN1\n123 ( 3.7)\n\n\n\nCIN2+\n30 ( 0.9)\n\n\n\nUnknown\n3064 (92.6)\n\n\nstatus_discretedx (%)\nDisease\n69 ( 2.2)\n\n\n\nPersistence\n1764 (55.5)\n\n\n\nClearance\n1347 (42.4)",
+    "crumbs": [
+      "Diagnosis Comparison (GOLDDX vs DISCRETEDX)"
+    ]
+  },
+  {
+    "objectID": "diagnosis_comparison.html#recommendations",
+    "href": "diagnosis_comparison.html#recommendations",
+    "title": "Diagnosis Variable Comparison: WORST_GOLDDX vs WORST_DISCRETEDX",
+    "section": "Recommendations",
+    "text": "Recommendations\nBased on this comparison:\n\nAgreement Rate: Check the overall agreement rate between GOLDDX and DISCRETEDX\nMissing Data: Compare which variable has fewer missing values\nCIN2+ Classification: The key determination for Disease classification\nClinical Relevance: GOLDDX is manually reviewed and may be more accurate, but DISCRETEDX may be more complete\n\nNote: The current analysis uses GOLDDX (diagnosis_3cat) for outcome classification. If DISCRETEDX shows better data quality or completeness, consider switching to DISCRETEDX-based classification.",
+    "crumbs": [
+      "Diagnosis Comparison (GOLDDX vs DISCRETEDX)"
+    ]
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "",
@@ -124,7 +194,7 @@
     "href": "index.html#study-sample",
     "title": "",
     "section": "Study Sample",
-    "text": "Study Sample\nStudy sample description: Sample of Individuals Who participated in STRIDES V16 Study. The study only includes participants who attended Visit 1 and Visit 2 who were HPV positive at Visit 1. The study sample is further divided into 3 groups:\n\nHPV Disease: Participants who were HPV positive at Visit 1 and Visit 2 and had CIN2+ at Visit 1 or Visit 2.\nHPV Persistence: Participants who were HPV positive at Visit 1 and Visit 2 and are not CIN2+ at Visit 1 or Visit 2.\nHPV Clearance: Participants who were HPV positive at Visit 1 and HPV negative at Visit 2 and are not CIN2+ at Visit 1 or Visit 2.",
+    "text": "Study Sample\nStudy sample description: Sample of Individuals Who participated in STRIDES V23 Study. The study only includes participants who attended Visit 1 and Visit 2 who were HPV positive at Visit 1. The study sample is further divided into 3 groups:\n\nHPV Disease: Participants who were HPV positive at Visit 1 and Visit 2 and had CIN2+ at Visit 1 or Visit 2.\nHPV Persistence: Participants who were HPV positive at Visit 1 and Visit 2 and are not CIN2+ at Visit 1 or Visit 2.\nHPV Clearance: Participants who were HPV positive at Visit 1 and HPV negative at Visit 2 and are not CIN2+ at Visit 1 or Visit 2.",
     "crumbs": [
       "Introduction"
     ]
@@ -134,7 +204,7 @@
     "href": "index.html#flowchart-of-study-sample",
     "title": "",
     "section": "Flowchart of Study Sample",
-    "text": "Flowchart of Study Sample\nNote: This flowchart is based on unique participants who were enrolled in Visit 1 The first participant enrolled on 2018-01-04 and the last participant enrolled on 2023-07-31\n\nAll participantsAbove 30 years of ageBelow 30 years of ageWhite participantsBlack participantsAsian participantsOther Race participants",
+    "text": "Flowchart of Study Sample\nNote: This flowchart is based on unique participants who were enrolled in Visit 1 The first participant enrolled on 2018-01-04 and the last participant enrolled on 2025-07-18\n\nAll participantsAbove 30 years of ageBelow 30 years of ageWhite participantsBlack participantsAsian participantsOther Race participants",
     "crumbs": [
       "Introduction"
     ]
@@ -194,7 +264,7 @@
     "href": "visit_analysis.html",
     "title": "STRIDES Visit Pattern Analysis",
     "section": "",
-    "text": "Time Between Visits by HPV Status\n\n\n\n\n\n\n\n\n\n\n\n\nstatus_v1_v2\nn\nmean_days\nmean_months\nmedian_months\nsd_months\nmin_months\nmax_months\n\n\n\n\nClearance\n879\n662.3\n21.8\n15.8\n12.5\n1.0\n61.3\n\n\nDisease\n354\n502.4\n16.5\n13.8\n8.8\n3.3\n53.4\n\n\nPersistence\n1216\n509.1\n16.7\n13.6\n9.7\n0.1\n62.3\n\n\n\n\n\n\n\n\n\n\n\nAnalysis of Missing HPV Results at Visit 2\n\n\ntotal_missing\nno_visit_2\nhas_visit_2_no_hpv\n\n\n\n\n35450\n32392\n3058\n\n\n\n\n\n\n\n\n\n\n\nSingle Visit Analysis\n\n\ntotal_participants\nsingle_visit\npercent_single_visit\n\n\n\n\n44071\n32398\n73.51319\n\n\n\n\n\n\n\n\n\n\n\nUnder 30 ASCUS HPV+ Analysis\n\n\ntotal\nsingle_visit\npercent_single_visit\n\n\n\n\n840\n447\n53.21429\n\n\n\n\n\n\n\n\n\n\n\nAnalysis of Short Interval Follow-ups (&lt;6 months)\n\n\n\n\n\n\n\n\n\n\nstatus_v1_v2\ntotal_followup\nshort_interval_count\npercent_short_interval\nshort_with_prev_cancer\nshort_without_prev_cancer\n\n\n\n\nClearance\n879\n15\n1.706485\n1\n14\n\n\nDisease\n248\n3\n1.209677\n0\n3\n\n\nPersistence\n1216\n62\n5.098684\n12\n50\n\n\nNA\n9330\n551\n5.905681\n188\n363",
+    "text": "Time Between Visits by HPV Status\n\n\n\n\n\n\n\n\n\n\n\n\nstatus_v1_v2\nn\nmean_days\nmean_months\nmedian_months\nsd_months\nmin_months\nmax_months\n\n\n\n\nClearance\n1273\n748.4\n24.6\n16.7\n16.4\n0.3\n84.6\n\n\nDisease\n421\n508.7\n16.7\n13.8\n9.7\n0.7\n69.7\n\n\nPersistence\n1614\n529.2\n17.4\n13.3\n11.4\n0.2\n80.5\n\n\n\n\n\n\n\n\n\n\n\nAnalysis of Missing HPV Results at Visit 2\n\n\ntotal_missing\nno_visit_2\nhas_visit_2_no_hpv\n\n\n\n\n41993\n37637\n4356\n\n\n\n\n\n\n\n\n\n\n\nSingle Visit Analysis\n\n\ntotal_participants\nsingle_visit\npercent_single_visit\n\n\n\n\n55002\n37637\n68.42842\n\n\n\n\n\n\n\n\n\n\n\nUnder 30 ASCUS HPV+ Analysis\n\n\ntotal\nsingle_visit\npercent_single_visit\n\n\n\n\n1073\n514\n47.90308\n\n\n\n\n\n\n\n\n\n\n\nAnalysis of Short Interval Follow-ups (&lt;6 months)\n\n\n\n\n\n\n\n\n\n\nstatus_v1_v2\ntotal_followup\nshort_interval_count\npercent_short_interval\nshort_with_prev_cancer\nshort_without_prev_cancer\n\n\n\n\nClearance\n1273\n21\n1.649647\n1\n20\n\n\nDisease\n308\n4\n1.298701\n0\n4\n\n\nPersistence\n1614\n78\n4.832714\n12\n66\n\n\nNA\n14170\n707\n4.989414\n195\n512",
     "crumbs": [
       "Analysis Questions"
     ]
@@ -204,7 +274,7 @@
     "href": "visit_analysis.html#time-between-visits-analysis",
     "title": "STRIDES Visit Pattern Analysis",
     "section": "",
-    "text": "Time Between Visits by HPV Status\n\n\n\n\n\n\n\n\n\n\n\n\nstatus_v1_v2\nn\nmean_days\nmean_months\nmedian_months\nsd_months\nmin_months\nmax_months\n\n\n\n\nClearance\n879\n662.3\n21.8\n15.8\n12.5\n1.0\n61.3\n\n\nDisease\n354\n502.4\n16.5\n13.8\n8.8\n3.3\n53.4\n\n\nPersistence\n1216\n509.1\n16.7\n13.6\n9.7\n0.1\n62.3\n\n\n\n\n\n\n\n\n\n\n\nAnalysis of Missing HPV Results at Visit 2\n\n\ntotal_missing\nno_visit_2\nhas_visit_2_no_hpv\n\n\n\n\n35450\n32392\n3058\n\n\n\n\n\n\n\n\n\n\n\nSingle Visit Analysis\n\n\ntotal_participants\nsingle_visit\npercent_single_visit\n\n\n\n\n44071\n32398\n73.51319\n\n\n\n\n\n\n\n\n\n\n\nUnder 30 ASCUS HPV+ Analysis\n\n\ntotal\nsingle_visit\npercent_single_visit\n\n\n\n\n840\n447\n53.21429\n\n\n\n\n\n\n\n\n\n\n\nAnalysis of Short Interval Follow-ups (&lt;6 months)\n\n\n\n\n\n\n\n\n\n\nstatus_v1_v2\ntotal_followup\nshort_interval_count\npercent_short_interval\nshort_with_prev_cancer\nshort_without_prev_cancer\n\n\n\n\nClearance\n879\n15\n1.706485\n1\n14\n\n\nDisease\n248\n3\n1.209677\n0\n3\n\n\nPersistence\n1216\n62\n5.098684\n12\n50\n\n\nNA\n9330\n551\n5.905681\n188\n363",
+    "text": "Time Between Visits by HPV Status\n\n\n\n\n\n\n\n\n\n\n\n\nstatus_v1_v2\nn\nmean_days\nmean_months\nmedian_months\nsd_months\nmin_months\nmax_months\n\n\n\n\nClearance\n1273\n748.4\n24.6\n16.7\n16.4\n0.3\n84.6\n\n\nDisease\n421\n508.7\n16.7\n13.8\n9.7\n0.7\n69.7\n\n\nPersistence\n1614\n529.2\n17.4\n13.3\n11.4\n0.2\n80.5\n\n\n\n\n\n\n\n\n\n\n\nAnalysis of Missing HPV Results at Visit 2\n\n\ntotal_missing\nno_visit_2\nhas_visit_2_no_hpv\n\n\n\n\n41993\n37637\n4356\n\n\n\n\n\n\n\n\n\n\n\nSingle Visit Analysis\n\n\ntotal_participants\nsingle_visit\npercent_single_visit\n\n\n\n\n55002\n37637\n68.42842\n\n\n\n\n\n\n\n\n\n\n\nUnder 30 ASCUS HPV+ Analysis\n\n\ntotal\nsingle_visit\npercent_single_visit\n\n\n\n\n1073\n514\n47.90308\n\n\n\n\n\n\n\n\n\n\n\nAnalysis of Short Interval Follow-ups (&lt;6 months)\n\n\n\n\n\n\n\n\n\n\nstatus_v1_v2\ntotal_followup\nshort_interval_count\npercent_short_interval\nshort_with_prev_cancer\nshort_without_prev_cancer\n\n\n\n\nClearance\n1273\n21\n1.649647\n1\n20\n\n\nDisease\n308\n4\n1.298701\n0\n4\n\n\nPersistence\n1614\n78\n4.832714\n12\n66\n\n\nNA\n14170\n707\n4.989414\n195\n512",
     "crumbs": [
       "Analysis Questions"
     ]
@@ -214,7 +284,7 @@
     "href": "visit_analysis.html#distribution-of-time-between-visits",
     "title": "STRIDES Visit Pattern Analysis",
     "section": "Distribution of Time Between Visits",
-    "text": "Distribution of Time Between Visits\n\n\n\n\n\n\n\n\n\n\nQuestion 6: How many in persistence group had long follow-up periods?\n\n\n\nAnalysis of Long Follow-up Periods in Persistence Group\n\n\n\n\n\n\n\n\n\ntotal_persistence\npast_2_years\npercent_2_years\npast_3_years\npercent_3_years\n\n\n\n\n1216\n203\n16.7\n86\n7.1",
+    "text": "Distribution of Time Between Visits\n\n\n\n\n\n\n\n\n\n\nQuestion 6: How many in persistence group had long follow-up periods?\n\n\n\nAnalysis of Long Follow-up Periods in Persistence Group\n\n\n\n\n\n\n\n\n\ntotal_persistence\npast_2_years\npercent_2_years\npast_3_years\npercent_3_years\n\n\n\n\n1614\n282\n17.5\n138\n8.6",
     "crumbs": [
       "Analysis Questions"
     ]
